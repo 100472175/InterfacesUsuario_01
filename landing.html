@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <head>
     <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     <link rel="stylesheet" href="css/landing.css">
     <style>
         h1 {
-            color: aquamarine;
+            color: rgb(0, 0, 0);
         }
         p {
             color: red;
+        }
+        .bloque_izq {
+            float: left;
+            width: 30%;
+            background-color: #f1f1f1;
+            padding: 5%;
+            height: 100%;
+        }
+        #bloque_der {
+            float: right;
+            width: 50%;
+            background-color: #f1f1f1;
+            padding: 5%;
+            height: 100%;
+        }
+        .fila_2_img {
+            width: 100%;
+            height: 33%;
+            background-color: #f1f1f1;
+            padding: 0;
+        }
+        .izquierda {
+            float: left;
+            width: 40%;
+            background-color: #f1f1f1;
+            padding: 5%;
+            
+        }
+        .derecha {
+            float: right;
+            width: 40%;
+            background-color: #f1f1f1;
+            padding: 5%;
         }
     </style>
 </head>
@@ -15,4 +49,48 @@
     <h1>Home</h1>
     <p>This is a paragraph
         This is a second line</p>
+    <section class="bloque_izq">
+        <h1> Resturante gatuno</h1>
+        <h2>Este es un parrafo</h2>
+        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+    </section>
+
+    
+    <section id="bloque_der">
+        <section class="fila_2_img">
+            <section class="izquierda">
+                <a href="google.com">Link a la página 1</a> 
+            </section>
+            <section class="derecha">
+                <a href="google.com">Link a la página 2</a>
+            </section>
+
+        </section>
+        <section class="fila_2_img">
+            <section class="izquierda">
+                <a href="google.com">Link a la página 3</a> 
+            </section>
+            <section class="derecha">
+                <a href="google.com">Link a la página 4</a>
+            </section>
+
+        </section>
+        <section class="fila_2_img">
+            <section class="izquierda">
+                <a href="google.com">Link a la página 5</a> 
+            </section>
+            <section class="derecha">
+                <a href="google.com">Link a la página 6</a>
+            </section>
+
+        </section>
+
+    </section>
+
+       <!--Hola
+    Al hacer click en cada link, titen que desplazarse hacia abajo, como su fiera un título linkeado--> 
+        
+        <footer>Holiwis</footer>
+    
+    
 </body>
