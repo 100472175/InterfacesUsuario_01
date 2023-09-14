@@ -7,9 +7,6 @@
         h1 {
             color: rgb(0, 0, 0);
         }
-        p {
-            color: red;
-        }
         .bloque_izq {
             float: left;
             width: 30%;
@@ -97,20 +94,34 @@
         .galeria input[type=radio]:nth-of-type(4):checked ~ img:nth-of-type(4) {
             opacity: 1;
         }
+
+        .slider{
+            aspect-ratio: auto;
+            width: 300px;
+            position: relative;
+            display: flex;
+            overflow: scroll;
+            scroll-snap-type: x mandatory;
+        }
+
+        .slider img{
+            width: 100%;
+            left: 0;
+            position: sticky;
+            object-fit: cover;
+            border-radius: 5px;
+            scroll-snap-align: center;
+        }
     </style>
 </head>
 <body>
-    <a href="#titulo_segundo"> Llevame al segundo título</a>
-    <h1>Home</h1>
-    <p>This is a paragraph
-        This is a second line</p>
     <section class="bloque_izq">
         <h1> Resturante gatuno</h1>
         <h2>Este es un parrafo</h2>
-        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        <iframe src="https://www.youtube.com/embed/ke4zyeJ5V7g?si=9ubmrw0R_CfMw_dw"></iframe>
     </section>
 
-    
+
     <section class="bloque_der">
         <section class="fila_2_img">
             <section class="izquierda">
@@ -143,11 +154,18 @@
 
     <section>
         <section class="titulo_galeria_text">
-            Texto
+            <p>En nuestro restaurante, tenemos una seleccion de entrantes para chuparte los dedos, entre otros, tenemos
+            las nuevas enriqquecidas galletas de canela con crugiente de azucar al toque de limón</p>
         </section>
         <section class = "titulo_galeria">
             <h2 id="titulo_primero">Esto es un título</h2>
 
+            <div class="slider">
+                <img alt="image1" src="https://images.unsplash.com/photo-1509281373149-e957c6296406?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2605&q=80">
+                <img alt="image2" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8fDB8fHww&w=1000&q=80">
+                <img alt="image3" src="https://cdn.pixabay.com/photo/2016/10/18/21/22/beach-1751455_1280.jpg">
+                <img alt="image4" src="https://cdn.pixabay.com/photo/2018/05/17/09/18/away-3408119_1280.jpg">
+            </div>
 
             <section class="galeria">
                 <input type="radio" name="navegacion" id="_1" checked>
