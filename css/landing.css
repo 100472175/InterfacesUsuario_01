@@ -20,6 +20,9 @@ h3 {
     font-size: 30px;
     /*font-family: "Apple Symbols";*/
 }
+p {
+    font-size: 1.25vw;
+}
 
 
 .main_section{
@@ -35,7 +38,6 @@ h3 {
     height: 100%;
     background-color: purple;
     padding: 5%;
-
 }
 .main_section_navigator {
     float: right;
@@ -46,7 +48,7 @@ h3 {
 }
 .video-class {
     width: 100%;
-
+    aspect-ratio: 16/9;
 }
 
 
@@ -71,7 +73,7 @@ h3 {
     text-decoration: none;
 }
 .link{
-    font-size: 15px;
+    font-size: 1.5vw;
     /*font-family: AppleMyungjo;*/
     font-weight: bold;
     text-align: center;
@@ -136,7 +138,7 @@ h3 {
 }
 .slider{
     aspect-ratio: auto;
-    width: 80%;
+    height: 80%;
     position: relative;
     display: flex;
     overflow-y: hidden;
@@ -175,11 +177,14 @@ h3 {
     padding: 2%;
 }
 
-
 .gallery_3{
     width: 100%;
     height: 100vh;
     background-color: #f1f1f1;
+}
+
+.gallery_3 .gallery_text_left{
+    padding-bottom: 10% ;
 }
 
 footer{
@@ -189,12 +194,17 @@ footer{
     width: 100%;
     height: 5%;
     background-color: aquamarine;
-    align-self: end;
+    text-align: center;
+
 }
+@media only-screen and (max-width: 768px) and (min-width: 600px){
 
-
-@media  screen and (max-width: 800px){
-
+    h1{
+        color: orange;
+    }
+    p{
+        font-size: 4vw;
+    }
     .main_section{
         display: inline;
     }
@@ -205,14 +215,20 @@ footer{
         width: 100%;
     }
     .line_navigator {
-        background-color:  blue;
+        background-color: blue;
     }
-
+    .nav_elem_left{
+        background-color: blue;
+    }
+    .link{
+        font-size: 4vw;
+    }
     .gallery_1{
         display: inline;
     }
     .gallery_text_left{
         width: 100%;
+        height: auto;
     }
     .gallery_title_right{
         width: 100%;
@@ -225,9 +241,63 @@ footer{
     }
     .gallery_text_right{
         width: 100%;
+        height: auto;
     }
     .gallery_3{
         display: inline;
+    }
+    .gallery_3 .gallery_text_left{
+        padding-bottom: 10%;
+        text-align: justify;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    p{
+        font-size: 4vw;
+    }
+    .main_section{
+        display: inline;
+    }
+    .main_section_title{
+        width: 100%;
+    }
+    .main_section_navigator{
+        width: 100%;
+    }
+    .line_navigator {
+        background-color:  blue;
+    }
+    .link{
+        font-size: 4vw;
+    }
+    .gallery_1{
+        display: inline;
+    }
+    .gallery_text_left{
+        width: 100%;
+        height: auto;
+    }
+    .gallery_title_right{
+        width: 100%;
+    }
+    .gallery_2{
+        display: inline;
+    }
+    .gallery_title_left{
+        width: 100%;
+    }
+    .gallery_text_right{
+        width: 100%;
+        height: auto;
+    }
+    .gallery_3{
+        display: inline;
+    }
+    .gallery_3 .gallery_text_left{
+        padding-bottom: 10%;
+        text-align: justify;
     }
 
 }
