@@ -70,8 +70,6 @@ h3 {
     background-color: transparent;
     text-decoration: none;
 }
-
-
 .link{
     font-size: 15px;
     /*font-family: AppleMyungjo;*/
@@ -82,7 +80,6 @@ h3 {
     height: 10%;
     display: compact;
 }
-
 .line_navigator {
     width: 100%;
     height: 33%;
@@ -116,7 +113,8 @@ h3 {
 }
 
 
-#section_2{
+
+.gallery_1{
     width: 100%;
     height: 100vh;
     background-color: #f1f1f1;
