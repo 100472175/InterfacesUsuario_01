@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Perpetua";
 }
 body{
     width: 100%;
@@ -11,17 +12,15 @@ h2 {
     color: black;
     font-size: 4em;
 }
-h2 {
-    color: black;
-    font-size: 3em;
-}
+
 h3 {
     color: black;
     font-size: 30px;
-    /*font-family: "Apple Symbols";*/
+
 }
 p {
     font-size: 1.25vw;
+
 }
 
 
@@ -34,17 +33,24 @@ p {
 }
 .main_section_title {
     float: left;
-    width: 40%;
+    width: 30%;
     height: 100%;
-    background-color: purple;
+    background-color: #1c1c1c;
     padding: 5%;
+}
+.main_section_title h2 {
+    color: white;
+}
+.main_section_title h3 {
+    color: white;
 }
 .main_section_navigator {
     float: right;
-    width: 60%;
-    background-color: brown;
+    width: 70%;
+    background-color:  #e9e7e0;
     padding: 5%;
     height: 100%;
+    border-left: #211f1f 2px dashed;
 }
 .video-class {
     width: 100%;
@@ -85,17 +91,18 @@ p {
 .line_navigator {
     width: 100%;
     height: 33%;
-    background-color: #f1f1f1;
+    background-color:  #e9e7e0;
     padding: 0;
 }
 .nav_elem_left {
     float: left;
     width: 40%;
     height: 50%;
-    background-color: yellow;
+    background-color: none;
     padding: 5%;
     margin: 4%;
-    border: 3px solid black ;
+    border: 1px solid black;
+    border-radius: 7px;
     text-align: center;
     box-shadow: 0 10px 4px rgba(0,0,0,0.12), 0 5px 3px rgba(0,0,0,0.24);
     /*text-decoration: underline;*/
@@ -105,13 +112,14 @@ p {
     float: right;
     width: 40%;
     height: 50%;
-    background-color: green;
+    background-color: none;
     margin: 4%;
     padding: 5%;
-    border: 3px solid black ;
+    border: 1px solid black ;
+    border-radius: 7px;
     text-align: center;
     box-shadow: 0 10px 4px rgba(0,0,0,0.12), 0 5px 3px rgba(0,0,0,0.24);
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
 
 
@@ -124,7 +132,7 @@ p {
 .gallery_title_right{
     float: right;
     width: 40%;
-    background-color: greenyellow;
+    background-color: white;
     padding: 2%;
     height: 100%;
 
@@ -132,7 +140,7 @@ p {
 .gallery_text_left{
     float: left;
     width: 60%;
-    background-color: dodgerblue;
+    background-color: white;
     padding: 2%;
     height: 100%;
 }
@@ -158,14 +166,14 @@ p {
 .gallery_2 {
     width: 100%;
     height: 100vh;
-    background-color: #f1f1f1;
+    background-color: white;
 }
 
 .gallery_title_left{
     float: left;
     width: 40%;
     height: 100%;
-    background-color: orangered;
+    background-color: white;
     padding: 2%;
 }
 
@@ -173,14 +181,14 @@ p {
     float: right;
     width: 60%;
     height: 100%;
-    background-color: lightcoral;
+    background-color: white;
     padding: 2%;
 }
 
 .gallery_3{
     width: 100%;
     height: 100vh;
-    background-color: #f1f1f1;
+    background-color: white;
 }
 
 .gallery_3 .gallery_text_left{
@@ -193,7 +201,7 @@ footer{
     bottom: 0;
     width: 100%;
     height: 5%;
-    background-color: aquamarine;
+    background-color: white;
     text-align: center;
 }
 
@@ -202,7 +210,7 @@ button{
     cursor: pointer;
     border: none;
     padding: 16px 32px;
-    color: #FFFFFF;
+    color: white;
     font-size: 24px;
     font-weight: bold;
     position: relative;
@@ -239,10 +247,6 @@ button:before {
 
 
 @media only-screen and (max-width: 768px) and (min-width: 600px){
-
-    h1{
-        color: orange;
-    }
     p{
         font-size: 4vw;
     }
@@ -255,12 +259,7 @@ button:before {
     .main_section_navigator{
         width: 100%;
     }
-    .line_navigator {
-        background-color: blue;
-    }
-    .nav_elem_left{
-        background-color: blue;
-    }
+
     .link{
         font-size: 4vw;
     }
@@ -307,9 +306,7 @@ button:before {
     .main_section_navigator{
         width: 100%;
     }
-    .line_navigator {
-        background-color:  blue;
-    }
+
     .link{
         font-size: 4vw;
     }
