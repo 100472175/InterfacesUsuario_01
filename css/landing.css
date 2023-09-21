@@ -12,12 +12,14 @@ body{
 h2 {
     color: black;
     font-size: 4em;
+    background-color: transparent;
 }
 
 h3 {
     color: black;
     font-size: 30px;
     text-align: center;
+    background-color: transparent;
 
 }
 p {
@@ -36,18 +38,18 @@ p {
     float: left;
     width: 30%;
     height: 100%;
-    background-color: #ecb297;
+    background-color: black;
+    background-image: url("https://i.pinimg.com/originals/1e/2b/7f/1e2b7f8efcadba09b4e11e4a446af787.jpg");
     padding: 5%;
 
 }
 .main_section_title h2 {
     color: white;
-    background-color: #ecb297;
+    background-color: transparent;
 }
 .main_section_title h3 {
     color: white;
     text-align: left;
-    background-color:#ecb297;
 }
 
 .main_section_navigator {
@@ -62,26 +64,26 @@ p {
     width: 100%;
     aspect-ratio: 16/9;
     margin-top: 20% ;
-
+    bottom: 0px
 }
 
 .link:link {
-    color:  #1c1c1c;
+    color:  black;
     background-color: transparent;
     /*text-decoration: underline;*/
 }
 .link:visited {
-    color:  #1c1c1c;
+    color:  black;
     background-color: transparent;
     /*text-decoration: underline;*/
 }
 .link:hover {
-    color: #e9e7e0;
+    color: white;
     background-color: transparent;
     text-decoration: none;
 }
 .link:active {
-    color: #1c1c1c;
+    color: black;
     background-color: transparent;
     text-decoration: none;
 }
@@ -105,10 +107,9 @@ p {
     float: left;
     width: 40%;
     height: 50%;
-    background-color: none;
     padding: 5%;
     margin: 4%;
-    border: 2px dashed  #1c1c1c;
+    border: 2px dashed  black;
     border-radius: 7px;
     text-align: center;
     box-shadow: 0 10px 4px rgba(0,0,0,0.12), 0 5px 3px rgba(0,0,0,0.24);
@@ -118,13 +119,12 @@ p {
 
 }
 .nav_elem_left:hover{
-    color: #e9e7e0;
-    background-color:#ecb297;
-
+    color: white;
+    background-color:black;
     cursor: pointer;
     border: none;
     /*padding: 16px 32px;*/
-    color: blaçk;
+    color: white;
     font-size: 24px;
     /*font-size: 24px;*/
     position: relative;
@@ -139,17 +139,18 @@ p {
     height: 50%;
     margin: 4%;
     padding: 5%;
-    border: 2px dashed  #1c1c1c  ;
+    border: 2px dashed black  ;
     border-radius: 7px;
     text-align: center;
     box-shadow: 0 10px 4px rgba(0,0,0,0.12), 0 5px 3px rgba(0,0,0,0.24);
+
     /*text-decoration: underline;*/
     /*background: black;*/
 
 }
 .nav_elem_right:hover{
-    color: #e9e7e0;
-    background-color: #ecb297;
+    color: white;
+    background-color: black;
     cursor: pointer;
     border: none;
     /*padding: 16px 32px;*/
@@ -169,7 +170,7 @@ p {
 .gallery_title_right{
     float: right;
     width: 40%;
-    background-color:#ecb297;
+    background-color: black;
     padding: 2%;
     height: 100%;
     color: white;
@@ -181,6 +182,7 @@ p {
     padding: 2%;
     height: 100%;
 }
+
 .slider{
     aspect-ratio: auto;
     height: 80%;
@@ -210,20 +212,20 @@ p {
     float: left;
     width: 40%;
     height: 100%;
-    background-color:  #ecb297;
+    background-color:  black;
     padding: 2%;
 }
 
 #title_first{
-    background-color: #ecb297;
+    background-color: black;
     color: white}
 
 #title_second{
-    background-color: #ecb297;
+    background-color: black;
     color: white}
 
 #title_third{
-    background-color: #ecb297;
+    background-color: black;
     color: white}
 
 .gallery_text_right{
@@ -242,7 +244,7 @@ p {
     padding-bottom: 10% ;
 }
 
-footer{
+footer {
     clear: both;
     position: fixed;
     bottom: 0;
@@ -251,6 +253,16 @@ footer{
     background-color: #1c1c1c;
     color: #e9e7e0;
     text-align: center;
+
+}
+footer p{
+    justify-content: end;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: 10px 10px;
+    gap: 10px;
+
 }
 
 
