@@ -164,13 +164,15 @@ p {
 }
 
 .slider{
-    aspect-ratio: auto;
+    aspect-ratio: 10/16;
     height: 80%;
     position: relative;
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    margin: auto;
+    border-radius: 10px;
 
 }
 .slider img{
