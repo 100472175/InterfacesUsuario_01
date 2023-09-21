@@ -253,17 +253,24 @@ footer {
     background-color: #1c1c1c;
     color: #e9e7e0;
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
 
 }
-footer p{
-    justify-content: end;
+
+footer p  {
     background-color: black;
-    display: flex;
-    justify-content: space-between;
-    grid-template-columns: 10px 10px;
-    gap: 10px;
 
 }
+
+footer p a {
+    background-color: black;
+    color: white;
+    text-decoration: transparent;
+}
+
+
 
 
 
@@ -322,7 +329,7 @@ button{
     }
 }
 
-/*
+
 @media only-screen and (max-width: 768px) and (min-width: 600px){
     p{
         font-size: 4vw;
@@ -369,7 +376,7 @@ button{
     }
 
 }
-*/
+
 
 @media screen and (max-width: 800px){
     p{
