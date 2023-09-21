@@ -39,14 +39,13 @@ p {
     background-color: black;
     background-image: url("https://i.pinimg.com/originals/1e/2b/7f/1e2b7f8efcadba09b4e11e4a446af787.jpg");
     padding: 5%;
+    display: grid;
+    place-content: center;
+    grid-template-rows: 1fr auto;
 }
 .main_section_title h2 {
     color: white;
     background-color: transparent;
-}
-.main_section_title h3 {
-    color: white;
-    text-align: left;
 }
 
 .main_section_navigator {
@@ -54,25 +53,25 @@ p {
     height: 100%;
     border-left: #211f1f 2px dashed;
     border-bottom: #211f1f 2px solid;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     padding: 10%;
+    padding-top: 5%;
 }
 .ddd{
+    display: grid;
+    place-items: center;
     border-radius: 10px;
     min-height: 150px;
     max-width: 300px;
     background-color: pink;
     padding: 20px;
     position: relative;
-
     background-position: center center;
     background-size: cover;
     margin: 20px;
     transition: all 1s ease;
-
 }
 .ddd p{
     display: flex;
@@ -81,7 +80,7 @@ p {
     align-content: center;
     text-align: center;
     background-image: none;
-
+    margin: auto;
 }
 .ddd p a{
     display: flex;
@@ -91,16 +90,16 @@ p {
     text-decoration: none;
     align-content: center;
     background-image: none;
+    background-color: pink;
     /* TODO */
 }
-
 .video-class {
     width: 100%;
     aspect-ratio: 16/9;
-    margin-top: 20% ;
-    bottom: 0px
-}
+    margin-bottom: 20%;
+    border: none;
 
+}
 .link:link {
     color:  black;
     background-color: transparent;
@@ -166,7 +165,6 @@ p {
     z-index: 0;
 
 }
-
 .nav_elem_right {
     float: right;
     width: 40%;
@@ -195,8 +193,6 @@ p {
     border-radius: 12px;
     z-index: 0;
 }
-
-
 .gallery_1{
     width: 100%;
     height: 100vh;
@@ -215,6 +211,15 @@ p {
     width: 60%;
     padding: 2%;
     height: 100%;
+    display: grid;
+    place-content: center;
+}
+.gallery_text_left div{
+    display: grid;
+    place-content: center;
+    padding: 10px;
+    border: 1px dashed black;
+
 }
 
 .slider{
@@ -236,7 +241,6 @@ p {
     scroll-snap-align: center;
 }
 
-
 .gallery_2 {
     width: 100%;
     height: 100vh;
@@ -249,6 +253,21 @@ p {
     background-color:  black;
     padding: 2%;
 }
+.gallery_text_right{
+    float: left;
+    width: 60%;
+    padding: 2%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+.gallery_text_right div {
+    display: grid;
+    place-content: center;
+    padding: 10px;
+    border: 10px solid black;
+}
+
 
 #title_first{
     background-color: black;
@@ -262,12 +281,7 @@ p {
     background-color: black;
     color: white}
 
-.gallery_text_right{
-    float: right;
-    width: 60%;
-    height: 100%;
-    padding: 2%;
-}
+
 
 .gallery_3{
     width: 100%;
@@ -289,12 +303,11 @@ footer {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
-
 }
 
 footer p  {
     background-color: black;
+    margin: auto;
 
 }
 
