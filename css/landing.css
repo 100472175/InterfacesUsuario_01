@@ -28,20 +28,17 @@ p {
 }
 
 .main_section{
-    display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
-
 }
 .main_section_title {
     float: left;
-    width: 30%;
+    width: 35%;
     height: 100%;
     background-color: black;
     background-image: url("https://i.pinimg.com/originals/1e/2b/7f/1e2b7f8efcadba09b4e11e4a446af787.jpg");
     padding: 5%;
-
 }
 .main_section_title h2 {
     color: white;
@@ -53,13 +50,48 @@ p {
 }
 
 .main_section_navigator {
-    float: right;
-    width: 70%;
-    padding: 5%;
+    width: 65%;
     height: 100%;
     border-left: #211f1f 2px dashed;
     border-bottom: #211f1f 2px solid;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    align-content: center;
+    justify-content: center;
+
 }
+.ddd{
+    border-radius: 10px;
+    min-height: 150px;
+    max-width: 300px;
+    background-color: pink;
+    padding: 20px;
+    position: relative;
+
+    background-position: center center;
+    background-size: cover;
+    margin: 20px;
+    transition: all 1s ease;
+
+}
+.ddd p{
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.ddd p a{
+    background-color: none;
+    color: black;
+    text-decoration: none;
+    /* TODO */
+}
+
+
 .video-class {
     width: 100%;
     aspect-ratio: 16/9;
