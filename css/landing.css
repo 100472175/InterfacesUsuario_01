@@ -16,7 +16,7 @@ h2 {
 }
 h3 {
     color: black;
-    font-size: 30px;
+    font-size: 3em;
     text-align: center;
     background-color: transparent;
 }
@@ -29,18 +29,19 @@ p {
     align-items: center;
     height: 100vh;
 }
-.title_navigation_title {
+.title_navigation_title_article {
     float: left;
     width: 35%;
     height: 100%;
+    background-image: url("../media/cafe_principal.jpg");
     background-color: black;
-    background-image: url("media/Cafe.jpg");
     padding: 5%;
     display: grid;
     place-content: center;
     grid-template-rows: 1fr auto;
 }
-.title_navigation_title h2 {
+
+.title_navigation_title_article h2 {
     color: white;
     background-color: transparent;
 }
@@ -62,13 +63,14 @@ p {
     border-radius: 10px;
     min-height: 150px;
     max-width: 300px;
-    background-color: pink;
+    /*background-color: ghostwhite;*/
     padding: 20px;
     position: relative;
     background-position: center center;
     background-size: cover;
     margin: 20px;
     transition: all 1s ease;
+    border: #e18d74 dashed 2px;
 }
 .button_box p{
     display: flex;
@@ -76,18 +78,16 @@ p {
     justify-content: space-between;
     align-content: center;
     text-align: center;
-    background-image: none;
     margin: auto;
+    background-color : transparent;
 }
 .button_box p a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: blue;
     text-decoration: none;
     align-content: center;
-    background-image: none;
-    background-color: pink;
+    background-color: inherit;
     /* TODO */
 }
 .video-class {
@@ -95,7 +95,6 @@ p {
     aspect-ratio: 16/9;
     margin-bottom: 20%;
     border: none;
-
 }
 
 .line_navigator {
@@ -213,23 +212,36 @@ p {
 
 #title_first{
     background-color: black;
-    color: white}
+    color: white;
+    padding-bottom: 5%;
+}
 #title_second{
     background-color: black;
-    color: white}
+    color: white;
+    padding-bottom: 5%;
+}
 #title_third{
     background-color: black;
-    color: white}
+    color: white;
+    padding-bottom: 5%;
+}
 #title_fourth{
     background-color: black;
-    color: white}
+    color: white;
+    padding-bottom: 5%;
+}
+#title_fifth{
+    background-color: black;
+    color: white;
+    padding-bottom: 5%;
+}
 
 
-.page_3_section{
+.page_2_section{
     width: 100%;
     height: 100vh;
 }
-.page_3_section .gallery_text_left{
+.page_2_section .gallery_text_left{
     padding-bottom: 10% ;
 }
 
@@ -300,6 +312,11 @@ button{
     filter: blur(8px);
     animation: glowing 40s linear infinite;
 }
+
+.imagen{
+    background-color: transparent;
+}
+
 @keyframes glowing {
     0% {
         background-position: 0 0;
@@ -320,7 +337,7 @@ button{
     .title_navigation_section{
         display: inline;
     }
-    .title_navigation_title{
+    .title_navigation_title_article{
         width: 100%;
     }
     .title_navigation_nav{
@@ -368,7 +385,7 @@ button{
     .title_navigation_section{
         display: inline;
     }
-    .title_navigation_title{
+    .title_navigation_title_article{
         width: 100%;
     }
     .title_navigation_nav{
