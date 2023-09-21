@@ -58,10 +58,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 10px;
-    align-content: center;
-    justify-content: center;
-
+    padding: 10%;
 }
 .ddd{
     border-radius: 10px;
@@ -78,16 +75,22 @@ p {
 
 }
 .ddd p{
-    background-color: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-content: center;
     text-align: center;
+    background-image: none;
+
 }
 .ddd p a{
-    background-color: none;
-    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: blue;
     text-decoration: none;
+    align-content: center;
+    background-image: none;
     /* TODO */
 }
 
