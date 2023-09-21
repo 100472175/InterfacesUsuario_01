@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Perpetua";
+    font-family: "Perpetua", serif;
     background-color: white;
 }
 body{
@@ -14,25 +14,22 @@ h2 {
     font-size: 4em;
     background-color: transparent;
 }
-
 h3 {
     color: black;
     font-size: 30px;
     text-align: center;
     background-color: transparent;
-
 }
 p {
     font-size: 1.25vw;
-
 }
 
-.main_section{
+.title_navigation_section{
     justify-content: space-between;
     align-items: center;
     height: 100vh;
 }
-.main_section_title {
+.title_navigation_title {
     float: left;
     width: 35%;
     height: 100%;
@@ -43,12 +40,12 @@ p {
     place-content: center;
     grid-template-rows: 1fr auto;
 }
-.main_section_title h2 {
+.title_navigation_title h2 {
     color: white;
     background-color: transparent;
 }
 
-.main_section_navigator {
+.title_navigation_nav {
     width: 65%;
     height: 100%;
     border-left: #211f1f 2px dashed;
@@ -59,7 +56,7 @@ p {
     padding: 10%;
     padding-top: 5%;
 }
-.ddd{
+.button_box{
     display: grid;
     place-items: center;
     border-radius: 10px;
@@ -73,7 +70,7 @@ p {
     margin: 20px;
     transition: all 1s ease;
 }
-.ddd p{
+.button_box p{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -82,7 +79,7 @@ p {
     background-image: none;
     margin: auto;
 }
-.ddd p a{
+.button_box p a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -100,36 +97,7 @@ p {
     border: none;
 
 }
-.link:link {
-    color:  black;
-    background-color: transparent;
-    /*text-decoration: underline;*/
-}
-.link:visited {
-    color:  black;
-    background-color: transparent;
-    /*text-decoration: underline;*/
-}
-.link:hover {
-    color: white;
-    background-color: transparent;
-    text-decoration: none;
-}
-.link:active {
-    color: black;
-    background-color: transparent;
-    text-decoration: none;
-}
-.link{
-    font-size: 1.5vw;
-    /*font-family: AppleMyungjo;*/
-    font-weight: bold;
-    text-align: center;
-    padding: 5px;
-    margin-top: 100vh;
-    height: 10%;
-    display: compact;
-}
+
 .line_navigator {
     width: 100%;
     height: 33%;
@@ -165,35 +133,8 @@ p {
     z-index: 0;
 
 }
-.nav_elem_right {
-    float: right;
-    width: 40%;
-    height: 50%;
-    margin: 4%;
-    padding: 5%;
-    border: 2px dashed black  ;
-    border-radius: 7px;
-    text-align: center;
-    box-shadow: 0 10px 4px rgba(0,0,0,0.12), 0 5px 3px rgba(0,0,0,0.24);
 
-    /*text-decoration: underline;*/
-    /*background: black;*/
-
-}
-.nav_elem_right:hover{
-    color: white;
-    background-color: black;
-    cursor: pointer;
-    border: none;
-    /*padding: 16px 32px;*/
-    color: black;
-    /*font-size: 24px;*/
-    font-weight: bold;
-    position: relative;
-    border-radius: 12px;
-    z-index: 0;
-}
-.gallery_1{
+.page_1_section{
     width: 100%;
     height: 100vh;
 }
@@ -241,11 +182,10 @@ p {
     scroll-snap-align: center;
 }
 
-.gallery_2 {
+.page_2_section {
     width: 100%;
     height: 100vh;
 }
-
 .gallery_title_left{
     float: left;
     width: 40%;
@@ -272,23 +212,22 @@ p {
 #title_first{
     background-color: black;
     color: white}
-
 #title_second{
     background-color: black;
     color: white}
-
 #title_third{
+    background-color: black;
+    color: white}
+#title_fourth{
     background-color: black;
     color: white}
 
 
-
-.gallery_3{
+.page_3_section{
     width: 100%;
     height: 100vh;
 }
-
-.gallery_3 .gallery_text_left{
+.page_3_section .gallery_text_left{
     padding-bottom: 10% ;
 }
 
@@ -304,13 +243,11 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-
 footer p  {
     background-color: black;
     margin: auto;
 
 }
-
 footer p a {
     background-color: black;
     color: white;
@@ -320,7 +257,7 @@ footer p a {
 
 
 
-
+/* Botón cambia de color con animación */
 button{
     background: black;
     cursor: pointer;
@@ -333,7 +270,6 @@ button{
     border-radius: 12px;
     z-index: 0;
 }
-
 .nav_elem_right:before  {
     content: "";
     position: absolute;
@@ -348,7 +284,6 @@ button{
     filter: blur(8px);
     animation: glowing 40s linear infinite;
 }
-
 .nav_elem_left:before  {
     content: "";
     position: absolute;
@@ -363,7 +298,6 @@ button{
     filter: blur(8px);
     animation: glowing 40s linear infinite;
 }
-
 @keyframes glowing {
     0% {
         background-position: 0 0;
@@ -381,20 +315,20 @@ button{
     p{
         font-size: 4vw;
     }
-    .main_section{
+    .title_navigation_section{
         display: inline;
     }
-    .main_section_title{
+    .title_navigation_title{
         width: 100%;
     }
-    .main_section_navigator{
+    .title_navigation_nav{
         width: 100%;
     }
 
     .link{
         font-size: 4vw;
     }
-    .gallery_1{
+    .page_1_section{
         display: inline;
     }
     .gallery_text_left{
@@ -404,7 +338,7 @@ button{
     .gallery_title_right{
         width: 100%;
     }
-    .gallery_2{
+    .page_2_section{
         display: inline;
     }
     .gallery_title_left{
@@ -414,10 +348,10 @@ button{
         width: 100%;
         height: auto;
     }
-    .gallery_3{
+    .page_3_section{
         display: inline;
     }
-    .gallery_3 .gallery_text_left{
+    .page_3_section .gallery_text_left{
         padding-bottom: 10%;
         text-align: justify;
     }
@@ -429,19 +363,19 @@ button{
     p{
         font-size: 4vw;
     }
-    .main_section{
+    .title_navigation_section{
         display: inline;
     }
-    .main_section_title{
+    .title_navigation_title{
         width: 100%;
     }
-    .main_section_navigator{
+    .title_navigation_nav{
         width: 100%;
     }
     .link{
         font-size: 4vw;
     }
-    .gallery_1{
+    .page_1_section{
         display: inline;
     }
     .gallery_text_left{
@@ -451,7 +385,7 @@ button{
     .gallery_title_right{
         width: 100%;
     }
-    .gallery_2{
+    .page_2_section{
         display: inline;
     }
     .gallery_title_left{
@@ -461,10 +395,10 @@ button{
         width: 100%;
         height: auto;
     }
-    .gallery_3{
+    .page_3_section{
         display: inline;
     }
-    .gallery_3 .gallery_text_left{
+    .page_3_section .gallery_text_left{
         padding-bottom: 10%;
         text-align: justify;
     }
