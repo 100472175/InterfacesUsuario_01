@@ -51,7 +51,7 @@ p {
     width: 65%;
     height: 100%;
     border-left: #211f1f 2px dashed;
-    border-bottom: #211f1f 2px solid;
+    border-bottom: #211f1f 4px solid;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -97,34 +97,7 @@ p {
 
     padding: 0;
 }
-.nav_elem_left {
-    float: left;
-    width: 40%;
-    height: 50%;
-    padding: 5%;
-    margin: 4%;
-    border: 2px dashed  black;
-    border-radius: 7px;
-    text-align: center;
-    box-shadow: 0 10px 4px rgba(0,0,0,0.12), 0 5px 3px rgba(0,0,0,0.24);
-    /*text-decoration: underline;*/
-    /*<!-- Top Right Bottom Left -->*/
 
-
-}
-.nav_elem_left:hover{
-    color: white;
-    background-color:black;
-    cursor: pointer;
-    border: none;
-    /*padding: 16px 32px;*/
-    font-size: 24px;
-    /*font-size: 24px;*/
-    position: relative;
-    border-radius: 12px;
-    z-index: 0;
-
-}
 
 .page_1_section{
     width: 100%;
@@ -147,13 +120,14 @@ p {
     display: grid;
     place-content: center;
 }
-.gallery_text_left div{
+.gallery_text_left p{
     display: grid;
     place-content: center;
     padding: 10px;
-    border: 1px dashed black;
+    border: 5px  double black;
 
 }
+
 
 .slider{
     aspect-ratio: 10/16;
@@ -195,11 +169,11 @@ p {
     display: grid;
     place-content: center;
 }
-.gallery_text_right p {
+.gallery_text_right p{
     display: grid;
     place-content: center;
-    padding: 10px;
-    border: 10px solid black;
+    padding: 2%;
+    border: 5px double black;
 }
 
 
@@ -284,9 +258,8 @@ footer a {
         display: inline;
     }
     .gallery_text_left{
-        width: 100%;
+        width: 90vh;
         height: auto;
-        font-size: 4em;
     }
     .gallery_title_right{
         width: 100%;
@@ -301,7 +274,7 @@ footer a {
         height: 95vh;
     }
     .gallery_text_right{
-        width: 100%;
+        width: 90vh;
         height: auto;
     }
     .page_3_section{
@@ -329,6 +302,7 @@ footer a {
     }
     .title_navigation_nav{
         width: 100%;
+        border-left: none;
     }
 
     .link{
@@ -338,12 +312,19 @@ footer a {
         display: inline;
     }
     .gallery_text_left{
-        width: 100%;
-        height: auto;
+        width: 95vh;
+        height: 100%;
+
     }
+    .gallery_text_left p{
+        margin: auto;
+
+    }
+
     .gallery_title_right{
         width: 100%;
     }
+
     .page_2_section{
         display: inline;
     }
@@ -351,8 +332,11 @@ footer a {
         width: 100%;
     }
     .gallery_text_right{
-        width: 100%;
+        width: 95vh;
         height: auto;
+    }
+    .gallery_text_right p {
+       margin: auto;
     }
     .page_3_section{
         display: inline;
@@ -366,245 +350,3 @@ footer a {
     }
 }
 
-
-
-/* For tablets */
-/*@media screen and (min-width: 768px) and (max-width: 1024px){
-    p{
-        font-size: 2.5vw;
-    }
-
-    .title_navigation_section{
-        justify-content: space-between;
-        align-items: center;
-        height: 100vh;
-    }
-    .title_navigation_title_article {
-        float: left;
-        width: 35%;
-        height: 100%;
-        background-image: url("../media/cafe_principal.jpg");
-        background-color: black;
-        padding: 5%;
-        display: grid;
-        place-content: center;
-        grid-template-rows: 1fr auto;
-    }
-
-    .title_navigation_title_article h2 {
-        color: white;
-        background-color: transparent;
-    }
-
-    .title_navigation_nav {
-        width: 65%;
-        height: 100%;
-        border-left: #211f1f 2px dashed;
-        border-bottom: #211f1f 2px solid;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        padding: 10%;
-        padding-top: 5%;
-    }
-    .button_box{
-        display: grid;
-        place-items: center;
-        border-radius: 10px;
-        min-height: 150px;
-        max-width: 300px;
-        !*background-color: ghostwhite;*!
-        padding: 20px;
-        position: relative;
-        background-position: center center;
-        background-size: cover;
-        margin: 20px;
-        transition: all 1s ease;
-        border: #e18d74 dashed 2px;
-    }
-    .button_box a{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        text-decoration: none;
-        text-align: center;
-        align-content: center;
-        background-color: transparent;
-        font-size: 2em;
-        !* TODO *!
-    }
-    .video-class {
-        width: 100%;
-        aspect-ratio: 16/9;
-        margin-bottom: 20%;
-        border: none;
-    }
-
-    .line_navigator {
-        width: 100%;
-        height: 33%;
-
-        padding: 0;
-    }
-    .nav_elem_left {
-        float: left;
-        width: 40%;
-        height: 50%;
-        padding: 5%;
-        margin: 4%;
-        border: 2px dashed  black;
-        border-radius: 7px;
-        text-align: center;
-        box-shadow: 0 10px 4px rgba(0,0,0,0.12), 0 5px 3px rgba(0,0,0,0.24);
-        !*text-decoration: underline;*!
-        !*<!-- Top Right Bottom Left -->*!
-
-
-    }
-    .nav_elem_left:hover{
-        color: white;
-        background-color:black;
-        cursor: pointer;
-        border: none;
-        !*padding: 16px 32px;*!
-        color: white;
-        font-size: 24px;
-        !*font-size: 24px;*!
-        position: relative;
-        border-radius: 12px;
-        z-index: 0;
-
-    }
-
-    .page_1_section{
-        width: 100%;
-        height: 100vh;
-    }
-    .gallery_title_right{
-        float: right;
-        width: 40%;
-        background-color: black;
-        padding: 2%;
-        height: 100%;
-        color: white;
-
-    }
-    .gallery_text_left{
-        float: left;
-        width: 60%;
-        padding: 2%;
-        height: 100%;
-        display: grid;
-        place-content: center;
-    }
-    .gallery_text_left div{
-        display: grid;
-        place-content: center;
-        padding: 10px;
-        border: 1px dashed black;
-
-    }
-
-    .slider{
-        aspect-ratio: 10/16;
-        width: 80%;
-        position: relative;
-        display: flex;
-        overflow-y: hidden;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        margin: auto;
-        border-radius: 10px;
-
-    }
-    .slider img{
-        width: 100%;
-        left: 0;
-        position: sticky;
-        object-fit: cover;
-        border-radius: 5px;
-        scroll-snap-align: center;
-    }
-
-    .page_2_section {
-        width: 100%;
-        height: 100vh;
-    }
-    .gallery_title_left{
-        float: left;
-        width: 40%;
-        height: 100%;
-        background-color:  black;
-        padding: 2%;
-    }
-    .gallery_text_right{
-        float: left;
-        width: 60%;
-        padding: 2%;
-        height: 100%;
-        display: grid;
-        place-content: center;
-    }
-    .gallery_text_right p {
-        display: grid;
-        place-content: center;
-        padding: 10px;
-        border: 10px solid black;
-    }
-
-
-    #title_first{
-        background-color: black;
-        color: white;
-        padding-bottom: 5%;
-    }
-    #title_second{
-        background-color: black;
-        color: white;
-        padding-bottom: 5%;
-    }
-    #title_third{
-        background-color: black;
-        color: white;
-        padding-bottom: 5%;
-    }
-    #title_fourth{
-        background-color: black;
-        color: white;
-        padding-bottom: 5%;
-    }
-    #title_fifth{
-        background-color: black;
-        color: white;
-        padding-bottom: 5%;
-    }
-
-
-    .page_2_section{
-        width: 100%;
-        height: 100vh;
-    }
-    .page_2_section .gallery_text_left{
-        padding-bottom: 10% ;
-    }
-
-    footer {
-        clear: both;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        height: 5%;
-        background-color: #1c1c1c;
-        color: #e9e7e0;
-        text-align: center;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    footer a {
-        background-color: black;
-        margin: auto;
-        color: white;
-        text-decoration: transparent;
-    }
-
-}*/
