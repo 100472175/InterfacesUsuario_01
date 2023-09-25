@@ -140,6 +140,7 @@ p {
 .gallery_text_left p{
     padding: 2%;
     border: 5px double black;
+
 }
 .slider{
     aspect-ratio: 10/16;
