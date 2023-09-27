@@ -8,12 +8,12 @@
     text-align: justify;
     background-color: transparent;
 }
-/*Dimensiones de la paguina*/
+/*Dimensiones del cuerpo de la página*/
 body{
     width: 100%;
     height: 100%;
 }
-/*Tamaño y formato del texto*/
+/*Tamaño y formato de los títulos*/
 h2 {
     font-size: 4em;
     text-align: center;
@@ -22,24 +22,27 @@ h3 {
     font-size: 3em;
     text-align: center;
 }
-/*Este titulo se usa para quitar los warning de recomendación de que cuertas clases temgaga que llevarun titulo.
-   En realidad estos titulos no aparecen la paguna web
-*/
+/*Este titulo se usa para quitar los warning de recomendación.
+   En realidad estos titulos no aparecen visibles la página web */
 h6{
     display: none;
 }
 p {
     font-size: 1.5em;
 }
+li {
+    font-size: 1.5em;
+    margin-left: 2%;
+}
 
-/*Contedor d la paguina 1 va ser de tipo flex*/
+/*Contenedor de la página 1, la que tiene la navegación, que va ser de tipo flex*/
 .title_navigation_section{
     align-items: center;
     height: 100vh;
 }
 
-/*Formato de la parte del titulo del video de la primera pagina. Es un display de tipo flex que
-contiene un grid de filas de un elemento */
+/*Formato de la parte del titulo y el video de la primera página. Es un display de tipo flex que
+contiene un grid */
 .title_navigation_title_article {
     float: left;
     width: 35%;
@@ -58,9 +61,8 @@ contiene un grid de filas de un elemento */
     text-align: left;
 }
 
-
-/*Formato de navegacion de los botones. Este articulo es un flex a la derecha.
-Contiene un grid de columnas y filas para mostrar los ditintos botones  */
+/*Formato de los botones de navegacion. Este articulo es un flex a la derecha.
+Contiene una malla para mostrar los ditintos botones  */
 .title_navigation_nav {
     width: 65%;
     height: 100%;
@@ -71,12 +73,13 @@ Contiene un grid de columnas y filas para mostrar los ditintos botones  */
     border-bottom: black 4px solid;
 
     display: grid;
+    /*Cuantas columnas hay en el navegador*/
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 
 }
 
-/*Formatos de los botones*/
+/*Formato de los botones*/
 .button_box{
     min-height: 150px;
     max-width: 300px;
@@ -99,23 +102,25 @@ Contiene un grid de columnas y filas para mostrar los ditintos botones  */
 
     transition: all 1s ease;
 
-    box-shadow: 0px 15px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 15px 20px rgba(0,0,0,0.4);
 }
 
-/*Transición que ocurre cuando el ratón esta encima de los botones*/
+/*Animación que ocurre cuando el ratón esta encima de los botones*/
 .button_box:hover{
     background-color: rgba(96, 93, 93, 0.63);
 }
 
-/*Formato del video*/
+/*Formato del video embedido como iframe*/
 .video-class {
     width: 100%;
     aspect-ratio: 16/9;
     margin-bottom: 20%;
     border: none;
 }
+
 /*Contenedor de las paginas donde el texto esta a la izquierda y la galeria a la derecha.
-Los elementos de dentro tendran un dispay flex*/
+Los elementos de dentro tendran un dispay flex.
+Serán iguales las páginas impares*/
 .page_1_section{
     width: 100%;
     height: 100vh;
@@ -123,7 +128,8 @@ Los elementos de dentro tendran un dispay flex*/
 }
 
 /*Contenedor de las paginas donde el texto esta a la derecha y la galeria a la izquierda.
-Los elementos de dentro tendran un dispay flex*/
+Los elementos de dentro tendran un dispay flex.
+Serán iguales las páginas pares*/
 .page_2_section {
     width: 100%;
     height: 100vh;
@@ -149,7 +155,7 @@ Los elementos de dentro tendran un dispay flex*/
 }
 
 /*Contenedor del texto que esta la derecha.
-El texto de dentro es un grid*/
+El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 .gallery_text_right{
     float: right;
     width: 60%;
@@ -160,7 +166,7 @@ El texto de dentro es un grid*/
 }
 
 /*Contenedor del texto que esta la izquierda.
-El texto de dentro es un grid*/
+El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 .gallery_text_left{
     float: left;
     width: 60%;
@@ -174,12 +180,12 @@ El texto de dentro es un grid*/
     padding: 2%;
     border: 5px double black;
 }
-.gallery_text_left p{
+.gallery_text_left div{
     padding: 2%;
     border: 5px double black;
 }
 
-/*Contenedor de la galeria de imagnes*/
+/*Contenedor de la galeria de imagnes, con el slider que aparece debajo, que hace que las imágenes se peguen*/
 .slider{
     aspect-ratio: 10/16;
     height: 80%;
@@ -192,7 +198,7 @@ El texto de dentro es un grid*/
     border-radius: 10px;
 }
 
-/*Formato de las imagenes*/
+/*Formato de las imagenes dentro de la galería*/
 .slider img{
     width: 100%;
     left: 0;
@@ -202,32 +208,14 @@ El texto de dentro es un grid*/
     scroll-snap-align: center;
 }
 
-/*Formato de los titulos de las pahuinas que tienen galeria*/
-#title_first{
+/*Formato de los titulos de las páginas que tienen galeria
+Cada uno tiene un id propio, pero como los textos son iguales, podemos darles una clase*/
+.titulo_seccion{
     background-color: black;
     color: white;
     padding-bottom: 5%;
 }
-#title_second{
-    background-color: black;
-    color: white;
-    padding-bottom: 5%;
-}
-#title_third{
-    background-color: black;
-    color: white;
-    padding-bottom: 5%;
-}
-#title_fourth{
-    background-color: black;
-    color: white;
-    padding-bottom: 5%;
-}
-#title_fifth{
-    background-color: black;
-    color: white;
-    padding-bottom: 5%;
-}
+
 
 /*Contendor del footer. Esta fijo.*/
 footer {
@@ -257,6 +245,7 @@ footer a {
     width: 15px;
     height: 15px;
 }
+
 .logo{
     background-color: transparent;
 }
@@ -264,9 +253,6 @@ footer a {
 
 /* Respponsive para tablet*/
 @media screen and (min-width: 600px) and (max-width: 966px){
-    p{
-        font-size: 1.5em;
-    }
     .title_navigation_section{
         display: inline;
     }
@@ -315,10 +301,14 @@ footer a {
     }
 }
 
-/* Responsive para telefonos movil*/
+/* Responsive para telefonos móviles*/
 @media screen and (max-width: 600px) {
     p{
         font-size: 1em;
+    }
+    li{
+        font-size: 1em;
+        margin-left: 2%;
     }
     .title_navigation_section{
         display: inline;
@@ -338,11 +328,11 @@ footer a {
     }
     .gallery_title_right{
         width: 100%;
-        height: 95vh;
+        height: auto;
     }
     .gallery_title_left{
         width: 100%;
-        height: 95vh;
+        height: auto;
     }
     .gallery_text_right{
         width: 99%;
@@ -355,5 +345,6 @@ footer a {
     }
     .slider{
         width: 50%;
+        margin-bottom: 5%;
     }
 }
