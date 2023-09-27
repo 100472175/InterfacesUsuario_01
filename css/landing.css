@@ -19,7 +19,7 @@ h2 {
     text-align: center;
 }
 h3 {
-    font-size: 3em;
+    font-size: 2.75em;
     text-align: center;
 }
 /*Este titulo se usa para quitar los warning de recomendación.
@@ -85,7 +85,7 @@ Contiene una malla para mostrar los ditintos botones  */
     max-width: 300px;
     padding: 5%;
     margin: 5%;
-
+    margin-bottom: 0%;
     font-size: 1.5em;
     text-align: center;
     text-decoration: transparent;
@@ -266,6 +266,7 @@ footer a {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
+
     .video-class{
         margin-top: 40%;
     }
@@ -294,7 +295,7 @@ footer a {
         margin-bottom: 5%;
     }
     .slider{
-        height: 80%;
+        width: 80%;
     }
     footer{
         height: 7%;
@@ -304,10 +305,10 @@ footer a {
 /* Responsive para telefonos móviles*/
 @media screen and (max-width: 600px) {
     p{
-        font-size: 1em;
+        font-size: 1.5em;
     }
     li{
-        font-size: 1em;
+        font-size: 1.5em;
         margin-left: 5%;
     }
     .title_navigation_section{
@@ -346,5 +347,8 @@ footer a {
     .slider{
         width: 50%;
         margin-bottom: 5%;
+    }
+    footer{
+        height: 7%;
     }
 }
