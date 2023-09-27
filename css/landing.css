@@ -176,7 +176,7 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     place-content: center;
 }
 
-.gallery_text_right p{
+.gallery_text_right div{
     padding: 2%;
     border: 5px double black;
 }
