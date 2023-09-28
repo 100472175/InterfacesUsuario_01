@@ -67,7 +67,7 @@ Contiene una malla para mostrar los ditintos botones  */
     width: 65%;
     height: 100%;
     padding: 10%;
-    padding-top: 5%;
+    padding-top: 3%;
 
     border-left: black 2px dashed;
     border-bottom: black 4px solid;
@@ -116,6 +116,7 @@ Contiene una malla para mostrar los ditintos botones  */
     aspect-ratio: 16/9;
     margin-bottom: 20%;
     border: none;
+    min-width: 100%;
 }
 
 /*Contenedor de las paginas donde el texto esta a la izquierda y la galeria a la derecha.
@@ -174,6 +175,7 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     height: 100%;
     display: grid;
     place-content: center;
+
 }
 
 .gallery_text_right div{
@@ -187,7 +189,7 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 
 /*Contenedor de la galeria de imagnes, con el slider que aparece debajo, que hace que las imágenes se peguen*/
 .slider{
-    aspect-ratio: 10/16;
+    aspect-ratio: 3/4;
     height: 80%;
     position: relative;
     display: flex;
@@ -196,17 +198,26 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     scroll-snap-type: x mandatory;
     margin: auto;
     border-radius: 10px;
+    min-width: auto;
+    max-width: 90%;
+}
+.slider img{
+    flex: 1 0 auto;
+    width: 100%;
+    left: 0;
+    scroll-snap-align: center;
 }
 
+
 /*Formato de las imagenes dentro de la galería*/
-.slider img{
+/*.slider img{
     width: 100%;
     left: 0;
     position: sticky;
     object-fit: cover;
     border-radius: 5px;
     scroll-snap-align: center;
-}
+}*/
 
 /*Formato de los titulos de las páginas que tienen galeria
 Cada uno tiene un id propio, pero como los textos son iguales, podemos darles una clase*/
@@ -266,7 +277,6 @@ footer a {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
-
     .video-class{
         margin-top: 40%;
     }
@@ -293,9 +303,6 @@ footer a {
         width: 99%;
         height: auto;
         margin-bottom: 5%;
-    }
-    .slider{
-        width: 80%;
     }
     footer{
         height: 7%;
@@ -344,10 +351,7 @@ footer a {
         height: auto;
         margin-bottom: 7%;
     }
-    .slider{
-        width: 50%;
-        margin-bottom: 5%;
-    }
+
     footer{
         height: 7%;
     }
