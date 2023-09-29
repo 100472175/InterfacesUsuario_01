@@ -49,7 +49,7 @@ contiene un grid */
     height: 100%;
     padding: 5%;
 
-    background-image: url("../media/cafe_principal.jpg");
+    background-image: url("../images/cafe_principal.jpg");
 
     display: grid;
     place-content: center;
@@ -85,7 +85,7 @@ Contiene una malla para mostrar los ditintos botones  */
     max-width: 300px;
     padding: 5%;
     margin: 5%;
-    margin-bottom: 0%;
+    margin-bottom: 0;
     font-size: 1.5em;
     text-align: center;
     text-decoration: transparent;
@@ -201,23 +201,14 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     min-width: auto;
     max-width: 90%;
 }
+
+/*Formato de las imagenes dentro de la galería*/
 .slider img{
     flex: 1 0 auto;
     width: 100%;
     left: 0;
     scroll-snap-align: center;
 }
-
-
-/*Formato de las imagenes dentro de la galería*/
-/*.slider img{
-    width: 100%;
-    left: 0;
-    position: sticky;
-    object-fit: cover;
-    border-radius: 5px;
-    scroll-snap-align: center;
-}*/
 
 /*Formato de los titulos de las páginas que tienen galeria
 Cada uno tiene un id propio, pero como los textos son iguales, podemos darles una clase*/
