@@ -36,9 +36,17 @@ li {
 }
 
 /*Contenedor de la página 1, la que tiene la navegación, que va ser de tipo flex*/
+/*
 .title_navigation_section{
     align-items: center;
     height: 100vh;
+}
+*/
+
+.page{
+    width: 100%;
+    height: 100vh;
+    border-bottom: black 4px solid;
 }
 
 /*Formato de la parte del titulo y el video de la primera página. Es un display de tipo flex que
@@ -75,15 +83,15 @@ Contiene una malla para mostrar los ditintos botones  */
     display: grid;
     /*Cuantas columnas hay en el navegador*/
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 
 }
 
 /*Formato de los botones*/
 .button_box{
-    min-height: 150px;
-    max-width: 300px;
-    padding: 5%;
+    min-height: 100px;
+    max-width: 200px;
+    /*padding: 5%;*/
     margin: 5%;
     margin-bottom: 0;
     font-size: 1.5em;
@@ -122,20 +130,19 @@ Contiene una malla para mostrar los ditintos botones  */
 /*Contenedor de las paginas donde el texto esta a la izquierda y la galeria a la derecha.
 Los elementos de dentro tendran un dispay flex.
 Serán iguales las páginas impares*/
-.page_1_section{
+
+
+/*Contenedor de las paginas donde el texto esta a la derecha y la galeria a la izquierda.
+Los elementos de dentro tendran un dispay flex.
+Serán iguales las páginas pares*/
+/*
+.page_1_section {
     width: 100%;
     height: 100vh;
     border-bottom: black 4px solid;
 }
 
-/*Contenedor de las paginas donde el texto esta a la derecha y la galeria a la izquierda.
-Los elementos de dentro tendran un dispay flex.
-Serán iguales las páginas pares*/
-.page_2_section {
-    width: 100%;
-    height: 100vh;
-    border-bottom: black 4px solid;
-}
+ */
 
 /*Formato del contenedor del titulo y la galeria de imagenes que se encuantra a la derecha.*/
 .gallery_title_right{
@@ -186,7 +193,25 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     padding: 2%;
     border: 5px double black;
 }
+.center{
 
+    display: grid;
+    place-content: center;
+}
+.center div{
+    padding: 2%;
+    border: 5px double black;
+
+
+
+
+
+
+}
+.center div a{
+    text-decoration: transparent;
+
+}
 /*Contenedor de la galeria de imagnes, con el slider que aparece debajo, que hace que las imágenes se peguen*/
 .slider{
     aspect-ratio: 3/4;
@@ -235,10 +260,12 @@ footer {
 
 /*Formato del texto y los enlaces que se encuentra en footer*/
 footer a {
+    font-size: 1.3em;
     margin: auto;
     color: white;
     background-color: black;
     text-decoration: transparent;
+
 }
 
 /*Formato del logo de la pagina y del logo de instagram*/
@@ -247,17 +274,30 @@ footer a {
     width: 15px;
     height: 15px;
 }
+.imagen2 {
+    background-color: transparent;
+    color : black;
+}
 
 .logo{
     background-color: transparent;
+
+}
+.logo2{
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
 }
 
 
 /* Respponsive para tablet*/
 @media screen and (min-width: 600px) and (max-width: 966px){
+    /*
     .title_navigation_section{
         display: inline;
     }
+
+     */
     .title_navigation_title_article{
         width: 100%;
     }
@@ -271,10 +311,13 @@ footer a {
     .video-class{
         margin-top: 40%;
     }
-    .page_1_section{
+    /*
+    .page{
         display: inline;
     }
-    .page_2_section{
+
+     */
+    .page{
         display: inline;
     }
     .gallery_title_right{
@@ -309,9 +352,12 @@ footer a {
         font-size: 1.5em;
         margin-left: 5%;
     }
+    /*
     .title_navigation_section{
         display: inline;
     }
+
+     */
     .title_navigation_title_article{
         width: 100%;
     }
@@ -319,12 +365,15 @@ footer a {
         width: 100%;
         border-left: none;
     }
-    .page_1_section{
+    .page{
         display: inline;
     }
-    .page_2_section{
+    /*
+    .page{
         display: inline;
     }
+    */
+
     .gallery_title_right{
         width: 100%;
         height: auto;
