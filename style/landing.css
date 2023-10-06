@@ -228,12 +228,10 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 .center{
     display: grid;
     place-content: center;
-
-
 }
 .center div{
     padding: 2%;
-    border: 5px double black;
+    /*border: 5px double black;*/
 
     text-align: center;
     display: grid;
@@ -241,33 +239,14 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
    
     margin: auto;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr;
-
-
+    /*grid-template-rows: 2fr 1fr;*/
 }
+
 .center div a{
     text-decoration: transparent;
     font-size: 1em;
-
-.ola{
-    height: 1%;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    z-index: 2;
-    bottom: 0;
-}
-.ola svg{
-    height: 100%;
-    width: 100%;
-}
-.ola svg path{
-    stroke: none;
-    fill: #ffffff;
 }
 
-
-}
 /*Contenedor de la galeria de imagnes, con el slider que aparece debajo, que hace que las imágenes se peguen*/
 .slider{
     aspect-ratio: 3/4;
@@ -348,6 +327,27 @@ footer a {
     background-color: transparent;
     width: 15px;
     height: 15px;
+}
+
+.ola{
+    height: 15%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    bottom: 15%;
+}
+.ola svg{
+    height: 100%;
+    width: 100%;
+}
+.ola_negra{
+    stroke: none;
+    fill: #000000;
+}
+.ola_blanca{
+    stroke: none;
+    fill: #ffffff;
 }
 
 
@@ -471,3 +471,4 @@ footer a {
         height: 7%;
     }
 }
+
