@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Perpetua", serif;
-    color: black;
+
     text-align: justify;
     background-color: transparent;
 }
@@ -22,6 +22,11 @@ h3 {
     font-size: 2.75em;
     text-align: center;
 }
+a{
+    font-size: 1.3em;
+    text-align: center;
+
+}
 /*Este titulo se usa para quitar los warning de recomendación.
    En realidad estos titulos no aparecen visibles la página web */
 h6{
@@ -36,17 +41,31 @@ li {
 }
 
 /*Contenedor de la página 1, la que tiene la navegación, que va ser de tipo flex*/
-/*
+
 .title_navigation_section{
     align-items: center;
     height: 100vh;
+    background-image: url("../images/cafe_f.png");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    max-height: 100%;
 }
-*/
+
 
 .page{
     width: 100%;
     height: 100vh;
-    border-bottom: black 4px solid;
+    /*border-bottom: black 4px solid;*/
+}
+
+.page2{
+    width: 100%;
+    height: 100vh;
+    /*border-bottom: black 4px solid;*/
+    background-color: black;
 }
 
 /*Formato de la parte del titulo y el video de la primera página. Es un display de tipo flex que
@@ -57,11 +76,12 @@ contiene un grid */
     height: 100%;
     padding: 5%;
 
-    background-image: url("../images/cafe_principal.jpg");
+    /*background-image: url("../images/cafe_principal.jpg");*/
 
     display: grid;
     place-content: center;
     grid-template-rows: 1fr auto;
+
 }
 
 .title_navigation_title_article h2 {
@@ -77,8 +97,8 @@ Contiene una malla para mostrar los ditintos botones  */
     padding: 10%;
     padding-top: 3%;
 
-    border-left: black 2px dashed;
-    border-bottom: black 4px solid;
+    /*border-left: black 2px dashed;*
+    /*border-bottom: black 4px solid;*/
 
     display: grid;
     /*Cuantas columnas hay en el navegador*/
@@ -90,11 +110,13 @@ Contiene una malla para mostrar los ditintos botones  */
 /*Formato de los botones*/
 .button_box{
     min-height: 100px;
-    max-width: 200px;
+    max-width: 100px;
     /*padding: 5%;*/
     margin: 5%;
-    margin-bottom: 0;
-    font-size: 1.5em;
+    margin-bottom: 0         ;
+    margin-left: 60%;
+    gap: 5%;
+    font-size: 1.4em;
     text-align: center;
     text-decoration: transparent;
 
@@ -102,20 +124,23 @@ Contiene una malla para mostrar los ditintos botones  */
     place-items: center;
     position: relative;
 
-    border-radius: 10px;
-    border: black dashed 2px;
+    border-radius: 100%;
+    border: #efefef solid 4px;
 
     background-position: center center;
     background-size: cover;
+    background-color: transparent;
+    color: #ffffff;
 
     transition: all 1s ease;
 
-    box-shadow: 0 15px 20px rgba(0,0,0,0.4);
+    /*box-shadow: 0 15px 20px rgba(0,0,0,0.4);  */
 }
 
 /*Animación que ocurre cuando el ratón esta encima de los botones*/
 .button_box:hover{
-    background-color: rgba(96, 93, 93, 0.63);
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
 
 /*Formato del video embedido como iframe*/
@@ -150,16 +175,16 @@ Serán iguales las páginas pares*/
     width: 40%;
     height: 100%;
     padding: 2%;
-    background-color: black;
+    /*background-color: black;*/
 }
 
 /*Formato del contenedor del titulo y la galeria de imagenes que se encuantra a la  izquierda.*/
 .gallery_title_left{
     float: left;
     width: 40%;
-    height: 100%;
+    height: 90%;
     padding: 2%;
-    background-color: black;
+    /*background-color: black;*/
 }
 
 /*Contenedor del texto que esta la derecha.
@@ -171,6 +196,8 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     height: 100%;
     display: grid;
     place-content: center;
+    color: white ;
+
 }
 
 /*Contenedor del texto que esta la izquierda.
@@ -187,29 +214,58 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 
 .gallery_text_right div{
     padding: 2%;
-    border: 5px double black;
+    border: 5px double white;
+    color: white ;
+
+}
+.gallery_title_right div p{
+    color: white ;
 }
 .gallery_text_left div{
     padding: 2%;
     border: 5px double black;
 }
 .center{
-
     display: grid;
     place-content: center;
+
+
 }
 .center div{
     padding: 2%;
     border: 5px double black;
 
-
-
-
+    text-align: center;
+    display: grid;
+    place-content: center;
+   
+    margin: auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
 
 
 }
 .center div a{
     text-decoration: transparent;
+    font-size: 1em;
+
+.ola{
+    height: 1%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    bottom: 0;
+}
+.ola svg{
+    height: 100%;
+    width: 100%;
+}
+.ola svg path{
+    stroke: none;
+    fill: #ffffff;
+}
+
 
 }
 /*Contenedor de la galeria de imagnes, con el slider que aparece debajo, que hace que las imágenes se peguen*/
@@ -238,11 +294,15 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 /*Formato de los titulos de las páginas que tienen galeria
 Cada uno tiene un id propio, pero como los textos son iguales, podemos darles una clase*/
 .titulo_seccion{
-    background-color: black;
+    /*background-color: black;*/
+    color: black;
+    padding-bottom: 5%;
+}
+.titulo_seccion2{
+    /*background-color: black;*/
     color: white;
     padding-bottom: 5%;
 }
-
 
 /*Contendor del footer. Esta fijo.*/
 footer {
@@ -256,11 +316,12 @@ footer {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    z-index: 3;
 }
 
 /*Formato del texto y los enlaces que se encuentra en footer*/
 footer a {
-    font-size: 1.3em;
+
     margin: auto;
     color: white;
     background-color: black;
@@ -292,14 +353,15 @@ footer a {
 
 /* Respponsive para tablet*/
 @media screen and (min-width: 600px) and (max-width: 966px){
-    /*
+
     .title_navigation_section{
         display: inline;
     }
 
-     */
+
     .title_navigation_title_article{
         width: 100%;
+        background-image: url("../images/cafe_f.png");
     }
     .title_navigation_nav {
         width: 100%;
@@ -311,12 +373,24 @@ footer a {
     .video-class{
         margin-top: 40%;
     }
-    /*
-    .page{
+    .button_box{
+        border: black solid 4px;
+        color: black;
+        min-height: 150px;
+        max-width: 150px;
+        font-size: 1em;
+
+        padding: 5%;
+        margin: 5%;
+
+
+    }
+
+    .page2{
         display: inline;
     }
 
-     */
+
     .page{
         display: inline;
     }
@@ -336,7 +410,7 @@ footer a {
     .gallery_text_left{
         width: 99%;
         height: auto;
-        margin-bottom: 5%;
+
     }
     footer{
         height: 7%;
@@ -352,14 +426,15 @@ footer a {
         font-size: 1.5em;
         margin-left: 5%;
     }
-    /*
+
     .title_navigation_section{
         display: inline;
     }
 
-     */
+
     .title_navigation_title_article{
         width: 100%;
+        background-image: url("../images/cafe_f.png");
     }
     .title_navigation_nav{
         width: 100%;
@@ -368,11 +443,11 @@ footer a {
     .page{
         display: inline;
     }
-    /*
-    .page{
+
+    .page2{
         display: inline;
     }
-    */
+
 
     .gallery_title_right{
         width: 100%;
@@ -389,7 +464,7 @@ footer a {
     .gallery_text_left{
         width: 99%;
         height: auto;
-        margin-bottom: 7%;
+
     }
 
     footer{
