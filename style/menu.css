@@ -1,0 +1,132 @@
+body{
+    background-color: #E3E7E8;
+    font-family: system-ui;
+}
+.contenedor{
+    width: 1000px; /*Esto hay que cambiarlo a porcentaje*/
+    margin: auto;
+    transition: 0.5s;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 50px ; /*Cmabiar los pixeles*/
+    margin-top: 50px;
+}
+header .bolsa{
+    position: relative;
+    text-align: right;
+}
+header .bolsa img{
+    width: 40px;
+}
+header .bolsa span{
+    background: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    padding: 3px 10px;
+}
+.lista{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px; /*cambiar*/
+    row-gap: 20px; /*cambiar*/
+    margin-top: 50px; /*cambiar*/
+}
+.lista .elemento{
+    text-align: center ;
+    background-color: #DCE0E1 ;
+    padding: 20px;
+    box-shadow: 0 50px 50px #757676;
+    letter-spacing: 1px;
+}
+.lista .elemento img {
+    width: 90%;
+    height: 430px;
+    object-fit: cover;
+}
+.lista .elemento .titulo{
+    font-weight: 600;
+}
+.lista .elemento .precio{
+    margin: 10px;
+}
+.lista .elemento button{
+    background-color: #1c1f25;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+}
+.elemeto_carrito{
+    position: fixed;
+    top: 0;
+    left: 100%; /* calc(100% - 500px) --Cambiar tiene punta que es algo como 40%*/
+    width: 500px; /*Cambiar*/
+    background-color: #453E3B;
+    height: 100vh;
+    transition: 0.5s;
+}
+.activar .elemeto_carrito{
+    left: calc(100% - 500px);
+}
+.activar .contenedor{
+    transform: translateX(-200px);
+}
+.elemeto_carrito h1{
+    color: #E8BC0E;
+    font-weight: 100;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.elemeto_carrito .resumen{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.elemeto_carrito .resumen div{
+    background-color: #E8BC0E;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.elemeto_carrito .resumen div:nth-child(2) { /*Esto elige el segundo hijo div, es como el enésimo hijo, el 2*/
+    background-color: #1c1f25;
+    color: #fff;
+}
+.lista_comida li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+    margin-bottom: 20px;
+}
+.lista_comida li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lista_comida li img{
+    width: 90%;
+}
+.lista_comida li button{
+    width: auto;
+    background-color: #fff5;
+    border: none;
+}
+.lista_comida .contador{
+    margin: 0 10px;
+}
