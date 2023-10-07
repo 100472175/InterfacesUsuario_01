@@ -66,6 +66,7 @@ li {
     height: 100vh;
     /*border-bottom: black 4px solid;*/
     background-color: black;
+    color: white;
 }
 
 /*Formato de la parte del titulo y el video de la primera página. Es un display de tipo flex que
@@ -225,23 +226,31 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     padding: 2%;
     border: 5px double black;
 }
+
+#reg h2{
+    color: white;
+}
+
 .center{
     display: grid;
     place-content: center;
+
+
+}
+.center form{
+    margin: 5%;
 }
 .center div{
     padding: 2%;
     /*border: 5px double black;*/
-
+    margin: 5%;
     text-align: center;
     display: grid;
     place-content: center;
-   
-    margin: auto;
-    grid-template-rows: 1fr 1fr 1fr;
-    /*grid-template-rows: 2fr 1fr;*/
-}
 
+    grid-template-columns: 1fr 1fr;
+
+}
 .center div a{
     text-decoration: transparent;
     font-size: 1em;
@@ -348,6 +357,13 @@ footer a {
 .ola_blanca{
     stroke: none;
     fill: #ffffff;
+}
+.i img{
+    width: 15%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    mix-blend-mode: color-burn;
+
 }
 
 
@@ -471,4 +487,3 @@ footer a {
         height: 7%;
     }
 }
-

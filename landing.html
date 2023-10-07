@@ -259,6 +259,39 @@
 
         <section class="page2">
             <h2 id="reg"> Registro </h2>
+            <form class="center">
+                <label for="name">Nombre:</label><br>
+                <input type="text" id="name" name="name" value="" style="color: white"><br>
+
+                <label for="surname">Apellido:</label><br>
+                <input type="text" id="surname" name="surname" value="" style="color: white"><br>
+
+                <label for="dni">DNI:</label><br>
+                <input type="text" id="dni" name="dni" value="" style="color: white"><br>
+
+                <label for="tlf">Teléfono móvil:</label><br>
+                <input type="text" id="tlf" name="tlf" value="" style="color: white"><br><br>
+
+                <label for="mail">Email:</label><br>
+                <input type="text" id="mail" name="mail" value="" style="color: white"><br><br>
+
+
+
+                <input type="reset" value="Reset"
+                       style="background-color: cadetblue;
+                        color: white" />
+                <input type="button" value="Registrarse"
+                       style="background-color: green;
+                        color: white"
+                        onclick="createAccount()"
+                />
+                <input type="button" value="Cancel"
+                       onclick="window.location.href='landing.html'"
+                       style="background-color: red;
+                         color: white;" />
+
+            </form>
+
         </section>
 
         <section class="page">
@@ -266,9 +299,15 @@
             <article class="center">
                 <h2 id = "contacto"> Conocenos: </h2>
                 <div>
-                    <h4>Nuestros contactos:</h4>
-                    <a href="https://mail.google.com/">Correo: cafeflorenciauc3m@gmail.com</a>
-                    <a href="https://www.instagram.com/cafe__florencia_/">   Instagram</a>
+                    <div>
+                        <h4>Nuestros contactos:</h4>
+                        <a href="https://mail.google.com/">Correo: cafeflorenciauc3m@gmail.com</a>
+                        <a href="https://www.instagram.com/cafe__florencia_/">   Instagram</a>
+                    </div>
+                    <div>
+                        <p>Formulario </p>
+                    </div>
+
                     <!-- <a href="https://mail.google.com/">Correo: cafeflorenciauc3m@gmail.com</a>
                     <a href="https://www.instagram.com/cafe__florencia_/"> <img class="imagen2" src="images/instagram.png"
                         alt="redes">  Instagram</a>-->
@@ -278,6 +317,11 @@
             </article>
 
 
+        </section>
+        <section class="page">
+            <div class="i">
+                <img src="images/menu/cafe1.jpg">
+            </div>
         </section>
 
         <footer>
@@ -290,4 +334,54 @@
         </footer>
 
     </body>
+    <script>
+
+        function getCookie(dni) {
+            let name = "dni=" + dni;
+            let identificador = "dni=";
+            let clave = dni;
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(identificador.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function setCookie(dni,exdays) {
+            let name = document.getElementById("name").value;
+            let surname = document.getElementById("surname").value;
+            let tlf = document.getElementById("tlf").value;
+            let mail = document.getElementById("mail").value;
+
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = "dni=" + dni + "; name=" + name + "; surname=" + surname + "; tfl=" + tlf + "; mail=" + mail + "; path=/";
+        }
+
+
+        function createAccount() {
+            // Ger the information from the precious form from inputs:
+            let dni_ = document.getElementById("dni").value;
+
+            // Check if the cookie exists:
+            if (getCookie(dni_) !== "") {
+                alert("Ya existe una cuenta con este DNI");
+                console.log("Ya existe una cuenta con este DNI")
+            }
+            else {
+                // Create a cookie with the information:
+                setCookie(dni_, 30);
+                console.log("Cuenta Creada");
+            }
+
+        }
+    </script>
 </html>
