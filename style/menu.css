@@ -71,10 +71,10 @@ header .bolsa span{
     height: 100vh;
     transition: 0.5s;
 }
-.activar .elemeto_carrito{
+.active .elemeto_carrito{
     left: calc(100% - 500px);
 }
-.activar .contenedor{
+.active .contenedor{
     transform: translateX(-200px);
 }
 .elemeto_carrito h1{

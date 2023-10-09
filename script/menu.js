@@ -2,34 +2,34 @@ let abrirCompra = document.querySelector(".bolsa");
 let cerrarCompra = document.querySelector(".finalizaCompra");
 let lista = document.querySelector(".lista");
 let lista_comida = document.querySelector(".lista_comida");
-let body = document.querySelector(".body");
+let body = document.querySelector("body");
 let totalCarrito = document.querySelector(".total");
 let cantidad = document.querySelector(".cantidad")
 
 abrirCompra.addEventListener('click', ()=>{
-    body.classList.add('activar');
+    body.classList.add('active');
 })
 cerrarCompra.addEventListener('click', ()=>{
-    body.classList.remove('activar');
+    body.classList.remove('active');
 })
 
 let productos = [
     {
         id: 1,
-        nombre: 'Nombre Prodcuto 1',
+        nombre: 'Cafe solo',
         imagen: 'cafe1.jpg',
         precio: 50
     },
     {
         id: 2,
-        nombre: 'Nombre Prodcuto 2',
-        imagen: 'cafe1.jpg',
+        nombre: 'Cade con leche',
+        imagen: 'cafe2.png',
         precio: 50
     },
     {
         id: 3,
-        nombre: 'Nombre Prodcuto 3',
-        imagen: 'cafe1.jpg',
+        nombre: 'Capuchino',
+        imagen: 'cafe3.jpg',
         precio: 40
     },
     {

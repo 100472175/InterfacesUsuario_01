@@ -29,7 +29,7 @@
                 <a class ="button_box" href="#title_fourth">Delicatessen</a>
                 <a class ="button_box" href="#title_fifth">Repostería</a>
                 <a class ="button_box" href="#reg">Registro</a>
-                <a class ="button_box" href="#title_sixth">Menu</a>
+                <a class ="button_box" href="./Menu.html">Menu</link>
                 <a class ="button_box" href="#contacto">Contacto</a>
             </nav>
 
@@ -275,8 +275,6 @@
                 <label for="mail">Email:</label><br>
                 <input type="text" id="mail" name="mail" value="" style="color: white"><br><br>
 
-
-
                 <input type="reset" value="Reset"
                        style="background-color: cadetblue;
                         color: white" />
@@ -292,37 +290,38 @@
 
             </form>
 
+
         </section>
 
         <section class="page">
-
             <article class="center">
                 <h2 id = "contacto"> Conocenos: </h2>
                 <div>
-                    <div>
+                    <div >
                         <h4>Nuestros contactos:</h4>
                         <a href="https://mail.google.com/">Correo: cafeflorenciauc3m@gmail.com</a>
                         <a href="https://www.instagram.com/cafe__florencia_/">   Instagram</a>
                     </div>
-                    <div>
-                        <p>Formulario </p>
-                    </div>
+                    <form>
+                        <label for="name">Nombre:</label><br>
+                        <input type="text" id="name_c" name="name" value="" style="color: white"><br>
+                        <label for="surname">Apellido:</label><br>
+                        <input type="text" id="surname_c" name="surname" value="" style="color: white"><br>
+                        <label for="mail">Email:</label><br>
+                        <input type="text" id="mail_c" name="mail" value="" style="color: white"><br><br>
+                        <label for="tlf">Teléfono móvil:</label><br>
+                        <input type="text" id="tlf_C" name="tlf" value="" style="color: white"><br><br>
+                        <label for="men">Mensaje:</label><br>
+                        <input type="text" id="men" name="tlf" value="" style="color: white"><br><br>
+                    </form>
 
                     <!-- <a href="https://mail.google.com/">Correo: cafeflorenciauc3m@gmail.com</a>
                     <a href="https://www.instagram.com/cafe__florencia_/"> <img class="imagen2" src="images/instagram.png"
                         alt="redes">  Instagram</a>-->
                 </div>
-
-
             </article>
-
-
         </section>
-        <section class="page">
-            <div class="i">
-                <img src="images/menu/cafe1.jpg">
-            </div>
-        </section>
+
 
         <footer>
             <!-- Footer con enlaces funcionales -->
@@ -330,58 +329,8 @@
             <a><img class="logo2" src="images/icono_w.png" alt="Logo">  Cafe Florencia</a>
             <a href="#contacto">Contacta con nosotros</a>
 
-
         </footer>
 
     </body>
-    <script>
-
-        function getCookie(dni) {
-            let name = "dni=" + dni;
-            let identificador = "dni=";
-            let clave = dni;
-            let decodedCookie = decodeURIComponent(document.cookie);
-            let ca = decodedCookie.split(';');
-            for(let i = 0; i < ca.length; i++) {
-                let c = ca[i];
-                while (c.charAt(0) == ' ') {
-                    c = c.substring(1);
-                }
-                if (c.indexOf(name) == 0) {
-                    return c.substring(identificador.length, c.length);
-                }
-            }
-            return "";
-        }
-
-        function setCookie(dni,exdays) {
-            let name = document.getElementById("name").value;
-            let surname = document.getElementById("surname").value;
-            let tlf = document.getElementById("tlf").value;
-            let mail = document.getElementById("mail").value;
-
-            const d = new Date();
-            d.setTime(d.getTime() + (exdays*24*60*60*1000));
-            let expires = "expires=" + d.toUTCString();
-            document.cookie = "dni=" + dni + "; name=" + name + "; surname=" + surname + "; tfl=" + tlf + "; mail=" + mail + "; path=/";
-        }
-
-
-        function createAccount() {
-            // Ger the information from the precious form from inputs:
-            let dni_ = document.getElementById("dni").value;
-
-            // Check if the cookie exists:
-            if (getCookie(dni_) !== "") {
-                alert("Ya existe una cuenta con este DNI");
-                console.log("Ya existe una cuenta con este DNI")
-            }
-            else {
-                // Create a cookie with the information:
-                setCookie(dni_, 30);
-                console.log("Cuenta Creada");
-            }
-
-        }
-    </script>
+    <script src="script/landing.js"></script>
 </html>

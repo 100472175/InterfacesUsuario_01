@@ -112,12 +112,10 @@ Contiene una malla para mostrar los ditintos botones  */
 .button_box{
     min-height: 100px;
     max-width: 100px;
-    /*padding: 5%;*/
     margin: 5%;
-    margin-bottom: 0         ;
-    margin-left: 60%;
-    gap: 5%;
-    font-size: 1.4em;
+    margin-left: 70%;
+
+    font-size: 1.3em;
     text-align: center;
     text-decoration: transparent;
 
@@ -126,9 +124,9 @@ Contiene una malla para mostrar los ditintos botones  */
     position: relative;
 
     border-radius: 100%;
-    border: #efefef solid 4px;
+    border: #ffffff solid 4px;
 
-    background-position: center center;
+    background-position: right center;
     background-size: cover;
     background-color: transparent;
     color: #ffffff;
@@ -237,9 +235,6 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 
 
 }
-.center form{
-    margin: 5%;
-}
 .center div{
     padding: 2%;
     /*border: 5px double black;*/
@@ -248,9 +243,15 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     display: grid;
     place-content: center;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
 
 }
+
+
+.center form{
+    margin: 5%;
+}
+
 .center div a{
     text-decoration: transparent;
     font-size: 1em;
@@ -339,12 +340,12 @@ footer a {
 }
 
 .ola{
-    height: 15%;
+    height: 10%;
     width: 100%;
     overflow: hidden;
     position: relative;
     z-index: 2;
-    bottom: 15%;
+    bottom: 10%;
 }
 .ola svg{
     height: 100%;
