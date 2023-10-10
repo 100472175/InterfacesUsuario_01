@@ -16,14 +16,14 @@ cerrarCompra.addEventListener('click', ()=>{
 let productos = [
     {
         id: 1,
-        nombre: 'Cafe solo',
+        nombre: 'Cafe con leche',
         imagen: 'cafe1.jpg',
         precio: 50
     },
     {
         id: 2,
-        nombre: 'Cade con leche',
-        imagen: 'cafe2.png',
+        nombre: 'Latte machiato',
+        imagen: 'cafe2.jpg',
         precio: 50
     },
     {
@@ -34,20 +34,20 @@ let productos = [
     },
     {
         id: 11,
-        nombre: 'Nombre Prodcuto 11',
-        imagen: 'cafe1.jpg',
+        nombre: 'Cafe con hielo',
+        imagen: 'cafe4.jpg',
         precio: 50
     },
     {
         id: 12,
-        nombre: 'Nombre Prodcuto 12',
-        imagen: 'cafe1.jpg',
+        nombre: 'Cafe solo',
+        imagen: 'cafe5.jpg',
         precio: 50
     },
     {
         id: 13,
-        nombre: 'Nombre Prodcuto 13',
-        imagen: 'cafe1.jpg',
+        nombre: 'Chocolate',
+        imagen: 'cafe6.jpg',
         precio: 40
     },
 ];
@@ -106,3 +106,5 @@ function cambiaCantidad(key, cantidad){
     }
     recargaElemento();
 }
+
+

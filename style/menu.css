@@ -93,7 +93,7 @@ header .bolsa span{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.elemeto_carrito .resumen div{
+.elemeto_carrito .resumen button{
     background-color: #E8BC0E;
     width: 100%;
     height: 70px;

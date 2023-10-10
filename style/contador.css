@@ -1,0 +1,6 @@
+#timer div{
+    /*No funciona*/
+    font-size: 2em;
+    display: grid;
+    place-content: center;
+}
