@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html lang="es">
+<html lang="es" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
     <head>
         <title>Cafe Florencia</title>
         <link rel="icon" href="images/icono_b.png">
@@ -259,36 +259,30 @@
 
         <section class="page2">
             <h2 id="reg"> Registro </h2>
-            <form class="center">
-                <label for="name">Nombre:</label><br>
-                <input type="text" id="name" name="name" value="" style="color: white"><br>
+                <div class="cen">
+                    <form>
+                        <label for="name">Nombre:</label><br>
+                        <input type="text" id="name" name="name" value="" style="color: white"><br>
 
-                <label for="surname">Apellido:</label><br>
-                <input type="text" id="surname" name="surname" value="" style="color: white"><br>
+                        <label for="surname">Apellido:</label><br>
+                        <input type="text" id="surname" name="surname" value="" style="color: white"><br>
 
-                <label for="dni">DNI:</label><br>
-                <input type="text" id="dni" name="dni" value="" style="color: white"><br>
+                        <label for="dni">DNI:</label><br>
+                        <input type="text" id="dni" name="dni" value="" style="color: white"><br>
 
-                <label for="tlf">Teléfono móvil:</label><br>
-                <input type="text" id="tlf" name="tlf" value="" style="color: white"><br><br>
+                        <label for="tlf">Teléfono móvil:</label><br>
+                        <input type="text" id="tlf" name="tlf" value="" style="color: white"><br>
 
-                <label for="mail">Email:</label><br>
-                <input type="text" id="mail" name="mail" value="" style="color: white"><br><br>
+                        <label for="mail">Email:</label><br>
+                        <input type="text" id="mail" name="mail" value="" style="color: white"><br>
 
-                <input type="reset" value="Reset"
-                       style="background-color: cadetblue;
-                        color: white" />
-                <input type="button" value="Registrarse"
-                       style="background-color: green;
-                        color: white"
-                        onclick="createAccount()"
-                />
-                <input type="button" value="Cancel"
-                       onclick="window.location.href='landing.html'"
-                       style="background-color: red;
-                         color: white;" />
-
-            </form>
+                        <input type="reset" value="Reset" class="reset"
+                               style="background-color: cadetblue;
+                                color: white" />
+                        <button  onclick="createAccount()" > Registrarse </button>
+                        <button onclick="window.location.href='landing.html'"> Cancel </button>
+                    </form>
+            </div>
 
 
         </section>
@@ -296,8 +290,8 @@
         <section class="page">
             <article class="center">
                 <h2 id = "contacto"> Conocenos: </h2>
-                <div>
-                    <div >
+                <div class ="e">
+                    <div>
                         <h4>Nuestros contactos:</h4>
                         <a href="https://mail.google.com/">Correo: cafeflorenciauc3m@gmail.com</a>
                         <a href="https://www.instagram.com/cafe__florencia_/">   Instagram</a>
@@ -308,11 +302,11 @@
                         <label for="surname">Apellido:</label><br>
                         <input type="text" id="surname_c" name="surname" value="" style="color: white"><br>
                         <label for="mail">Email:</label><br>
-                        <input type="text" id="mail_c" name="mail" value="" style="color: white"><br><br>
+                        <input type="text" id="mail_c" name="mail" value="" style="color: white"><br>
                         <label for="tlf">Teléfono móvil:</label><br>
-                        <input type="text" id="tlf_C" name="tlf" value="" style="color: white"><br><br>
+                        <input type="text" id="tlf_C" name="tlf" value="" style="color: white"><br>
                         <label for="men">Mensaje:</label><br>
-                        <input type="text" id="men" name="tlf" value="" style="color: white"><br><br>
+                        <input type="text" id="men" name="tlf" value="" style="color: white"><br>
                     </form>
 
                     <!-- <a href="https://mail.google.com/">Correo: cafeflorenciauc3m@gmail.com</a>
