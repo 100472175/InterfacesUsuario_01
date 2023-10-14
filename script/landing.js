@@ -1,3 +1,13 @@
+let nav = document.querySelector(".boton_menu");
+
+nav.addEventListener('click', ()=>{
+    body.classList.add('active');
+})
+nav.addEventListener('click', cerrar())
+
+function cerrar(){
+    nav.style.display= 'none';
+}
 function getCookie(dni) {
     let name = "dni=" + dni;
     let identificador = "dni=";
@@ -18,9 +28,13 @@ function getCookie(dni) {
 
 function setCookie(dni,exdays) {
     let name = document.getElementById("name").value;
+    comp_nombre_ape(name);
     let surname = document.getElementById("surname").value;
+    comp_nombre_ape(surname);
     let tlf = document.getElementById("tlf").value;
+    comp_tlf(tlf);
     let mail = document.getElementById("mail").value;
+    comp_correo(mail);
 
     const d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -32,16 +46,46 @@ function setCookie(dni,exdays) {
 function createAccount() {
     // Ger the information from the precious form from inputs:
     let dni_ = document.getElementById("dni").value;
+    comp_dni(dni_);
+
 
     // Check if the cookie exists:
     if (getCookie(dni_) !== "") {
         alert("Ya existe una cuenta con este DNI");
-        console.log("Ya existe una cuenta con este DNI")
+
     }
     else {
         // Create a cookie with the information:
         setCookie(dni_, 30);
-        console.log("Cuenta Creada");
+        alert("Cuenta Creada");
     }
 
+}
+
+function comp_dni(dni_){
+    let pattern = /^[0-9]{8}[A-Z]$/;
+    if (false == pattern.test(dni_)){
+        alert("DNI no valido")
+    }
+
+}
+
+function comp_tlf(tlf){
+    let pattern = /^[0-9]{9}/;
+    if(false == pattern.test(tlf)){
+        alert("Telefono no valido");
+    }
+}
+function comp_correo(correo){
+    let pattern = /^[a-z0-9]+@[a-z]+\.[a-z]{3}$/;
+    if(false == pattern.test(corre)){
+        alert("Correo no valido")
+    }
+}
+
+function comp_nombre_ape(nom){
+    let pattern = /^[A-Z,a-z]$/;
+    if(false == pattern.test(corre)){
+        alert("Nombre u Apellido no valido")
+    }
 }

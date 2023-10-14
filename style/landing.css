@@ -103,8 +103,10 @@ Contiene una malla para mostrar los ditintos botones  */
 }
 /*Formato de los botones*/
 .button_box{
-    min-height: 100px;
-    max-width: 100px;
+    min-height: 40%;
+    max-width: 40%;
+    width: 30%;
+    height: 80%;
     margin: 5%;
     margin-left: 70%;
 
@@ -140,6 +142,31 @@ Contiene una malla para mostrar los ditintos botones  */
     margin-bottom: 20%;
     border: none;
     min-width: 100%;
+}
+.margen_d{
+    background-color: cornflowerblue;
+    position: fixed;
+    top: 0;
+    left: 100%; /* calc(100% - 500px) --Cambiar tiene punta que es algo como 40%*/
+    width: 500px; /*Cambiar*/
+
+    height: 100vh;
+    transition: 0.5s;
+    z-index: 3;
+}
+.boton_menu{
+    right: 5%;
+    top: 5%;
+
+}
+.img3 {
+    height: 30px;
+    width: 30px;
+
+}
+.active .boton_menu{
+    left: calc(100% - 500px);
+
 }
 /*Contenedor de las paginas donde el texto esta a la izquierda y la galeria a la derecha.
 Los elementos de dentro tendran un dispay flex.
@@ -239,6 +266,7 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 }
 .cen label{
     width: auto;
+    color: black;
 }
 .cen button{
     font-size: 0.75em;
@@ -248,6 +276,8 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     color: white;
     padding: 5%;
     width: auto;
+    margin: 2%;
+
 }
 .cen input{
     border: none;
@@ -255,6 +285,7 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     background-color: white;
     color: black;
     width: auto;
+    text-align: center;
 }
 .reset{
     font-size: 0.75em;
@@ -308,6 +339,7 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     border: black;
     color: black;
     width: auto;
+    text-align: center;
 
 }
 
