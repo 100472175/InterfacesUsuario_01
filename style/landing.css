@@ -46,7 +46,7 @@ li {
     align-items: center;
     height: 100vh;
     background-image: url("../images/cafe_f.png");
-    background-color: black;
+
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -143,31 +143,9 @@ Contiene una malla para mostrar los ditintos botones  */
     border: none;
     min-width: 100%;
 }
-.margen_d{
-    background-color: cornflowerblue;
-    position: fixed;
-    top: 0;
-    left: 100%; /* calc(100% - 500px) --Cambiar tiene punta que es algo como 40%*/
-    width: 500px; /*Cambiar*/
 
-    height: 100vh;
-    transition: 0.5s;
-    z-index: 3;
-}
-.boton_menu{
-    right: 5%;
-    top: 5%;
 
-}
-.img3 {
-    height: 30px;
-    width: 30px;
 
-}
-.active .boton_menu{
-    left: calc(100% - 500px);
-
-}
 /*Contenedor de las paginas donde el texto esta a la izquierda y la galeria a la derecha.
 Los elementos de dentro tendran un dispay flex.
 Serán iguales las páginas impares*/
@@ -263,6 +241,7 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     padding: 10%;
     width: auto;
     margin:auto;
+
 }
 .cen label{
     width: auto;
@@ -270,14 +249,14 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 }
 .cen button{
     font-size: 0.75em;
-    border: none;
+    border: black  solid 2px;
     border-radius: 20px;
-    background-color: #4d5a72;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 5%;
     width: auto;
     margin: 2%;
-
+    align-content: center;
 }
 .cen input{
     border: none;
@@ -291,10 +270,10 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     font-size: 0.75em;
     border: none;
     border-radius: 20px;
-    background-color: #4d5a72;
     color: white;
     padding: 5%;
     width: auto;
+    margin: 2%;
 
 }
 .center{
@@ -425,7 +404,6 @@ footer a {
     width: 100%;
     overflow: hidden;
     position: relative;
-    z-index: 2;
     bottom: 10%;
 }
 .ola svg{
@@ -447,6 +425,31 @@ footer a {
     mix-blend-mode: color-burn;
 
 }
+.barra{
+    display: none;
+}
+
+.abrir{
+    display: none;
+}
+.nav_menu{
+
+    display: none;
+
+}
+
+.nav_menu .visible{
+    display: none;
+
+}
+.lis{
+    display: none;
+}
+.cerrar{
+    display: none;
+}
+
+
 
 
 /* Respponsive para tablet*/
@@ -517,8 +520,56 @@ footer a {
 
 /* Responsive para telefonos móviles*/
 @media screen and (max-width: 600px) {
-    p{
+    .barra {
+        height: 30px;
+        width: 30px;
+        right: 5%;
+        top: 5%;
+        position: fixed;
+
+    }
+    .abrir{
+        position: fixed;
+        background-color: red;
+        color: black;
+        top:0;
+        right: 0;
+    }
+    .nav_menu{
+        visibility: hidden;
+        position: fixed;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr auto;
+        top: 0;
+        right: 0;
+        padding: 2rem;
+        background-color: #ecb297;
+        width: 40%;
+        color: black;
+        height: 100%;
+    }
+
+    .nav_menu .visible{
+
+        visibility: visible;
+
+    }
+    .lis{
+        display: flex;
+    }
+    .cerrar{
+        background-color: aquamarine;
+        height: 10%;
+        width: 10%;
+        top:0;
+        right: 0;
+    ;
+
+    }
+
+    p {
         font-size: 1.5em;
+
     }
     li{
         font-size: 1.5em;
@@ -535,6 +586,7 @@ footer a {
         background-image: url("../images/cafe_f.png");
     }
     .title_navigation_nav{
+        display: none;
         width: 100%;
         border-left: none;
     }

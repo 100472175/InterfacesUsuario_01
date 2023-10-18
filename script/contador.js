@@ -1,11 +1,11 @@
-var timeLimitInMinutes = 10;
-var timeLimitInSeconds = timeLimitInMinutes * 60;
-var timerElement = document.getElementById('timer');
+let timeLimitInMinutes = 10;
+let timeLimitInSeconds = timeLimitInMinutes * 60;
+let timerElement = document.getElementById('timer');
 
 function startTimer() {
     timeLimitInSeconds--;
-    var minutes = Math.floor(timeLimitInSeconds / 60);
-    var seconds = timeLimitInSeconds % 60;
+    let minutes = Math.floor(timeLimitInSeconds / 60);
+    let seconds = timeLimitInSeconds % 60;
 
     if (timeLimitInSeconds < 0) {
         timerElement.textContent = '00:00';
@@ -23,5 +23,5 @@ function startTimer() {
     timerElement.textContent = minutes + ':' + seconds;
 }
 
-var timerInterval = setInterval(startTimer, 1000);
+let timerInterval = setInterval(startTimer, 1000);
 

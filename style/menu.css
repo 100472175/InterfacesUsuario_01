@@ -44,13 +44,15 @@ header .bolsa span{
     padding: 20px;
     box-shadow: 0 50px 50px #757676;
     letter-spacing: 1px;
+    border-radius: 20px;
 }
 .lista .elemento img {
     width: 90%;
     height: 430px;
     object-fit: cover;
+    border-radius: 20px;
 }
-.lista .elemento .titulo{
+.list  a .elemento .titulo{
     font-weight: 600;
 }
 .lista .elemento .precio{
@@ -59,15 +61,16 @@ header .bolsa span{
 .lista .elemento button{
     background-color: #1c1f25;
     color: #fff;
-    width: 100%;
+    width: 60%;
     padding: 10px;
+    border-radius: 20px;
 }
 .elemeto_carrito{
     position: fixed;
     top: 0;
     left: 100%; /* calc(100% - 500px) --Cambiar tiene punta que es algo como 40%*/
     width: 500px; /*Cambiar*/
-    background-color: #453E3B;
+    background-color: rgba(114, 103, 101, 0.65);
     height: 100vh;
     transition: 0.5s;
 }
@@ -77,8 +80,9 @@ header .bolsa span{
 .active .contenedor{
     transform: translateX(-200px);
 }
+
 .elemeto_carrito h1{
-    color: #E8BC0E;
+    color: #4d5a72;
     font-weight: 100;
     margin: 0;
     padding: 0 20px;
@@ -94,7 +98,7 @@ header .bolsa span{
     grid-template-columns: repeat(2, 1fr);
 }
 .elemeto_carrito .resumen button{
-    background-color: #E8BC0E;
+    background-color: #4d5a72;
     width: 100%;
     height: 70px;
     display: flex;
@@ -104,7 +108,7 @@ header .bolsa span{
     cursor: pointer;
 }
 .elemeto_carrito .resumen div:nth-child(2) { /*Esto elige el segundo hijo div, es como el enésimo hijo, el 2*/
-    background-color: #1c1f25;
+    background-color: #2b3036;
     color: #fff;
 }
 .lista_comida li{
@@ -124,9 +128,15 @@ header .bolsa span{
 }
 .lista_comida li button{
     width: auto;
-    background-color: #fff5;
+    background-color: rgba(255, 255, 255, 0.82);
     border: none;
 }
 .lista_comida .contador{
     margin: 0 10px;
+}
+
+.men{display: grid;
+    place-content: center;
+    background-color: red;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }

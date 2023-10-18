@@ -1,13 +1,13 @@
-let nav = document.querySelector(".boton_menu");
-
-nav.addEventListener('click', ()=>{
-    body.classList.add('active');
+let nav = document.querySelector(".nav_menu");
+let abrir = document.querySelector(".abrir");
+let cerrar= document.querySelector(".cerrar");
+abrir.addEventListener('click', ()=>{
+    nav.classList.add('visible');
 })
-nav.addEventListener('click', cerrar())
+cerrar.addEventListener('click',()=>{
+    nav.classList.remove('visible');})
 
-function cerrar(){
-    nav.style.display= 'none';
-}
+
 function getCookie(dni) {
     let name = "dni=" + dni;
     let identificador = "dni=";
@@ -78,7 +78,7 @@ function comp_tlf(tlf){
 }
 function comp_correo(correo){
     let pattern = /^[a-z0-9]+@[a-z]+\.[a-z]{3}$/;
-    if(false == pattern.test(corre)){
+    if(false == pattern.test(correo)){
         alert("Correo no valido")
     }
 }

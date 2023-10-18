@@ -1,6 +1,19 @@
-#timer div{
-    /*No funciona*/
-    font-size: 2em;
+
+.body{
+    height: 100%;
+    width: 100%;
+}
+.center{
+    margin-top: 10%;
     display: grid;
     place-content: center;
+
+
+
+
+}
+#timer {
+    /*No funciona*/
+    margin: auto;
+    font-size: 5em;
 }
