@@ -268,9 +268,10 @@
             <h2 id="reg"> Registro </h2>
                 <div class="cen">
                     <form>
-                        <label for="name">Nombre:</label><br>
-                        <input type="text" id="name" name="name" value="" ><br>
-
+                        <div class="cajas">
+                            <label for="name">Nombre:</label><br>
+                            <input type="text" id="name" name="name" value="" ><br>
+                        </div>
                         <label for="surname">Apellido:</label><br>
                         <input type="text" id="surname" name="surname" value="" ><br>
 
@@ -320,6 +321,26 @@
                 </div>
             </article>
         </section>
+        <article class="margen_d">
+        <buttom class="abrir" > abrir </buttom>
+
+        <nav class="nav_menu">
+            <!-- Boton que redirecciona a otras paginas -->
+            <buttom class="cerrar" > cerrar</buttom><br>
+            <ul class="n">
+                <a href="#title_first">Café</a> <br>
+                <a href="#title_second">Bebidas Dulces</a> <br>
+                <a href="#title_third">Tartas</a><br>
+                <a href="#title_fourth">Delicatessen</a><br>
+                <a href="#title_fifth">Repostería</a><br>
+                <a href="#reg">Registro</a><br>
+                <a href="./Menu.html">Menu</a><br>
+                <a href="#contacto">Contacto</a><br>
+            </ul>
+
+
+        </nav>
+        </article>
 
 
         <footer>
@@ -329,25 +350,8 @@
             <a href="#contacto">Contacta con nosotros</a>
 
         </footer>
-        <article class="margen_d">
-            <img class="barra" src="images/boton-de-menu-de-tres-lineas-horizontales.png" alt="Boton menu">
-            <button class="abrir" > abrir </button>
-            <nav class="nav_menu">
 
-                <button class="cerrar" > cerrar</button>
-                <!-- Boton que redirecciona a otras paginas -->
-                <a href="#title_first">Café</a>
-                <a href="#title_second">Bebidas Dulces</a>
-                <a href="#title_third">Tartas</a>
-                <a href="#title_fourth">Delicatessen</a>
-                <a href="#title_fifth">Repostería</a>
-                <a href="#reg">Registro</a>
-                <a href="./Menu.html">Menu</a>
-                <a href="#contacto">Contacto</a>
 
-            </nav>
-        </article>
-
-    </body>
-    <script src="script/landing.js"></script>
+   </body>
+   <script src="script/landing.js"></script>
 </html>

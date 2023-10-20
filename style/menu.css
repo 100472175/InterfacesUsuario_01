@@ -140,3 +140,15 @@ header .bolsa span{
     background-color: red;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
+
+
+.contador{
+
+    margin-top: 10%;
+    display: grid;
+    place-content: center;
+}
+#timer {
+    margin: auto;
+    font-size: 5em;
+}

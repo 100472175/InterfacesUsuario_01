@@ -2,10 +2,21 @@ let nav = document.querySelector(".nav_menu");
 let abrir = document.querySelector(".abrir");
 let cerrar= document.querySelector(".cerrar");
 abrir.addEventListener('click', ()=>{
-    nav.classList.add('visible');
+    cerrar.style.display = 'block';
+    abrir.style.display = 'none';
+    nav.style.display = 'block';
+
 })
 cerrar.addEventListener('click',()=>{
-    nav.classList.remove('visible');})
+    cerrar.style.display = 'none';
+    abrir.style.display = 'block';
+    nav.style.display = 'none';
+})
+window.addEventListener('load',()=>{
+    cerrar.style.display = 'none';
+    abrir.style.display = 'block';
+    nav.style.display = 'none';
+})
 
 
 function getCookie(dni) {

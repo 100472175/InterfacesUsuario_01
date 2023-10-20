@@ -233,19 +233,31 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     width: 30%;
     height: auto;
     border-radius: 20px;
-    background-color: #9f9898;
+    background-color: #cbc5c5;
 
 }
+
 .cen form{
+
     font-size: 1.25em;
     padding: 10%;
-    width: auto;
+    width: 100%;
     margin:auto;
 
+
+}
+.cajas{
+    border-bottom:2px solid black;
 }
 .cen label{
     width: auto;
     color: black;
+    top: 20px;
+    transform: translateY(-50%);
+}
+input:focus~label,
+input:valid~label{
+    top:-5px;
 }
 .cen button{
     font-size: 0.75em;
@@ -260,11 +272,11 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 }
 .cen input{
     border: none;
-    border-radius: 20px;
-    background-color: white;
+    background-color: transparent;
     color: black;
     width: auto;
-    text-align: center;
+
+
 }
 .reset{
     font-size: 0.75em;
@@ -426,27 +438,38 @@ footer a {
 
 }
 .barra{
-    display: none;
+
 }
 
 .abrir{
-    display: none;
+    top:0;
+    right:0;
+    background-color: brown;
+    position: fixed;
+    background-image: url(images/boton-de-menu-de-tres-lineas-horizontales.png);
+
 }
 .nav_menu{
-
-    display: none;
-
+    top:0;
+    right: 0;
+    background-color: #ffcfa4;
+    position: fixed;
+    display: grid;
+    place-content: center;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 20%;
+    height: 100%;
+    text-align: center;
 }
 
-.nav_menu .visible{
-    display: none;
 
-}
-.lis{
-    display: none;
-}
+
 .cerrar{
-    display: none;
+    top:0;
+    right:10%;
+    background-color: brown;
+    position: fixed;
+
 }
 
 
@@ -520,6 +543,18 @@ footer a {
 
 /* Responsive para telefonos móviles*/
 @media screen and (max-width: 600px) {
+    /*
+    .margen_d{
+        position: fixed;
+        display: grid;
+       background-color: brown;
+        bottom: 0;
+        right: 0;
+        padding: 2rem;
+        height: 100%;
+        width: 40%;
+
+    }
     .barra {
         height: 30px;
         width: 30px;
@@ -533,27 +568,22 @@ footer a {
         background-color: red;
         color: black;
         top:0;
-        right: 0;
+        left: 0;
+        z-index: 2;
     }
     .nav_menu{
-        visibility: hidden;
         position: fixed;
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr auto;
-        top: 0;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        bottom: 0;
         right: 0;
         padding: 2rem;
-        background-color: #ecb297;
+        background-color: transparent;
         width: 40%;
-        color: black;
-        height: 100%;
-    }
-
-    .nav_menu .visible{
-
-        visibility: visible;
 
     }
+
+
     .lis{
         display: flex;
     }
@@ -562,10 +592,11 @@ footer a {
         height: 10%;
         width: 10%;
         top:0;
-        right: 0;
-    ;
-
+        left: 0;
+        z-index: 2;
     }
+
+     */
 
     p {
         font-size: 1.5em;

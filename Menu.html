@@ -8,6 +8,11 @@
 
 </head>
 <body>
+    <div class="pasos">
+        <button class="uno"> Paso 1 </button>
+        <button class="dos"> Paso 2 </button>
+        <button class="tres"> Paso 3 </button>
+    </div>
     <div class="contenedor">
         <header>
             <h1>Carrito de compra</h1>
@@ -21,12 +26,6 @@
             <a href="./landing.html"> Inicio > </a>
             <a> Menu  ></a>
             <a> ...  ></a>
-        </div>
-
-        <div class="pasos">
-            <button> Paso 1 </button>
-            <button onclick="window.location.href='Paso2.html'"> Paso 2 </button>
-            <button> Paso 3 </button>
         </div>
 
         <div class="men">
@@ -47,9 +46,29 @@
             <div class="finalizaCompra">Cerrar</div>
         </div>
     </div>
-    <nav><!-- En paso te encuentras (Crear barra)-->
 
-    </nav>
+    <div class="compr">
+        <a href="./landing.html"> Inicio > </a>
+        <a href="./Menu.html"> Menu  ></a>
+        <a> Revisón  ></a>
+
+        <ul  class="lista_comida"></ul>
+    </div>
+
+    <div class="contador" >
+        <div>
+            <a href="./landing.html"> Inicio > </a>
+            <a> Menu  ></a>
+            <a> Revisón  ></a>
+            <a> Espera al pedido  ></a>
+
+        </div>
+        <h2>Tu pedido esta hecho</h2>
+        <h2>Tiempo hasta la entrega:</h2>
+        <p id="timer"></p>
+    </div>
+
+
 
     <script src="script/menu.js"></script>
 </body>
