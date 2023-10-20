@@ -13,6 +13,7 @@ let paso1= document.querySelector(".uno");
 let paso2= document.querySelector(".dos");
 let paso3= document.querySelector(".tres");
 let comp= document.querySelector(".compr");
+let reserva = document.querySelector(".reserva");
 abrirCompra.addEventListener('click', ()=>{
     body.classList.add('active');
 })
@@ -177,7 +178,7 @@ function recargaElemento() {
 
 
 function mostrarElemento() {
-    lista_comida.innerHTML = '';
+    reserva.innerHTML = '';
 
     lista_comidas.forEach((value, key) => {
         if (value != null) {
@@ -191,7 +192,7 @@ function mostrarElemento() {
                 <div class="contador">${value.cantidad}</div>
                 <button onclick="cambiaCantidad(${key}, ${value.cantidad + 1})">+</button>      
             </div>`;
-            lista_comida.appendChild(newDiv);
+            reserva.appendChild(newDiv);
         }
     })
 }

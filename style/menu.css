@@ -150,6 +150,12 @@ header .bolsa span{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
+.reserva{
+    display: grid;
+    place-content: center;
+    background-color:aquamarine ;
+
+}
 
 .contador{
 
