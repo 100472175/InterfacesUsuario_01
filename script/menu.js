@@ -6,22 +6,22 @@ let body = document.querySelector("body");
 let totalCarrito = document.querySelector(".total");
 let cantidad = document.querySelector(".cantidad");
 
-let contenedor= document.querySelector(".contenedor");
-let eleme= document.querySelector(".elemeto_carrito");
-let contador= document.querySelector(".contador");
-let paso1= document.querySelector(".uno");
-let paso2= document.querySelector(".dos");
-let paso3= document.querySelector(".tres");
-let comp= document.querySelector(".compr");
+let contenedor = document.querySelector(".contenedor");
+let eleme = document.querySelector(".elemeto_carrito");
+let contador = document.querySelector(".contador");
+let paso1 = document.querySelector(".uno");
+let paso2 = document.querySelector(".dos");
+let paso3 = document.querySelector(".tres");
+let comp = document.querySelector(".compr");
 let reserva = document.querySelector(".reserva");
-abrirCompra.addEventListener('click', ()=>{
+abrirCompra.addEventListener('click', () => {
     body.classList.add('active');
 })
-cerrarCompra.addEventListener('click', ()=>{
+cerrarCompra.addEventListener('click', () => {
     body.classList.remove('active');
 })
 
-let productos = [
+let cosas = [
     {
         id: 1,
         nombre: 'Cafe con leche',
@@ -58,9 +58,6 @@ let productos = [
         imagen: 'cafe6.jpg',
         precio: 40
     },
-];
-
-let bebidas = [
     {
         id: 7,
         nombre: 'Cafe',
@@ -98,28 +95,16 @@ let bebidas = [
         precio: 40
     },
 ];
-let lista_comidas = [];
-function init_bebida(){
-    while (lista.hasChildNodes()){
-        lista.removeChild(lista.firstChild);
-    }
 
-    bebidas.forEach((value, key) =>{
-        let newDiv = document.createElement('div');
-        newDiv.classList.add('elemento');
-        newDiv.innerHTML = `
-            <img src="images/menu/${value.imagen}/" alt="imagen_del_producto">
-            <div class="titulo">${value.nombre}</div>
-            <div class="precio">${value.precio.toLocaleString()}</div> <!--Mirar que hace el toLocaleString() */-->
-            <button onclick="aniadirAlCarrito_2(${key})"> Añadir al carrito</button>`;
-        lista.appendChild(newDiv);
-    })
-}
-function initApp(){
-    while (lista.hasChildNodes()){
+
+let lista_comidas = [];
+
+function initApp(st_elem) {
+    while (lista.hasChildNodes()) {
         lista.removeChild(lista.firstChild);
     }
-    productos.forEach((value, key) =>{
+    let prods = Array.from(cosas).slice(st_elem, (st_elem+6))
+    prods.forEach((value, key) => {
         //
         let newDiv = document.createElement('div');
         newDiv.classList.add('elemento');
@@ -127,26 +112,20 @@ function initApp(){
             <img src="images/menu/${value.imagen}/" alt="imagen_del_producto">
             <div class="titulo">${value.nombre}</div>
             <div class="precio">${value.precio.toLocaleString()}</div> <!--Mirar que hace el toLocaleString() */-->
-            <button onclick="aniadirAlCarrito(${key})"> Añadir al carrito</button>`;
+            <button onclick="aniadirAlCarrito(${value.id-1})"> Añadir al carrito</button>`;
         lista.appendChild(newDiv);
     })
 }
-//init_bebida();
-initApp();
-function aniadirAlCarrito(key){
-    if (lista_comidas[key] == null){
-        lista_comidas[key] = JSON.parse(JSON.stringify(productos[key]));
+
+
+function aniadirAlCarrito(key) {
+    if (lista_comidas[key] == null) {
+        lista_comidas[key] = JSON.parse(JSON.stringify(cosas[key]));
         lista_comidas[key].cantidad = 1;
     }
     recargaElemento()
 }
-function aniadirAlCarrito_2(key){
-    if (lista_comidas[key] == null){
-        lista_comidas[key] = JSON.parse(JSON.stringify(bebidas[key]));
-        lista_comidas[key].cantidad = 1;
-    }
-    recargaElemento()
-}
+
 function recargaElemento() {
 
     lista_comida.innerHTML = '';
@@ -156,7 +135,6 @@ function recargaElemento() {
     lista_comidas.forEach((value, key) => {
         precioTotal = precioTotal + value.precio;
         cuenta = cuenta + value.cantidad;
-
         if (value != null) {
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
@@ -169,17 +147,14 @@ function recargaElemento() {
                 <button onclick="cambiaCantidad(${key}, ${value.cantidad + 1})">+</button>      
             </div>`;
             lista_comida.appendChild(newDiv);
-
         }
     })
     totalCarrito.innerText = precioTotal.toLocaleString();
     cantidad.innerText = cuenta;
 }
 
-
 function mostrarElemento() {
     reserva.innerHTML = '';
-
     lista_comidas.forEach((value, key) => {
         if (value != null) {
             let newDiv = document.createElement('li');
@@ -197,26 +172,26 @@ function mostrarElemento() {
     })
 }
 
-function cambiaCantidad(key, cantidad){
-    if(cantidad == 0){
+function cambiaCantidad(key, cantidad) {
+    if (cantidad == 0) {
         delete lista_comidas[key];
-    } else{
+    } else {
         lista_comidas[key].cantidad = cantidad;
-        lista_comidas[key].precio = cantidad * productos[key].precio;
+        lista_comidas[key].precio = cantidad * cosas[key].precio;
     }
     recargaElemento();
 }
 
-paso1.addEventListener('click', ()=>{
-    contenedor.style.display= 'block';
+paso1.addEventListener('click', () => {
+    contenedor.style.display = 'block';
     eleme.style.display = 'block';
     contador.style.display = 'none';
     comp.style.display = 'none';
 
 
 })
-paso2.addEventListener('click', ()=>{
-    contenedor.style.display= 'none';
+paso2.addEventListener('click', () => {
+    contenedor.style.display = 'none';
     eleme.style.display = 'none';
     contador.style.display = 'none';
     comp.style.display = 'block';
@@ -225,8 +200,8 @@ paso2.addEventListener('click', ()=>{
 
 })
 
-paso3.addEventListener('click', ()=>{
-    contenedor.style.display= 'none';
+paso3.addEventListener('click', () => {
+    contenedor.style.display = 'none';
     eleme.style.display = 'none';
     comp.style.display = 'none';
     contador.style.display = 'block';
@@ -235,16 +210,14 @@ paso3.addEventListener('click', ()=>{
 
 })
 
-window.addEventListener('load', ()=>{
-    contenedor.style.display= 'block';
+window.addEventListener('load', () => {
+    contenedor.style.display = 'block';
     eleme.style.display = 'block';
     contador.style.display = 'none';
     comp.style.display = 'none';
-
+    initApp(0)
 
 })
-
-
 
 
 let timeLimitInMinutes = 10;

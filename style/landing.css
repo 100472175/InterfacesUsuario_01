@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Perpetua", serif;
-
     text-align: justify;
     background-color: transparent;
 }
@@ -454,18 +453,22 @@ footer a {
     right: 0;
     background-color: #ffcfa4;
     position: fixed;
-    display: grid;
-    place-content: center;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     width: 20%;
     height: 100%;
+    text-align: center;
+}
+.hamburger{
+    list-style-type: none
+}
+
+.hamburger li{
     text-align: center;
 }
 
 
 .cerrar{
     top:0;
-    right:10%;
+    right: 0;
     background-color: brown;
     position: fixed;
 
