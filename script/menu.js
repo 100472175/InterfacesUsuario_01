@@ -8,7 +8,7 @@ let cantidad = document.querySelector(".cantidad");
 
 let contenedor = document.querySelector(".contenedor");
 let eleme = document.querySelector(".elemeto_carrito");
-let contador = document.querySelector(".contador");
+let contador = document.querySelector(".contador_t");
 let paso1 = document.querySelector(".uno");
 let paso2 = document.querySelector(".dos");
 let paso3 = document.querySelector(".tres");
@@ -119,10 +119,10 @@ function initApp(st_elem) {
 
 
 function aniadirAlCarrito(key) {
-    if (lista_comidas[key] == null) {
-        lista_comidas[key] = JSON.parse(JSON.stringify(cosas[key]));
-        lista_comidas[key].cantidad = 1;
-    }
+  if (lista_comidas[key] == null) {
+      lista_comidas[key] = JSON.parse(JSON.stringify(cosas[key]));
+      lista_comidas[key].cantidad = 1;
+  }
     recargaElemento()
 }
 
@@ -163,7 +163,7 @@ function mostrarElemento() {
             <div>${value.nombre}</div>
             <div>${value.precio.toLocaleString()}</div>
             <div>
-                <button onclick="cambiaCantidad(${key}, ${value.cantidad - 1})">-</button>
+                <button class="contador" onclick="cambiaCantidad(${key}, ${value.cantidad - 1})"> - </button>
                 <div class="contador">${value.cantidad}</div>
                 <button onclick="cambiaCantidad(${key}, ${value.cantidad + 1})">+</button>      
             </div>`;

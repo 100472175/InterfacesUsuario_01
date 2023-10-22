@@ -82,7 +82,7 @@ function comp_dni(dni_){
 }
 
 function comp_tlf(tlf){
-    let pattern = /^[0-9]{9}/;
+    let pattern = /^[0-9]{9}$/;
     if(false == pattern.test(tlf)){
         alert("Telefono no valido");
     }

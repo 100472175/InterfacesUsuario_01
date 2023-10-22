@@ -63,6 +63,8 @@ header .bolsa span{
 }
 .list  a .elemento .titulo{
     font-weight: 600;
+    text-align: center;
+
 }
 .lista .elemento .precio{
     margin: 10px;
@@ -72,7 +74,9 @@ header .bolsa span{
     color: #fff;
     width: 60%;
     padding: 10px;
+    border: none;
     border-radius: 20px;
+    text-align: center;
 }
 .elemeto_carrito{
     position: fixed;
@@ -115,6 +119,8 @@ header .bolsa span{
     align-items: center;
     font-weight: bold;
     cursor: pointer;
+    border: none;
+    color: white;
 }
 .elemeto_carrito .resumen div{
     display: flex;
@@ -142,7 +148,7 @@ header .bolsa span{
     padding: 2%;
 }
 .lista_comida li div{
-    display: flex;
+    display: grid;
     /*
     justify-content: center;
     align-items: center;
@@ -152,11 +158,19 @@ header .bolsa span{
     align-content: center;
     margin: auto;
 }
+
+.lista_comida li div:last-child{
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+/*
 .lista_comida li div img{
     margin-left: 15%;
     left: 0;
     width: 20%;
 }
+*/
+
 .lista_comida li button{
     width: auto;
     background-color: rgba(255, 255, 255, 0.82);
@@ -178,7 +192,7 @@ header .bolsa span{
 
 }
 
-.contador{
+.contador_t{
     margin-top: 10%;
     display: grid;
     place-content: center;
