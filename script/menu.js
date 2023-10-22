@@ -127,11 +127,9 @@ function aniadirAlCarrito(key) {
 }
 
 function recargaElemento() {
-
     lista_comida.innerHTML = '';
     let cuenta = 0;
     let precioTotal = 0;
-    let i = 0;
     lista_comidas.forEach((value, key) => {
         precioTotal = precioTotal + value.precio;
         cuenta = cuenta + value.cantidad;
@@ -142,14 +140,14 @@ function recargaElemento() {
             <div>${value.nombre}</div>
             <div>${value.precio.toLocaleString()}</div>
             <div>
-                <button onclick="cambiaCantidad(${key}, ${value.cantidad - 1})">-</button>
+                <button class="contador" onclick="cambiaCantidad(${key}, ${value.cantidad - 1})"> - </button>
                 <div class="contador">${value.cantidad}</div>
-                <button onclick="cambiaCantidad(${key}, ${value.cantidad + 1})">+</button>      
+                <button class="contador" onclick="cambiaCantidad(${key}, ${value.cantidad + 1})"> + </button>      
             </div>`;
             lista_comida.appendChild(newDiv);
         }
     })
-    totalCarrito.innerText = precioTotal.toLocaleString();
+    totalCarrito.innerText = "Total → ".concat(precioTotal.toLocaleString());
     cantidad.innerText = cuenta;
 }
 
@@ -165,7 +163,7 @@ function mostrarElemento() {
             <div>
                 <button class="contador" onclick="cambiaCantidad(${key}, ${value.cantidad - 1})"> - </button>
                 <div class="contador">${value.cantidad}</div>
-                <button onclick="cambiaCantidad(${key}, ${value.cantidad + 1})">+</button>      
+                <button class="contador" onclick="cambiaCantidad(${key}, ${value.cantidad + 1})"> + </button>      
             </div>`;
             reserva.appendChild(newDiv);
         }
@@ -187,17 +185,14 @@ paso1.addEventListener('click', () => {
     eleme.style.display = 'block';
     contador.style.display = 'none';
     comp.style.display = 'none';
-
-
 })
-paso2.addEventListener('click', () => {
+
+totalCarrito.addEventListener('click', () => {
     contenedor.style.display = 'none';
     eleme.style.display = 'none';
     contador.style.display = 'none';
     comp.style.display = 'block';
     mostrarElemento();
-
-
 })
 
 paso3.addEventListener('click', () => {
@@ -206,8 +201,6 @@ paso3.addEventListener('click', () => {
     comp.style.display = 'none';
     contador.style.display = 'block';
     let timerInterval = setInterval(startTimer, 1000);
-
-
 })
 
 window.addEventListener('load', () => {
