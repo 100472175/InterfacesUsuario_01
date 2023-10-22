@@ -1,6 +1,13 @@
 let nav = document.querySelector(".nav_menu");
 let abrir = document.querySelector(".abrir");
 let cerrar= document.querySelector(".cerrar");
+
+window.addEventListener('load',()=>{
+    cerrar.style.display = 'none';
+    abrir.style.display = 'block';
+    nav.style.display = 'none';
+})
+
 abrir.addEventListener('click', ()=>{
     cerrar.style.display = 'block';
     abrir.style.display = 'none';
@@ -8,11 +15,6 @@ abrir.addEventListener('click', ()=>{
 
 })
 cerrar.addEventListener('click',()=>{
-    cerrar.style.display = 'none';
-    abrir.style.display = 'block';
-    nav.style.display = 'none';
-})
-window.addEventListener('load',()=>{
     cerrar.style.display = 'none';
     abrir.style.display = 'block';
     nav.style.display = 'none';
