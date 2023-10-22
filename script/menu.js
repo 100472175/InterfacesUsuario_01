@@ -112,7 +112,7 @@ function initApp(st_elem) {
             <img src="images/menu/${value.imagen}/" alt="imagen_del_producto">
             <div class="titulo">${value.nombre}</div>
             <div class="precio">${value.precio.toLocaleString()}</div> <!--Mirar que hace el toLocaleString() */-->
-            <button onclick="aniadirAlCarrito(${value.id-1})"> Añadir al carrito</button>`;
+            <button onclick="aniadirAlCarrito(${value.id-1})"> Añadir </button>`;
         lista.appendChild(newDiv);
     })
 }
@@ -140,7 +140,7 @@ function recargaElemento() {
             <div>${value.nombre}</div>
             <div>${value.precio.toLocaleString()}</div>
             <div>
-                <button class="contador" onclick="cambiaCantidad(${key}, ${value.cantidad - 1})"> - </button>
+                <button class="contador" onclick="cambiaCantidad(${key}, ${value.cantidad - 1})"> — </button>
                 <div class="contador">${value.cantidad}</div>
                 <button class="contador" onclick="cambiaCantidad(${key}, ${value.cantidad + 1})"> + </button>      
             </div>`;
@@ -156,10 +156,11 @@ function mostrarElemento() {
     lista_comidas.forEach((value, key) => {
         if (value != null) {
             let newDiv = document.createElement('li');
-            newDiv.innerHTML = `
-            <!--<div><img src="images/menu/${value.image}" alt="imagen_del_producto" ></div>-->
-            <p>${value.nombre}, Cantidad = ${value.cantidad},  Precio =  ${value.precio.toLocaleString()} </p>
-            `;
+            newDiv.innerHTML= `
+            <div><img src="images/menu/${value.imagen}/" alt="imagen_del_producto3"></div>
+            <div>${value.nombre}</div>
+            <div>${value.precio.toLocaleString()}</div>
+            <div class="contador">${value.cantidad}</div>`;
             reserva.appendChild(newDiv);
         }
     })

@@ -16,23 +16,26 @@ body{
     font-family: system-ui;
 }
 .contenedor{
-    width: 1000px; /*Esto hay que cambiarlo a porcentaje*/
+    width: 55%; /*Esto hay que cambiarlo a porcentaje*/
     margin: auto;
-    transition: 0.5s;
+    transition: 0.75s;
 }
 
 header{
     display: grid;
-    grid-template-columns: 1fr 50px ; /*Cmabiar los pixeles*/
-    margin-top: 50px;
+    grid-template-columns: 1fr 14% ; /*Cmabiar los pixeles*/
+    margin-top: 5%;
 }
+
 header .bolsa{
     position: relative;
     text-align: right;
 }
+
 header .bolsa img{
     width: 40px;
 }
+
 header .bolsa span{
     background: red;
     border-radius: 50%;
@@ -48,21 +51,22 @@ header .bolsa span{
 .lista{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px; /*cambiar*/
-    row-gap: 20px; /*cambiar*/
-    margin-top: 50px; /*cambiar*/
+    column-gap: 5%; /*cambiar*/
+    row-gap: 5%; /*cambiar*/
+    margin-top: 5%; /*cambiar*/
 }
-.lista .elemento{
-    text-align: center ;
-    background-color: #DCE0E1 ;
-    padding: 20px;
+.elemento{
+    text-align: center;
+    background-color: #e9eeef;
+    padding: 5%;
     box-shadow: 0 50px 50px #757676;
     letter-spacing: 1px;
-    border-radius: 20px;
+    border-radius: 30px;
+    height: 90%;
 }
 .lista .elemento img {
     width: 90%;
-    height: 430px;
+    height: 70%;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -71,41 +75,42 @@ header .bolsa span{
     text-align: center;
 
 }
-.lista .elemento .precio{
-    margin: 10px;
+.precio{
+    margin: 2%;
     text-align: center;
 }
 .lista .elemento button{
     background-color: #1c1f25;
-    color: #fff;
+    color: #dedede;
     width: 60%;
-    padding: 10px;
     border: none;
-    border-radius: 20px;
     text-align: center;
+    margin: auto;
+    height: 5%;
+    font-size: 1em;
 }
 .elemeto_carrito{
     position: fixed;
     top: 0;
-    left: 100%; /* calc(100% - 500px) --Cambiar tiene punta que es algo como 40%*/
-    width: 500px; /*Cambiar*/
-    background-color: rgba(114, 103, 101, 0.65);
+    left: 100%;
+    width: 25%;
+    background-color: rgba(114, 103, 101, .95);
     height: 100vh;
-    transition: 0.5s;
+    transition: 0.75s;
 }
 .active .elemeto_carrito{
-    left: calc(100% - 500px);
+    left: 75%;
 }
 .active .contenedor{
-    transform: translateX(-200px);
+    transform: translateX(-25%);
 }
 
 .elemeto_carrito h1{
     color: #4d5a72;
     font-weight: 100;
     margin: 0;
-    padding: 0 20px;
-    height: 80px;
+    padding: 0 5%;
+    height: 10%;
     display: flex;
     align-items: center;
 }
@@ -119,7 +124,8 @@ header .bolsa span{
 .resumen button{
     background-color: #4d5a72;
     width: 100%;
-    height: 70px;
+    height: 100%;
+    padding: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,6 +134,7 @@ header .bolsa span{
     border: none;
     color: white;
 }
+
 .resumen div{
     display: flex;
     justify-content: center;
@@ -143,17 +150,15 @@ header .bolsa span{
 .lista_comida{
     margin: 5%;
 }
-
 .lista_comida li{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     color: #fff;
-    row-gap: 10px;
+    row-gap: 5%;
     margin-bottom: 20px;
     border: 1px #4d5a72 solid;
     padding: 2%;
 }
-
 .lista_comida li div{
     display: grid;
     /*
@@ -166,7 +171,6 @@ header .bolsa span{
     font-weight: bold;
     text-align: left;
 }
-
 .lista_comida li div:last-child{
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
@@ -189,30 +193,44 @@ header .bolsa span{
 .lista_comida .contador{
     margin: 0 10px;
 }
-
 .men{display: grid;
     place-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
 }
-
 .men button{
-
     text-align: center;
 }
-
 .reserva{
     width: 100%;
     display: grid;
     place-content: center;
     list-style: none;
-
+    margin: auto;
 }
-
 .reserva li {
     width: 100%;
 
 }
+.reserva li div img{
+    margin-left: 15%;
+    right: 0;
+    width: 30%;
+}
+
+.reserva li div{
+    display: grid;
+    padding: 5%;
+    place-content: center;
+    align-content: center;
+    font-weight: bold;
+    text-align: left;
+}
+.compr h2{
+    display: grid;
+    place-content: center;
+    right: 50%;
+}
+
 
 
 .contador_t{
@@ -220,8 +238,66 @@ header .bolsa span{
     display: grid;
     place-content: center;
 }
-
 #timer {
     margin: auto;
     font-size: 5em;
+}
+
+.botones_revison{
+    padding-left: 30%;
+    padding-right: 30%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+
+
+}
+.botones_revison button{
+    text-align: center;
+    margin: 10%;
+    height: auto;
+    padding: 10%;
+    border-radius: 30px;
+}
+.botones_revison button{
+    background-color: #2b3036;
+    color: #fff;
+}
+
+.botones_revison button:nth-child(1){
+    background-color: #4d5a72;
+    color: #fff;
+}
+
+@media screen and (min-width: 600px) and (max-width: 966px) {
+    .lista{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .elemeto_carrito{
+        width: 34%;
+    }
+    .active .elemeto_carrito{
+        left: 66%;
+    }
+    .active .contenedor{
+        transform: translateX(-25%);
+    }
+
+}
+
+
+
+@media screen and (max-width: 600px){
+    .lista{
+        grid-template-columns: 1fr;
+    }
+    .elemeto_carrito{
+        width: 80%;
+    }
+    .active .elemeto_carrito{
+        left: 20%;
+    }
+    .active .contenedor{
+        transform: translateX(-25%);
+    }
 }
