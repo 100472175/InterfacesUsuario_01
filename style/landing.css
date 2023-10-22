@@ -356,6 +356,8 @@ input:valid~label{
     left: 0;
     scroll-snap-align: center;
 }
+
+
 /*Formato de los titulos de las páginas que tienen galeria
 Cada uno tiene un id propio, pero como los textos son iguales, podemos darles una clase*/
 .titulo_seccion{
@@ -434,10 +436,7 @@ footer a {
     aspect-ratio: 4/3;
     object-fit: contain;
     mix-blend-mode: color-burn;
-
 }
-
-
 
 .nav_menu{
     display: none;
@@ -449,11 +448,158 @@ footer a {
 .nav_menu{
     display: none;
 }
+/* Galería con JavaScript*/
+
+.new_slider{
+    width: 510px;
+    height: 680px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    margin: auto;
+}
+
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+    width: 510px;
+    height: 680px;
+}
+
+/* Navegación Manual */
+.navigation-manual{
+    position: absolute;
+    width: 510px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background: black;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+
+#bebida_radio1:checked ~ .first{
+    margin-left: -20%;
+}
+#bebida_radio2:checked ~ .first{
+    margin-left: -40%;
+}
+#bebida_radio3:checked ~ .first{
+    margin-left: -60%;
+}
+#bebida_radio4:checked ~ .first{
+    margin-left: -60%;
+}
+#bebida_radio5:checked ~ .first{
+    margin-left: -80%;
+}
+#bebida_radio6:checked ~ .first{
+    margin-left: -100%;
+}
+
+
+/* Navegación automática coloreado */
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 510px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: black;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: black;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: black;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: black;
+}
+
+#bebida_radio1:checked ~ .navigation-auto .radio_auto-btn1{
+    background: black;
+}
+#bebida_radio2:checked ~ .navigation-auto .radio_auto-btn2{
+    background: black;
+}
+#bebida_radio3:checked ~ .navigation-auto .radio_auto-btn3{
+    background: black;
+}
+#bebida_radio4:checked ~ .navigation-auto .radio_auto-btn4{
+    background: black;
+}
+#bebida_radio5:checked ~ .navigation-auto .radio_auto-btn5{
+    background: black;
+}
+#bebida_radio6:checked ~ .navigation-auto .radio_auto-btn6{
+    background: black;
+}
+
+
+
 
 
 .cerrar{
     display: none;
-
 }
 .tres_rayas{
     display: none;
@@ -529,6 +675,7 @@ footer a {
         color: black;
         width: 5%;
         height: 3%;
+        border: none;
     }
     .abrir img{
         display: block;
@@ -566,7 +713,7 @@ footer a {
         position: fixed;
         width: 5%;
         height: 3%;
-
+        border: none;
     }
     .cerrar img{
         display: block;
