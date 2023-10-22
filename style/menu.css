@@ -220,6 +220,7 @@ header .bolsa span{
     display: grid;
     place-content: center;
 }
+
 #timer {
     margin: auto;
     font-size: 5em;

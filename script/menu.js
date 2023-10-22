@@ -60,37 +60,37 @@ let cosas = [
     },
     {
         id: 7,
-        nombre: 'Cafe',
+        nombre: 'Macarons',
         imagen: 'cafe1.jpg',
-        precio: 50
+        precio: 12
     },
     {
         id: 8,
-        nombre: 'Batido',
+        nombre: 'Croissants',
         imagen: 'cafe2.jpg',
         precio: 50
     },
     {
         id: 9,
-        nombre: 'Capuchino',
+        nombre: 'Profiteroles',
         imagen: 'cafe3.jpg',
         precio: 40
     },
     {
         id: 10,
-        nombre: 'Cafe con hielo',
+        nombre: 'Eclairs',
         imagen: 'cafe4.jpg',
         precio: 50
     },
     {
         id: 11,
-        nombre: 'Cafe solo',
+        nombre: 'Surtido de macarrons',
         imagen: 'cafe5.jpg',
         precio: 50
     },
     {
         id: 12,
-        nombre: 'Chocolate',
+        nombre: 'Tarta sorpresa',
         imagen: 'cafe6.jpg',
         precio: 40
     },
