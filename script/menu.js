@@ -14,6 +14,7 @@ let paso2 = document.querySelector(".dos");
 let paso3 = document.querySelector(".pagar");
 let comp = document.querySelector(".compr");
 let reserva = document.querySelector(".reserva");
+let cargando = document.querySelector(".cargando");
 abrirCompra.addEventListener('click', () => {
     body.classList.add('active');
 })
@@ -220,6 +221,11 @@ function startTimer() {
 
     if (timeLimitInSeconds < 0) {
         timerElement.textContent = '00:00';
+        cargando.style.display = 'None';
+        let newDiv = document.createElement('p');
+        newDiv.innerHTML= ` Pedido entregado`;
+
+
         clearInterval(timerInterval);
         return;
     }

@@ -244,12 +244,16 @@ header .bolsa span{
 
 
 .espera_pedido{
-    
-}
-.contador_t{
     display: grid;
     place-content: center;
     margin: auto;
+
+}
+.contador_t nav{
+    display: grid;
+    place-content: center;
+    margin: 4% auto;
+
 }
 #timer {
     margin: auto;
@@ -282,6 +286,49 @@ header .bolsa span{
     background-color: #4d5a72;
     color: #fff;
 }
+
+
+
+.container{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+.cargando{
+    width: 50%;
+    height: 7%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 50% auto;
+}
+
+.granos_cafe{
+    width: 5px;
+    height: 5px;
+    animation: salto .5s alternate infinite;
+}
+.granos_cafe img{
+    width: 30px;
+    height: 30px;
+}
+.granos_cafe:nth-child(2) {
+    animation-delay: .18s;
+}
+.granos_cafe:nth-child(3) {
+    animation-delay: .37s;
+}
+@keyframes salto {
+    from {
+        transform: scaleX(1.25);
+    }
+    to{
+        transform:
+                translateY(-50px) scaleX(1);
+    }
+}
+
 
 @media screen and (min-width: 600px) and (max-width: 966px) {
     .lista{
