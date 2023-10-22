@@ -38,7 +38,7 @@ header .bolsa img{
 
 header .bolsa span{
     background: red;
-    border-radius: 50%;
+    border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +68,7 @@ header .bolsa span{
     width: 90%;
     height: 70%;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 .titulo{
     font-weight: 600;
@@ -79,7 +79,7 @@ header .bolsa span{
     margin: 2%;
     text-align: center;
 }
-.lista .elemento button{
+.elemento button{
     background-color: #1c1f25;
     color: #dedede;
     width: 60%;
@@ -107,12 +107,14 @@ header .bolsa span{
 
 .elemeto_carrito h1{
     color: #4d5a72;
-    font-weight: 100;
+
     margin: 0;
     padding: 0 5%;
     height: 10%;
     display: flex;
     align-items: center;
+    font-size: 2em;
+    font-weight: bold;
 }
 .resumen{
     position: absolute;
@@ -201,14 +203,23 @@ header .bolsa span{
     text-align: center;
 }
 .reserva{
-    width: 100%;
+    width: 65%;
     display: grid;
     place-content: center;
     list-style: none;
     margin: auto;
 }
 .reserva li {
-    width: 100%;
+    width: 65%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-content: center;
+    color: #000000;
+    row-gap: 5%;
+    margin-bottom: 20px;
+    border: 1px #4d5a72 solid;
+    border-radius: 30px;
+    padding: 2%;
 
 }
 .reserva li div img{
@@ -232,16 +243,19 @@ header .bolsa span{
 }
 
 
-
+.espera_pedido{
+    
+}
 .contador_t{
-    margin-top: 10%;
     display: grid;
     place-content: center;
+    margin: auto;
 }
 #timer {
     margin: auto;
     font-size: 5em;
 }
+
 
 .botones_revison{
     padding-left: 30%;

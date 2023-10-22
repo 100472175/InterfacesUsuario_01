@@ -136,7 +136,7 @@ function recargaElemento() {
         if (value != null) {
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
-            <!--<div><img src="images/menu/${value.image}" alt="imagen_del_producto"></div> -->
+            <!--<div><img src="images/menu/${value.imagen}/" alt="imagen_del_producto"></div> -->
             <div>${value.nombre}</div>
             <div>${value.precio.toLocaleString()}</div>
             <div>
