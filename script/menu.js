@@ -9,9 +9,9 @@ let cantidad = document.querySelector(".cantidad");
 let contenedor = document.querySelector(".contenedor");
 let eleme = document.querySelector(".elemeto_carrito");
 let contador = document.querySelector(".contador_t");
-let paso1 = document.querySelector(".uno");
+let paso1 = document.querySelector(".cambiar_pedido");
 let paso2 = document.querySelector(".dos");
-let paso3 = document.querySelector(".tres");
+let paso3 = document.querySelector(".pagar");
 let comp = document.querySelector(".compr");
 let reserva = document.querySelector(".reserva");
 abrirCompra.addEventListener('click', () => {
@@ -26,7 +26,7 @@ let cosas = [
         id: 1,
         nombre: 'Cafe con leche',
         imagen: 'cafe1.jpg',
-        precio: 50
+        precio: 5.5
     },
     {
         id: 2,
@@ -157,14 +157,9 @@ function mostrarElemento() {
         if (value != null) {
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
-            <div><img src="images/menu/${value.image}" alt="imagen_del_producto" ></div>
-            <div>${value.nombre}</div>
-            <div>${value.precio.toLocaleString()}</div>
-            <div>
-                <button class="contador" onclick="cambiaCantidad(${key}, ${value.cantidad - 1})"> - </button>
-                <div class="contador">${value.cantidad}</div>
-                <button class="contador" onclick="cambiaCantidad(${key}, ${value.cantidad + 1})"> + </button>      
-            </div>`;
+            <!--<div><img src="images/menu/${value.image}" alt="imagen_del_producto" ></div>-->
+            <p>${value.nombre}, Cantidad = ${value.cantidad},  Precio =  ${value.precio.toLocaleString()} </p>
+            `;
             reserva.appendChild(newDiv);
         }
     })

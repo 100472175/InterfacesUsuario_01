@@ -20,6 +20,7 @@ body{
     margin: auto;
     transition: 0.5s;
 }
+
 header{
     display: grid;
     grid-template-columns: 1fr 50px ; /*Cmabiar los pixeles*/
@@ -192,14 +193,27 @@ header .bolsa span{
 .men{display: grid;
     place-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+.men button{
+
+    text-align: center;
 }
 
 .reserva{
+    width: 100%;
     display: grid;
     place-content: center;
-    background-color:aquamarine ;
+    list-style: none;
 
 }
+
+.reserva li {
+    width: 100%;
+
+}
+
 
 .contador_t{
     margin-top: 10%;
