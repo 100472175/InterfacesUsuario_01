@@ -26,73 +26,181 @@ let cosas = [
     {
         id: 1,
         nombre: 'Cafe con leche',
-        imagen: 'cafe1.jpg',
+        imagen: '/menu/cafe1.jpg',
         precio: 5.5
     },
     {
         id: 2,
         nombre: 'Latte machiato',
-        imagen: 'cafe2.jpg',
+        imagen: '/menu/cafe2.jpg',
         precio: 50
     },
     {
         id: 3,
         nombre: 'Capuchino',
-        imagen: 'cafe3.jpg',
+        imagen: '/menu/cafe3.jpg',
         precio: 40
     },
     {
         id: 4,
         nombre: 'Cafe con hielo',
-        imagen: 'cafe4.jpg',
+        imagen: '/menu/cafe4.jpg',
         precio: 50
     },
     {
         id: 5,
         nombre: 'Cafe solo',
-        imagen: 'cafe5.jpg',
+        imagen: '/menu/cafe5.jpg',
         precio: 50
     },
     {
         id: 6,
         nombre: 'Chocolate',
-        imagen: 'cafe6.jpg',
+        imagen: '/menu/cafe6.jpg',
         precio: 40
     },
     {
         id: 7,
-        nombre: 'Macarons',
-        imagen: 'cafe1.jpg',
+        nombre: 'A',
+        imagen: 'bebida1.jpg',
         precio: 12
     },
     {
         id: 8,
-        nombre: 'Croissants',
-        imagen: 'cafe2.jpg',
+        nombre: 'Batido de chocolate',
+        imagen: 'bebida2.jpg',
         precio: 50
     },
     {
         id: 9,
-        nombre: 'Profiteroles',
-        imagen: 'cafe3.jpg',
+        nombre: 'Batido de strachatela',
+        imagen: 'bebida3.jpg',
         precio: 40
     },
     {
         id: 10,
-        nombre: 'Eclairs',
-        imagen: 'cafe4.jpg',
+        nombre: 'Batido de strachatela',
+        imagen: 'bebida4.jpg',
         precio: 50
     },
     {
         id: 11,
         nombre: 'Surtido de macarrons',
-        imagen: 'cafe5.jpg',
+        imagen: 'bebida5.jpg',
         precio: 50
     },
     {
         id: 12,
         nombre: 'Tarta sorpresa',
-        imagen: 'cafe6.jpg',
+        imagen: 'bebida6.jpg',
+        precio: 40
+    },
+    {
+        id: 13,
+        nombre: 'Macarons',
+        imagen: 'delicatessen1.jpg',
+        precio: 12
+    },
+    {
+        id: 14,
+        nombre: 'Croissants',
+        imagen: 'delicatessen2.jpg',
+        precio: 50
+    },
+    {
+        id: 15,
+        nombre: 'Profiteroles',
+        imagen: 'delicatessen3.jpg',
+        precio: 40
+    },
+    {
+        id: 16,
+        nombre: 'Eclairs',
+        imagen: 'delicatessen4.jpg',
+        precio: 50
+    },
+    {
+        id: 17,
+        nombre: 'Surtido de macarrons',
+        imagen: 'delicatessen5.jpg',
+        precio: 50
+    },
+    {
+        id: 18,
+        nombre: 'Tarta sorpresa',
+        imagen: 'delicatessen6.jpg',
+        precio: 40
+    },
+    {
+        id: 19,
+        nombre: 'Macarons',
+        imagen: 'tartas1.jpg',
+        precio: 12
+    },
+    {
+        id: 20,
+        nombre: 'Croissants',
+        imagen: 'tartas2.jpg',
+        precio: 50
+    },
+    {
+        id: 21,
+        nombre: 'Profiteroles',
+        imagen: 'tartas3.jpg',
+        precio: 40
+    },
+    {
+        id: 22,
+        nombre: 'Eclairs',
+        imagen: 'tartas4.jpg',
+        precio: 50
+    },
+    {
+        id: 23,
+        nombre: 'Surtido de macarrons',
+        imagen: 'tartas5.jpg',
+        precio: 50
+    },
+    {
+        id: 24,
+        nombre: 'Tarta sorpresa',
+        imagen: 'tartas6.jpg',
+        precio: 40
+    },
+    {
+        id: 25,
+        nombre: 'Macarons',
+        imagen: 'Reposteria1.jpg',
+        precio: 12
+    },
+    {
+        id: 26,
+        nombre: 'Croissants',
+        imagen: 'Reposteria2.jpg',
+        precio: 50
+    },
+    {
+        id: 27,
+        nombre: 'Profiteroles',
+        imagen: 'Reposteria3.jpg',
+        precio: 40
+    },
+    {
+        id: 28,
+        nombre: 'Eclairs',
+        imagen: 'Reposteria4.jpg',
+        precio: 50
+    },
+    {
+        id: 29,
+        nombre: 'Surtido de macarrons',
+        imagen: 'Reposteria5.jpg',
+        precio: 50
+    },
+    {
+        id: 30,
+        nombre: 'Tarta sorpresa',
+        imagen: 'Reposteria6.jpg',
         precio: 40
     },
 ];
@@ -110,7 +218,7 @@ function initApp(st_elem) {
         let newDiv = document.createElement('div');
         newDiv.classList.add('elemento');
         newDiv.innerHTML = `
-            <img src="images/menu/${value.imagen}/" alt="imagen_del_producto">
+            <img src="images/${value.imagen}/" alt="imagen_del_producto">
             <div class="titulo">${value.nombre}</div>
             <div class="precio">${value.precio.toLocaleString()}</div> <!--Mirar que hace el toLocaleString() */-->
             <button onclick="aniadirAlCarrito(${value.id-1})"> Añadir </button>`;
@@ -158,7 +266,7 @@ function mostrarElemento() {
         if (value != null) {
             let newDiv = document.createElement('li');
             newDiv.innerHTML= `
-            <div><img src="images/menu/${value.imagen}/" alt="imagen_del_producto3"></div>
+            <div><img src="images/${value.imagen}/" alt="imagen_del_producto3"></div>
             <div>${value.nombre}</div>
             <div>${value.precio.toLocaleString()}</div>
             <div class="contador">${value.cantidad}</div>`;
