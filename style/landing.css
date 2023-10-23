@@ -451,8 +451,8 @@ footer a {
 /* Galería con JavaScript*/
 
 .new_slider{
-    width: 510px;
-    height: 680px;
+    width: 410px;
+    aspect-ratio: 3/4;
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
@@ -475,14 +475,14 @@ footer a {
 }
 
 .slide img{
-    width: 510px;
-    height: 680px;
+    width: 410px;
+    aspect-ratio: 3/4;
 }
 
 /* Navegación Manual */
 .navigation-manual{
     position: absolute;
-    width: 510px;
+    width: 410px;
     margin-top: -40px;
     display: flex;
     justify-content: center;
@@ -543,7 +543,7 @@ footer a {
 .navigation-auto{
     position: absolute;
     display: flex;
-    width: 510px;
+    width: 410px;
     justify-content: center;
     margin-top: 460px;
 }
