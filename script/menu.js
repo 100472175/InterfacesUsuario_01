@@ -15,6 +15,9 @@ let paso3 = document.querySelector(".pagar");
 let comp = document.querySelector(".compr");
 let reserva = document.querySelector(".reserva");
 let cargando = document.querySelector(".cargando");
+let precio_total = document.querySelector(".precio_total");
+let precioTotal = 0;
+
 abrirCompra.addEventListener('click', () => {
     body.classList.add('active');
 })
@@ -226,19 +229,22 @@ function initApp(st_elem) {
     })
 }
 
-
 function aniadirAlCarrito(key) {
   if (lista_comidas[key] == null) {
       lista_comidas[key] = JSON.parse(JSON.stringify(cosas[key]));
       lista_comidas[key].cantidad = 1;
   }
-    recargaElemento()
+  else{
+      lista_comidas[key].cantidad = lista_comidas[key].cantidad + 1;
+
+  }
+  recargaElemento()
 }
 
 function recargaElemento() {
     lista_comida.innerHTML = '';
     let cuenta = 0;
-    let precioTotal = 0;
+
     lista_comidas.forEach((value, key) => {
         precioTotal = precioTotal + value.precio;
         cuenta = cuenta + value.cantidad;
@@ -262,7 +268,11 @@ function recargaElemento() {
 
 function mostrarElemento() {
     reserva.innerHTML = '';
+    let cuenta = 0;
+    let precioTotal = 0;
     lista_comidas.forEach((value, key) => {
+        precioTotal = precioTotal + value.precio;
+        cuenta = cuenta + value.cantidad;
         if (value != null) {
             let newDiv = document.createElement('li');
             newDiv.innerHTML= `
@@ -273,6 +283,8 @@ function mostrarElemento() {
             reserva.appendChild(newDiv);
         }
     })
+    precio_total.innerText = "Total: ".concat(precioTotal.toLocaleString());
+
 }
 
 function cambiaCantidad(key, cantidad) {

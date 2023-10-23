@@ -264,7 +264,12 @@ header .bolsa span{
     font-size: 5em;
 }
 
+.precio_total{
+    display: grid;
+    place-content: center;
+    font-weight: bold;
 
+}
 .botones_revison{
     padding-left: 30%;
     padding-right: 30%;
@@ -323,6 +328,9 @@ header .bolsa span{
 .granos_cafe:nth-child(3) {
     animation-delay: .37s;
 }
+
+
+
 @keyframes salto {
     from {
         transform: scaleX(1.25);
