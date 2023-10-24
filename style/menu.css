@@ -156,7 +156,7 @@ header .bolsa span{
 }
 .lista_comida li{
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     color: #fff;
     row-gap: 5%;
     margin-bottom: 20px;
@@ -197,6 +197,7 @@ header .bolsa span{
 .lista_comida .contador{
     margin: 0 10px;
 }
+
 .men{display: grid;
     place-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -204,6 +205,27 @@ header .bolsa span{
 .men button{
     text-align: center;
 }
+.migas_pan{
+    display: flex;
+
+}
+.migas_pan a{
+    text-decoration: none;
+    color: black;
+
+}
+.migas_pan2{
+    position: relative;
+    left: 30%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+}
+.migas_pan2 a{
+    text-decoration: none;
+    color: black;
+}
+
 .reserva{
     width: 65%;
     display: grid;
@@ -214,7 +236,7 @@ header .bolsa span{
 .reserva li {
     width: 65%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     place-content: center;
     color: #000000;
     row-gap: 5%;
@@ -328,6 +350,19 @@ header .bolsa span{
 .granos_cafe:nth-child(3) {
     animation-delay: .37s;
 }
+.posicion{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 8%;
+}
+.posicion button{
+    text-align: center;
+    border: none;
+    background-color:#4d5a72;
+    color: white;
+    font-size: 1.5em;
+}
 
 
 
@@ -340,6 +375,7 @@ header .bolsa span{
                 translateY(-50px) scaleX(1);
     }
 }
+
 
 
 @media screen and (min-width: 600px) and (max-width: 966px) {

@@ -9,20 +9,127 @@ let cantidad = document.querySelector(".cantidad");
 let contenedor = document.querySelector(".contenedor");
 let eleme = document.querySelector(".elemeto_carrito");
 let contador = document.querySelector(".contador_t");
-let paso1 = document.querySelector(".cambiar_pedido");
+let cambiar_pedido = document.querySelector(".cambiar_pedido");
+let paso1 = document.querySelector(".uno");
 let paso2 = document.querySelector(".dos");
-let paso3 = document.querySelector(".pagar");
+let paso3 = document.querySelector(".tres");
+let pagar = document.querySelector(".pagar");
 let comp = document.querySelector(".compr");
 let reserva = document.querySelector(".reserva");
 let cargando = document.querySelector(".cargando");
 let precio_total = document.querySelector(".precio_total");
-let precioTotal = 0;
+let precio_compra = 0;
+let pos = 0;
+
 
 abrirCompra.addEventListener('click', () => {
     body.classList.add('active');
 })
 cerrarCompra.addEventListener('click', () => {
     body.classList.remove('active');
+})
+
+
+
+window.addEventListener('load', () => {
+    contenedor.style.display = 'block';
+    eleme.style.display = 'block';
+    contador.style.display = 'none';
+    comp.style.display = 'none';
+    paso1.style.background='black';
+    pos = 0;
+    initApp(0)
+
+})
+
+paso1.addEventListener('click', () => {
+    if (pos === 1) {
+        contenedor.style.display = 'block';
+        eleme.style.display = 'block';
+        contador.style.display = 'none';
+        comp.style.display = 'none';
+        paso1.style.background = 'black';
+        paso2.style.background = '#4d5a72';
+        pos = 0;
+    }
+    else if( pos ===2){
+        alert("No puedes ir para atras tu pedido esta en camino")
+    }
+})
+
+cambiar_pedido.addEventListener('click', () => {
+    if (pos === 1) {
+        contenedor.style.display = 'block';
+        eleme.style.display = 'block';
+        contador.style.display = 'none';
+        comp.style.display = 'none';
+        paso1.style.background = 'black';
+        paso2.style.background = '#4d5a72';
+        pos = 0;
+    }
+})
+paso2.addEventListener('click', () => {
+    if (pos === 0) {
+        if (precio_compra != 0) {
+            contenedor.style.display = 'none';
+            eleme.style.display = 'none';
+            contador.style.display = 'none';
+            comp.style.display = 'block';
+            paso2.style.background = 'black';
+            pos = 1;
+            mostrarElemento();
+        } else {
+            alert("No has selecionado ningún elemento")
+        }
+    }
+})
+totalCarrito.addEventListener('click', () => {
+    if (pos === 0) {
+        if (precio_compra != 0) {
+            contenedor.style.display = 'none';
+            eleme.style.display = 'none';
+            contador.style.display = 'none';
+            comp.style.display = 'block';
+            paso2.style.background = 'black';
+            pos = 1;
+            mostrarElemento();
+        } else {
+            alert("No has selecionado ningún elemento")
+        }
+    }
+})
+
+paso3.addEventListener('click', () => {
+
+    if(pos === 1) {
+        contenedor.style.display = 'none';
+        eleme.style.display = 'none';
+        comp.style.display = 'none';
+        contador.style.display = 'block';
+        paso3.style.background='black';
+        pos = 2;
+
+        let timerInterval = setInterval(startTimer, 1000);
+    }
+    else if(pos === 2){
+        alert("Solo se puede acceder despues de pagar ")
+    }
+})
+pagar.addEventListener('click', () => {
+    if(pos === 1) {
+        contenedor.style.display = 'none';
+        eleme.style.display = 'none';
+        comp.style.display = 'none';
+        contador.style.display = 'block';
+        paso3.style.background='black';
+        pos = 2;
+
+        let timerInterval = setInterval(startTimer, 1000);
+    }
+    else if(pos === 2){
+        alert("Solo se puede acceder despues de pagar ")
+    }
+
 })
 
 let cosas = [
@@ -236,15 +343,16 @@ function aniadirAlCarrito(key) {
   }
   else{
       lista_comidas[key].cantidad = lista_comidas[key].cantidad + 1;
+      lista_comidas[key].precio = lista_comidas[key].cantidad  * cosas[key].precio;
 
   }
-  recargaElemento()
+  recargaElemento();
 }
 
 function recargaElemento() {
     lista_comida.innerHTML = '';
     let cuenta = 0;
-
+    let precioTotal = 0;
     lista_comidas.forEach((value, key) => {
         precioTotal = precioTotal + value.precio;
         cuenta = cuenta + value.cantidad;
@@ -253,6 +361,7 @@ function recargaElemento() {
             newDiv.innerHTML = `
             <!--<div><img src="images/menu/${value.imagen}/" alt="imagen_del_producto"></div> -->
             <div>${value.nombre}</div>
+            <div>${cosas[key].precio}</div>
             <div>${value.precio.toLocaleString()}</div>
             <div>
                 <button class="contador" onclick="cambiaCantidad(${key}, ${value.cantidad - 1})"> — </button>
@@ -263,27 +372,26 @@ function recargaElemento() {
         }
     })
     totalCarrito.innerText = "Total → ".concat(precioTotal.toLocaleString());
+    precio_compra = precioTotal;
     cantidad.innerText = cuenta;
 }
 
 function mostrarElemento() {
     reserva.innerHTML = '';
-    let cuenta = 0;
-    let precioTotal = 0;
     lista_comidas.forEach((value, key) => {
-        precioTotal = precioTotal + value.precio;
-        cuenta = cuenta + value.cantidad;
         if (value != null) {
             let newDiv = document.createElement('li');
             newDiv.innerHTML= `
             <div><img src="images/${value.imagen}/" alt="imagen_del_producto3"></div>
             <div>${value.nombre}</div>
+            <div>${cosas[key].precio}</div>
             <div>${value.precio.toLocaleString()}</div>
             <div class="contador">${value.cantidad}</div>`;
             reserva.appendChild(newDiv);
         }
     })
-    precio_total.innerText = "Total: ".concat(precioTotal.toLocaleString());
+    precio_total.innerText = "Total: ".concat(precio_compra.toLocaleString());
+
 
 }
 
@@ -297,37 +405,7 @@ function cambiaCantidad(key, cantidad) {
     recargaElemento();
 }
 
-paso1.addEventListener('click', () => {
-    contenedor.style.display = 'block';
-    eleme.style.display = 'block';
-    contador.style.display = 'none';
-    comp.style.display = 'none';
-})
 
-totalCarrito.addEventListener('click', () => {
-    contenedor.style.display = 'none';
-    eleme.style.display = 'none';
-    contador.style.display = 'none';
-    comp.style.display = 'block';
-    mostrarElemento();
-})
-
-paso3.addEventListener('click', () => {
-    contenedor.style.display = 'none';
-    eleme.style.display = 'none';
-    comp.style.display = 'none';
-    contador.style.display = 'block';
-    let timerInterval = setInterval(startTimer, 1000);
-})
-
-window.addEventListener('load', () => {
-    contenedor.style.display = 'block';
-    eleme.style.display = 'block';
-    contador.style.display = 'none';
-    comp.style.display = 'none';
-    initApp(0)
-
-})
 
 
 let timeLimitInMinutes = 10;
