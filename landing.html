@@ -37,12 +37,6 @@
                     </path>
                 </svg>
             </div>
-            <!--div style="height: 15%; width: 100%; overflow: hidden; position: relative; z-index: 2; bottom: 15%">
-                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%; ">
-                    <path d="M-0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z" style="stroke: none; fill: #ffffff;">
-                    </path>
-                </svg>
-            </div-->
 
         </section>
 
@@ -337,37 +331,42 @@
                 </div>
 
             </article>
-            <div class="ola">
-                <svg viewBox="0 0 500 150" preserveAspectRatio="none">
-                    <path d="M-0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z" class="ola_negra">
-                    </path>
-                </svg>
-            </div>
+
         </section>
 
-        <section class="page2">
+        <section class="page">
             <h2 id="reg"> Registro </h2>
                 <div class="cen">
                     <form>
                         <div class="cajas">
                             <label for="name">Nombre:</label><br>
-                            <input type="text" id="name" name="name" value="" ><br>
+                            <input type="text" id="name" name="name" value="" >
                         </div>
-                        <label for="surname">Apellido:</label><br>
-                        <input type="text" id="surname" name="surname" value="" ><br>
 
-                        <label for="dni">DNI:</label><br>
-                        <input type="text" id="dni" name="dni" value="" ><br>
+                        <div class="cajas">
+                            <label for="surname">Apellido:</label><br>
+                            <input type="text" id="surname" name="surname" value="" >
+                        </div>
 
-                        <label for="tlf">Teléfono móvil:</label><br>
-                        <input type="text" id="tlf" name="tlf" value="" ><br>
+                        <div class="cajas">
+                            <label for="dni">DNI:</label><br>
+                            <input type="text" id="dni" name="dni" value="" >
+                        </div>
 
-                        <label for="mail">Email:</label><br>
-                        <input type="text" id="mail" name="mail" value=""><br>
+                        <div class="cajas">
+                            <label for="tlf">Teléfono móvil:</label><br>
+                            <input type="text" id="tlf" name="tlf" value="" >
+                        </div>
 
-                        <input type="reset" value="Reset" class="reset"/><br>
-                        <button  onclick="createAccount()" > Registrarse </button><br>
-                        <button onclick="window.location.href='landing.html'"> Cancel </button><br>
+                        <div class="cajas">
+                            <label for="mail">Email:</label><br>
+                            <input type="text" id="mail" name="mail" value="">
+                        </div>
+                        <div class="botones">
+                            <button type="reset" value="Reset" > Reset </button>
+                            <button  class="registrarse" > Registrarse </button>
+                            <button class="cancel"> Cancel </button>
+                        </div>
                     </form>
             </div>
 
@@ -378,22 +377,18 @@
             <article class="center">
                 <h2 id = "contacto"> Conocenos: </h2>
                 <div class ="e">
-                    <div>
+                    <div class="conocenos">
                         <h4>Nuestros contactos:</h4>
-                        <a href="https://mail.google.com/">Correo: cafeflorenciauc3m@gmail.com</a>
+                        <a href="https://mail.google.com/">cafeflorenciauc3m@gmail.com</a>
                         <a href="https://www.instagram.com/cafe__florencia_/">   Instagram</a>
                     </div>
-                    <form>
-                        <label for="name">Nombre:</label><br>
-                        <input type="text" id="name_c" name="name_c" value=""><br>
-                        <label for="surname">Apellido:</label><br>
-                        <input type="text" id="surname_c" name="surname_c" value="" ><br>
-                        <label for="mail">Email:</label><br>
-                        <input type="text" id="mail_c" name="mail_c" value="" ><br>
-                        <label for="tlf">Teléfono móvil:</label><br>
-                        <input type="text" id="tlf_C" name="tlf_c" value="" ><br>
-                        <label for="men">Mensaje:</label><br>
-                        <input type="text" id="men" name="men" value=""><br>
+                    <form class="mensaje">
+                        <label for="mail">Email:</label>
+                        <input type="text" id="mail_c" name="mail_c" value="" >
+                        <label for="men">Mensaje:</label>
+                        <textarea id="men" name="men" value=""></textarea>
+                        <button type="reset" value="Reset" > Enviar </button>
+
                     </form>
 
                     <!-- <a href="https://mail.google.com/">Correo: cafeflorenciauc3m@gmail.com</a>

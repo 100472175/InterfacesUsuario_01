@@ -219,8 +219,8 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 }
 
 #reg {
-    color: white;
-    padding: 4%;
+    color: black;
+    padding: 2%;
     display: grid;
     place-content: center;
 }
@@ -228,21 +228,16 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 .cen{
     margin:auto;
     display: grid;
-    place-content: center;
     width: 30%;
-    height: auto;
-    border-radius: 20px;
-    background-color: #cbc5c5;
+    height: 60%;
+    border: 5px double black;
 
 }
 
 .cen form{
-
     font-size: 1.25em;
-    padding: 10%;
+    padding: 5%;
     width: 100%;
-    margin:auto;
-
 
 }
 .cajas{
@@ -251,13 +246,9 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 .cen label{
     width: auto;
     color: black;
-    top: 20px;
-    transform: translateY(-50%);
+    margin-top: 5%;
 }
-input:focus~label,
-input:valid~label{
-    top:-5px;
-}
+
 .cen button{
     font-size: 0.75em;
     border: black  solid 2px;
@@ -265,75 +256,102 @@ input:valid~label{
     background-color: white;
     color: black;
     padding: 5%;
-    width: auto;
-    margin: 2%;
-    align-content: center;
+    width: 60%;
+    text-align: center;
+
 }
 .cen input{
     border: none;
     background-color: transparent;
     color: black;
     width: auto;
+    margin-bottom: 5%;
 
 
 }
-.reset{
-    font-size: 0.75em;
-    border: none;
+.botones{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1.25em;
     border-radius: 20px;
-    color: white;
-    padding: 5%;
+    background-color: white;
+    color: black;
+    margin-top: 5%;
+    margin-left: 10%;
     width: auto;
-    margin: 2%;
+    text-align: center;
 
 }
+
+
 .center{
     display: grid;
     place-content: center;
 
-
 }
-.center h2{
+.center h4{
     text-align: center;
+    font-size: 2em;
 
 }
 .e{
-
     display: grid;
     place-content: center center;
     grid-template-columns: 1fr 1fr;
-    padding: 10% ;
+    padding: 10%;
+    gap: 20%;
 
 }
-.e div{
+.conocenos{
+    border: 5px double black;
     padding: 10%;
     /*border: 5px double black;*/
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     width: 30vw;
+    height: 50vh;
 }
 
-.center div a{
+.conocenos a{
     text-decoration: transparent;
-    font-size: 1em;
+    font-size: 1.5em;
     color: black;
 }
 
-.e form{
+.mensaje{
+    font-size: 1.5em;
+    margin: auto;
+    border: 5px double black;
     width: 30vw;
     text-align: center;
+    height: 50vh;
+    display: grid;
+    place-content: center;
 
 }
-.e form input{
-    border-radius:  20px;
-    border: black;
+
+.mensaje textarea{
+    resize: none;
+    border:2px  solid black;
+    width: 25vw;
+    height: 30vh;
+}
+.mensaje input{
+    border: 2px solid black;
     color: black;
-    width: auto;
     text-align: center;
-
 }
-
-
+.mensaje button{
+    font-size: 1em;
+    border: black  solid 2px;
+    border-radius: 20px;
+    color: black;
+    margin: auto;
+    margin-top: 5% ;
+    width: 20%;
+    text-align: center;
+}
 
 /*Contenedor de la galeria de imagnes, con el slider que aparece debajo, que hace que las imágenes se peguen*/
 .slider{
@@ -593,7 +611,6 @@ footer a {
 #bebida_radio6:checked ~ .navigation-auto .radio_auto-btn6{
     background: black;
 }
-
 
 
 

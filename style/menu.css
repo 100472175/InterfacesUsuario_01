@@ -22,6 +22,7 @@ body{
 }
 
 header{
+
     display: grid;
     grid-template-columns: 1fr 14% ; /*Cmabiar los pixeles*/
     margin-top: 5%;
@@ -38,14 +39,14 @@ header .bolsa img{
 
 header .bolsa span{
     background: red;
-    border-radius: 50px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
     position: absolute;
     top: -5px;
-    left: 80%;
+    left: 83%;
     padding: 3px 10px;
 }
 .lista{
@@ -116,6 +117,7 @@ header .bolsa span{
     align-items: center;
     font-size: 2em;
     font-weight: bold;
+    margin-top: 5%;
 }
 .resumen{
     position: absolute;
@@ -204,6 +206,7 @@ header .bolsa span{
 }
 .men button{
     text-align: center;
+    font-size: 1em;
 }
 .migas_pan{
     display: flex;
@@ -266,6 +269,7 @@ header .bolsa span{
     display: grid;
     place-content: center;
     right: 50%;
+
 }
 
 
@@ -275,10 +279,14 @@ header .bolsa span{
     margin: auto;
 
 }
+.contador_t{
+    margin-top: 10%
+}
+
 .contador_t nav{
     display: grid;
     place-content: center;
-    margin: 4% auto;
+    margin: 40% auto;
 
 }
 #timer {
@@ -307,6 +315,7 @@ header .bolsa span{
     height: auto;
     padding: 10%;
     border-radius: 30px;
+    font-size: 1.5em;
 }
 .botones_revison button{
     background-color: #2b3036;
@@ -318,9 +327,13 @@ header .bolsa span{
     color: #fff;
 }
 
-
+.logo{
+    height: 40px;
+    width: 40px;
+}
 
 .container{
+
     display: grid;
     place-content: center;
     height: 100vh;
@@ -351,10 +364,14 @@ header .bolsa span{
     animation-delay: .37s;
 }
 .posicion{
+    position: fixed;
+    top:0;
+    width: 100%;
     display: grid;
     place-content: center;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 8%;
+    z-index: 3;
+
 }
 .posicion button{
     text-align: center;
@@ -379,6 +396,13 @@ header .bolsa span{
 
 
 @media screen and (min-width: 600px) and (max-width: 966px) {
+    header{
+        margin-top: 10%;
+    }
+
+    .elemeto_carrito h1{
+        margin-top: 15%;
+    }
     .lista{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -397,6 +421,15 @@ header .bolsa span{
 
 
 @media screen and (max-width: 600px){
+    .elemeto_carrito h1{
+        margin-top: 10%;
+    }
+
+    header{
+
+
+        margin-top: 10%;
+    }
     .lista{
         grid-template-columns: 1fr;
     }

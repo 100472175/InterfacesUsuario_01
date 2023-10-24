@@ -18,6 +18,7 @@ let comp = document.querySelector(".compr");
 let reserva = document.querySelector(".reserva");
 let cargando = document.querySelector(".cargando");
 let precio_total = document.querySelector(".precio_total");
+let logo = document.querySelector(".logo");
 let precio_compra = 0;
 let pos = 0;
 
@@ -29,7 +30,9 @@ cerrarCompra.addEventListener('click', () => {
     body.classList.remove('active');
 })
 
-
+logo.addEventListener('click', () => {
+    window.location.href='landing.html';
+})
 
 window.addEventListener('load', () => {
     contenedor.style.display = 'block';
@@ -78,9 +81,14 @@ paso2.addEventListener('click', () => {
             paso2.style.background = 'black';
             pos = 1;
             mostrarElemento();
-        } else {
+
+        }else {
             alert("No has selecionado ningún elemento")
         }
+
+    }
+    else if( pos ===2) {
+        alert("No puedes ir para atras tu pedido esta en camino")
     }
 })
 totalCarrito.addEventListener('click', () => {
@@ -111,7 +119,7 @@ paso3.addEventListener('click', () => {
 
         let timerInterval = setInterval(startTimer, 1000);
     }
-    else if(pos === 2){
+    else if(pos === 0){
         alert("Solo se puede acceder despues de pagar ")
     }
 })
@@ -126,9 +134,7 @@ pagar.addEventListener('click', () => {
 
         let timerInterval = setInterval(startTimer, 1000);
     }
-    else if(pos === 2){
-        alert("Solo se puede acceder despues de pagar ")
-    }
+
 
 })
 
@@ -137,67 +143,67 @@ let cosas = [
         id: 1,
         nombre: 'Cafe con leche',
         imagen: '/menu/cafe1.jpg',
-        precio: 5.5
+        precio: 2.00
     },
     {
         id: 2,
         nombre: 'Latte machiato',
         imagen: '/menu/cafe2.jpg',
-        precio: 50
+        precio: 2.00
     },
     {
         id: 3,
         nombre: 'Capuchino',
         imagen: '/menu/cafe3.jpg',
-        precio: 40
+        precio: 2.30
     },
     {
         id: 4,
         nombre: 'Cafe con hielo',
         imagen: '/menu/cafe4.jpg',
-        precio: 50
+        precio: 1.80
     },
     {
         id: 5,
         nombre: 'Cafe solo',
         imagen: '/menu/cafe5.jpg',
-        precio: 50
+        precio: 1.80
     },
     {
         id: 6,
         nombre: 'Chocolate',
         imagen: '/menu/cafe6.jpg',
-        precio: 40
+        precio: 2.3
     },
     {
         id: 7,
         nombre: 'A',
         imagen: 'bebida1.jpg',
-        precio: 12
+        precio: 4.50
     },
     {
         id: 8,
         nombre: 'Batido de chocolate',
         imagen: 'bebida2.jpg',
-        precio: 50
+        precio: 4.50
     },
     {
         id: 9,
         nombre: 'Batido de strachatela',
         imagen: 'bebida3.jpg',
-        precio: 40
+        precio: 4.50
     },
     {
         id: 10,
-        nombre: 'Batido de strachatela',
+        nombre: 'Batido de vainilla',
         imagen: 'bebida4.jpg',
-        precio: 50
+        precio: 4.50
     },
     {
         id: 11,
-        nombre: 'Surtido de macarrons',
+        nombre: 'Batido de strachatela',
         imagen: 'bebida5.jpg',
-        precio: 50
+        precio: 4.5
     },
     {
         id: 12,
@@ -207,39 +213,39 @@ let cosas = [
     },
     {
         id: 13,
-        nombre: 'Macarons',
+        nombre: 'Macarons de chocolate',
         imagen: 'delicatessen1.jpg',
-        precio: 12
+        precio: 2.5
     },
     {
         id: 14,
-        nombre: 'Croissants',
+        nombre: 'Mini delicias',
         imagen: 'delicatessen2.jpg',
-        precio: 50
+        precio: 3.5
     },
     {
         id: 15,
-        nombre: 'Profiteroles',
+        nombre: 'Bonbones',
         imagen: 'delicatessen3.jpg',
-        precio: 40
+        precio: 1.5
     },
     {
         id: 16,
-        nombre: 'Eclairs',
+        nombre: 'Macarons de oreo',
         imagen: 'delicatessen4.jpg',
-        precio: 50
+        precio: 2.5
     },
     {
         id: 17,
-        nombre: 'Surtido de macarrons',
+        nombre: 'Mini tartitas',
         imagen: 'delicatessen5.jpg',
-        precio: 50
+        precio: 4.5
     },
     {
         id: 18,
-        nombre: 'Tarta sorpresa',
+        nombre: 'Macarons de fresa',
         imagen: 'delicatessen6.jpg',
-        precio: 40
+        precio: 2.5
     },
     {
         id: 19,
@@ -279,33 +285,33 @@ let cosas = [
     },
     {
         id: 25,
-        nombre: 'Macarons',
+        nombre: 'Donas glaseados',
         imagen: 'Reposteria1.jpg',
-        precio: 12
+        precio: 3.5
     },
     {
         id: 26,
-        nombre: 'Croissants',
+        nombre: 'Tortitas especiales',
         imagen: 'Reposteria2.jpg',
-        precio: 50
+        precio: 4.5
     },
     {
         id: 27,
-        nombre: 'Profiteroles',
+        nombre: 'Tortitas con fresas',
         imagen: 'Reposteria3.jpg',
-        precio: 40
+        precio: 4.5
     },
     {
         id: 28,
-        nombre: 'Eclairs',
+        nombre: 'Gofres',
         imagen: 'Reposteria4.jpg',
-        precio: 50
+        precio: 4.5
     },
     {
         id: 29,
-        nombre: 'Surtido de macarrons',
+        nombre: 'Totitas con chocolate',
         imagen: 'Reposteria5.jpg',
-        precio: 50
+        precio: 4.5
     },
     {
         id: 30,
@@ -330,7 +336,7 @@ function initApp(st_elem) {
         newDiv.innerHTML = `
             <img src="images/${value.imagen}/" alt="imagen_del_producto">
             <div class="titulo">${value.nombre}</div>
-            <div class="precio">${value.precio.toLocaleString()}</div> <!--Mirar que hace el toLocaleString() */-->
+            <div class="precio">${value.precio.toLocaleString()} €</div> <!--Mirar que hace el toLocaleString() */-->
             <button onclick="aniadirAlCarrito(${value.id-1})"> Añadir </button>`;
         lista.appendChild(newDiv);
     })
@@ -361,8 +367,8 @@ function recargaElemento() {
             newDiv.innerHTML = `
             <!--<div><img src="images/menu/${value.imagen}/" alt="imagen_del_producto"></div> -->
             <div>${value.nombre}</div>
-            <div>${cosas[key].precio}</div>
-            <div>${value.precio.toLocaleString()}</div>
+            <div>${cosas[key].precio} €</div>
+            <div>${value.precio.toLocaleString()} €</div>
             <div>
                 <button class="contador" onclick="cambiaCantidad(${key}, ${value.cantidad - 1})"> — </button>
                 <div class="contador">${value.cantidad}</div>
@@ -371,7 +377,7 @@ function recargaElemento() {
             lista_comida.appendChild(newDiv);
         }
     })
-    totalCarrito.innerText = "Total → ".concat(precioTotal.toLocaleString());
+    totalCarrito.innerText = "Total → ".concat(precioTotal.toLocaleString()).concat(' €');
     precio_compra = precioTotal;
     cantidad.innerText = cuenta;
 }
@@ -384,13 +390,13 @@ function mostrarElemento() {
             newDiv.innerHTML= `
             <div><img src="images/${value.imagen}/" alt="imagen_del_producto3"></div>
             <div>${value.nombre}</div>
-            <div>${cosas[key].precio}</div>
-            <div>${value.precio.toLocaleString()}</div>
-            <div class="contador">${value.cantidad}</div>`;
+            <div>${cosas[key].precio} €</div>
+            <div>${value.precio.toLocaleString() } €</div>
+            <div class="contador">${value.cantidad} u</div>`;
             reserva.appendChild(newDiv);
         }
     })
-    precio_total.innerText = "Total: ".concat(precio_compra.toLocaleString());
+    precio_total.innerText = "Total: ".concat(precio_compra.toLocaleString()).concat(' €');
 
 
 }

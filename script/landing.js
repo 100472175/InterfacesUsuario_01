@@ -1,7 +1,16 @@
 let nav = document.querySelector(".nav_menu");
 let abrir = document.querySelector(".abrir");
 let cerrar = document.querySelector(".cerrar");
+let registrarse = document.querySelector(".registrarse");
+let cancel = document.querySelector(".cancel");
+registrarse.addEventListener('click', () => {
+    createAccount();
 
+})
+cancel.addEventListener('click', () => {
+    window.location.href='landing.html';
+
+})
 window.addEventListener('load', () => {
     cerrar.style.display = 'none';
     abrir.style.display = 'block';
