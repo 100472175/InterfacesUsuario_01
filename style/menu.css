@@ -12,8 +12,9 @@ h1{
 }
 
 body{
-    background-color: #ffffff;
-    font-family: system-ui;
+    background-color: white;
+    width: 100%;
+    height: 100%;
 }
 .contenedor{
     width: 55%; /*Esto hay que cambiarlo a porcentaje*/
@@ -22,10 +23,12 @@ body{
 }
 
 header{
-
     display: grid;
     grid-template-columns: 1fr 14% ; /*Cmabiar los pixeles*/
     margin-top: 5%;
+}
+header h1{
+    font-size: 3em;
 }
 
 header .bolsa{
@@ -49,7 +52,7 @@ header .bolsa span{
     left: 83%;
     padding: 3px 10px;
 }
-.lista{
+.lista_comida_disp{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 5%; /*cambiar*/
@@ -90,24 +93,31 @@ header .bolsa span{
     height: 5%;
     font-size: 1em;
     border-radius: 30px;
+    cursor: pointer;
+
 }
-.elemeto_carrito{
+.elemento button:hover{
+    color:black;
+    border: black solid 1px;
+    background-color: white;
+}
+.carrito{
     position: fixed;
     top: 0;
     left: 100%;
-    width: 25%;
+    width: 35%;
     background-color: rgba(70, 68, 68, 0.52);
     height: 100vh;
     transition: 0.75s;
 }
-.active .elemeto_carrito{
-    left: 75%;
+.active .carrito{
+    left: 65%;
 }
 .active .contenedor{
     transform: translateX(-25%);
 }
 
-.elemeto_carrito h1{
+.carrito h1{
     color: #4d5a72;
 
     margin: 0;
@@ -118,15 +128,16 @@ header .bolsa span{
     font-size: 2em;
     font-weight: bold;
     margin-top: 5%;
+    text-align: left;
 }
-.resumen{
+.info_pedido{
     position: absolute;
     bottom: 0;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.resumen button{
+.info_pedido button{
     background-color: #4d5a72;
     width: 100%;
     height: 100%;
@@ -141,7 +152,7 @@ header .bolsa span{
 
 }
 
-.resumen div{
+.info_pedido div{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -149,14 +160,14 @@ header .bolsa span{
     cursor: pointer;
 }
 
-.elemeto_carrito .resumen div:nth-child(2) { /*Esto elige el segundo hijo div, es como el enésimo hijo, el 2*/
+.info_pedido div:nth-child(2) { /*Esto elige el segundo hijo div, es como el enésimo hijo, el 2*/
     background-color: #2b3036;
     color: #fff;
 }
-.lista_comida{
+.lista_comida_selec{
     margin: 5%;
 }
-.lista_comida li{
+.lista_comida_selec li{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     color: #fff;
@@ -165,7 +176,7 @@ header .bolsa span{
     border: 1px #4d5a72 solid;
     padding: 2%;
 }
-.lista_comida li div{
+.lista_comida_selec li div{
     display: grid;
     /*
     justify-content: center;
@@ -177,7 +188,7 @@ header .bolsa span{
     font-weight: bold;
     text-align: left;
 }
-.lista_comida li div:last-child{
+.lista_comida_selec li div:last-child{
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
 }
@@ -189,24 +200,25 @@ header .bolsa span{
 }
 */
 
-.lista_comida li button{
+.lista_comida_selec li button{
     font-size: x-large;
     width: auto;
     color: white;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
-.lista_comida .contador{
+.lista_comida_selec .contador{
     margin: 0 10px;
 }
 
-.men{display: grid;
+.diferentes_menus{display: grid;
     place-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-.men button{
+.diferentes_menus button{
     text-align: center;
-    font-size: 1em;
+    font-size: 1.5em;
 }
 .migas_pan{
     display: flex;
@@ -215,6 +227,7 @@ header .bolsa span{
 .migas_pan a{
     text-decoration: none;
     color: black;
+    font-size: 1.25em;
 
 }
 .migas_pan2{
@@ -237,12 +250,13 @@ header .bolsa span{
     margin: auto;
 }
 .reserva li {
-    width: 65%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     place-content: center;
     color: #000000;
     row-gap: 5%;
+
 
     border: 1px #4d5a72 solid;
     border-radius: 30px;
@@ -254,8 +268,11 @@ header .bolsa span{
 .reserva li div img{
     margin-left: 15%;
     right: 0;
-    width: 30%;
+    width: 70%;
+    border-radius: 10px;
+
 }
+
 
 .reserva li div{
     display: grid;
@@ -263,12 +280,15 @@ header .bolsa span{
     place-content: center;
     align-content: center;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
+    font-size: 1.25em;
 }
 .compr h2{
     display: grid;
     place-content: center;
     right: 50%;
+    font-size: 3em;
+    text-align: center;
 
 }
 
@@ -316,8 +336,7 @@ header .bolsa span{
     padding: 10%;
     border-radius: 30px;
     font-size: 1.5em;
-}
-.botones_revison button{
+    border: none;
     background-color: #2b3036;
     color: #fff;
 }
@@ -366,7 +385,7 @@ header .bolsa span{
 .posicion{
     position: fixed;
     top:0;
-    width: 100%;
+    width: 100vw;
     display: grid;
     place-content: center;
     grid-template-columns: 1fr 1fr 1fr;
@@ -396,21 +415,24 @@ header .bolsa span{
 
 
 @media screen and (min-width: 600px) and (max-width: 966px) {
+    .contenedor{
+        width: 65%; /*Esto hay que cambiarlo a porcentaje*/
+    }
     header{
         margin-top: 10%;
     }
 
-    .elemeto_carrito h1{
-        margin-top: 15%;
+    .carrito h1{
+        margin-top: 20%;
     }
-    .lista{
+    .lista_comida_disp{
         grid-template-columns: repeat(2, 1fr);
     }
-    .elemeto_carrito{
-        width: 34%;
+    .carrito{
+        width: 40%;
     }
-    .active .elemeto_carrito{
-        left: 66%;
+    .active .carrito{
+        left: 60%;
     }
     .active .contenedor{
         transform: translateX(-25%);
@@ -421,25 +443,52 @@ header .bolsa span{
 
 
 @media screen and (max-width: 600px){
-    .elemeto_carrito h1{
+    .carrito h1{
         margin-top: 10%;
     }
-
+    .contenedor{
+        width: 85%;
+    }
+    .elemento{
+        margin-bottom: 10%;
+    }
     header{
-
-
         margin-top: 10%;
+
     }
-    .lista{
+    header h1{
+        font-size: 2em;
+    }
+
+    .diferentes_menus button{
+        font-size: 1em;
+    }
+    .lista_comida_disp{
         grid-template-columns: 1fr;
     }
-    .elemeto_carrito{
+    .carrito{
         width: 80%;
     }
-    .active .elemeto_carrito{
+    .active .carrito{
         left: 20%;
     }
     .active .contenedor{
-        transform: translateX(-25%);
+        transform: translateX(0);
     }
+    .reserva {
+        width: 90%;
+    }
+    .compr header h2{
+        font-size: 2em;
+    }
+    .botones_revison{
+        gap: 5%;
+
+    }
+    .botones_revison button{
+        height: 10vh;
+        width: 15vh;
+    }
+
+
 }

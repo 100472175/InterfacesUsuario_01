@@ -1,13 +1,12 @@
 let abrirCompra = document.querySelector(".bolsa");
 let cerrarCompra = document.querySelector(".finalizaCompra");
-let lista = document.querySelector(".lista");
-let lista_comida = document.querySelector(".lista_comida");
+let lista = document.querySelector(".lista_comida_disp");
+let lista_comida = document.querySelector(".lista_comida_selec");
 let body = document.querySelector("body");
 let totalCarrito = document.querySelector(".total");
 let cantidad = document.querySelector(".cantidad");
-
 let contenedor = document.querySelector(".contenedor");
-let eleme = document.querySelector(".elemeto_carrito");
+let eleme = document.querySelector(".carrito");
 let contador = document.querySelector(".contador_t");
 let cambiar_pedido = document.querySelector(".cambiar_pedido");
 let paso1 = document.querySelector(".uno");
@@ -19,6 +18,11 @@ let reserva = document.querySelector(".reserva");
 let cargando = document.querySelector(".cargando");
 let precio_total = document.querySelector(".precio_total");
 let logo = document.querySelector(".logo");
+let cafe = document.querySelector(".cafe");
+let bebidas_dulces = document.querySelector(".bebidas_dulces");
+let delicateen = document.querySelector(".delicatessen");
+let tartas = document.querySelector(".tartas");
+let reposteria = document.querySelector(".reposteria");
 let precio_compra = 0;
 let pos = 0;
 
@@ -41,9 +45,78 @@ window.addEventListener('load', () => {
     comp.style.display = 'none';
     paso1.style.background='black';
     pos = 0;
-    initApp(0)
+    initApp(0);
+    cafe.style.background='black';
+    cafe.style.color = 'white';
 
 })
+cafe.addEventListener('click', () => {
+    initApp(0);
+    cafe.style.background='black';
+    cafe.style.color = 'white';
+    bebidas_dulces.style.background='white';
+    bebidas_dulces.style.color = 'black';
+    delicateen.style.background='white';
+    delicateen.style.color = 'black';
+    tartas.style.background='white';
+    tartas.style.color = 'black';
+    reposteria.style.background='white';
+    reposteria.style.color = 'black';
+})
+bebidas_dulces.addEventListener('click', () => {
+    initApp(6);
+    bebidas_dulces.style.background='black';
+    bebidas_dulces.style.color = 'white';
+    cafe.style.background='white';
+    cafe.style.color = 'black';
+    delicateen.style.background='white';
+    delicateen.style.color = 'black';
+    tartas.style.background='white';
+    tartas.style.color = 'black';
+    reposteria.style.background='white';
+    reposteria.style.color = 'black';
+})
+delicateen.addEventListener('click', () => {
+    initApp(12);
+    delicateen.style.background='black';
+    delicateen.style.color = 'white';
+    bebidas_dulces.style.background='white';
+    bebidas_dulces.style.color = 'black';
+    tartas.style.background='white';
+    tartas.style.color = 'black';
+    reposteria.style.background='white';
+    reposteria.style.color = 'black';
+    cafe.style.background='white';
+    cafe.style.color = 'black';
+})
+tartas.addEventListener('click', () => {
+    initApp(18);
+    tartas.style.background='black';
+    tartas.style.color = 'white';
+    bebidas_dulces.style.background='white';
+    bebidas_dulces.style.color = 'black';
+    delicateen.style.background='white';
+    delicateen.style.color = 'black';
+    reposteria.style.background='white';
+    reposteria.style.color = 'black';
+    cafe.style.background='white';
+    cafe.style.color = 'black';
+})
+reposteria.addEventListener('click', () => {
+    initApp(24);
+    reposteria.style.background='black';
+    reposteria.style.color = 'white';
+    bebidas_dulces.style.background='white';
+    bebidas_dulces.style.color = 'black';
+    delicateen.style.background='white';
+    delicateen.style.color = 'black';
+    tartas.style.background='white';
+    tartas.style.color = 'black';
+
+    cafe.style.background='white';
+    cafe.style.color = 'black';
+})
+
 
 paso1.addEventListener('click', () => {
     if (pos === 1) {
@@ -343,6 +416,7 @@ function initApp(st_elem) {
 }
 
 function aniadirAlCarrito(key) {
+
   if (lista_comidas[key] == null) {
       lista_comidas[key] = JSON.parse(JSON.stringify(cosas[key]));
       lista_comidas[key].cantidad = 1;
@@ -414,33 +488,32 @@ function cambiaCantidad(key, cantidad) {
 
 
 
-let timeLimitInMinutes = 10;
-let timeLimitInSeconds = timeLimitInMinutes * 60;
+let cantidad_minutos = 10;
+let cantidad_segundos = cantidad_minutos * 60;
 let timerElement = document.getElementById('timer');
 
 function startTimer() {
-    timeLimitInSeconds--;
-    let minutes = Math.floor(timeLimitInSeconds / 60);
-    let seconds = timeLimitInSeconds % 60;
+    cantidad_segundos--;
+    let minutos = Math.floor(cantidad_segundos / 60);
+    let segundos = cantidad_segundos % 60;
 
-    if (timeLimitInSeconds < 0) {
+    if (cantidad_segundos < 0) {
         timerElement.textContent = '00:00';
         cargando.style.display = 'None';
         let newDiv = document.createElement('p');
         newDiv.innerHTML= ` Pedido entregado`;
 
-
         clearInterval(timerInterval);
         return;
     }
 
-    if (minutes < 10) {
-        minutes = '0' + minutes;
+    if (minutos < 10) {
+        minutos = '0' + minutos;
     }
-    if (seconds < 10) {
-        seconds = '0' + seconds;
+    if (segundos < 10) {
+        segundos = '0' + segundos;
     }
 
-    timerElement.textContent = minutes + ':' + seconds;
+    timerElement.textContent = minutos + ':' + segundos;
 }
 

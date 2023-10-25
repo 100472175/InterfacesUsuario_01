@@ -102,10 +102,8 @@ Contiene una malla para mostrar los ditintos botones  */
 }
 /*Formato de los botones*/
 .button_box{
-    min-height: 40%;
-    max-width: 40%;
-    width: 30%;
-    height: 80%;
+    width: 100px;
+    height: 100px;
     margin: 5%;
     margin-left: 70%;
 
@@ -117,8 +115,9 @@ Contiene una malla para mostrar los ditintos botones  */
     place-items: center;
     position: relative;
 
-    border-radius: 100%;
-    border: #ffffff solid 4px;
+    border-radius: 50%;
+    border: #ffffff solid 2px;
+
 
     background-position: right center;
     background-size: cover;
@@ -225,16 +224,16 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     place-content: center;
 }
 
-.cen{
+.registrar{
     margin:auto;
     display: grid;
     width: 30%;
-    height: 60%;
+    height: auto;
     border: 5px double black;
 
 }
 
-.cen form{
+.registrar form{
     font-size: 1.25em;
     padding: 5%;
     width: 100%;
@@ -242,32 +241,31 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 }
 .cajas{
     border-bottom:2px solid black;
+    margin-bottom: 2%;
 }
-.cen label{
+.registrar label{
     width: auto;
     color: black;
     margin-top: 5%;
 }
 
-.cen button{
+.registrar button{
     font-size: 0.75em;
     border: black  solid 2px;
     border-radius: 20px;
     background-color: white;
     color: black;
     padding: 5%;
-    width: 60%;
+    width: 70%;
     text-align: center;
 
 }
-.cen input{
+.registrar input{
     border: none;
     background-color: transparent;
     color: black;
     width: auto;
     margin-bottom: 5%;
-
-
 }
 .botones{
     display: grid;
@@ -278,10 +276,13 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     background-color: white;
     color: black;
     margin-top: 5%;
-    margin-left: 10%;
     width: auto;
     text-align: center;
 
+}
+.botones button{
+    width: 90%;
+    border: 1px solid black;
 }
 
 
@@ -295,11 +296,11 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     font-size: 2em;
 
 }
-.e{
+.conocer{
     display: grid;
     place-content: center center;
     grid-template-columns: 1fr 1fr;
-    padding: 10%;
+    margin-top:10% ;
     gap: 20%;
 
 }
@@ -328,7 +329,6 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     height: 50vh;
     display: grid;
     place-content: center;
-
 }
 
 .mensaje textarea{
@@ -341,16 +341,18 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     border: 2px solid black;
     color: black;
     text-align: center;
+
 }
 .mensaje button{
     font-size: 1em;
-    border: black  solid 2px;
+    border: black  solid 1px;
     border-radius: 20px;
     color: black;
     margin: auto;
     margin-top: 5% ;
-    width: 20%;
+    width: 25%;
     text-align: center;
+
 }
 
 /*Contenedor de la galeria de imagnes, con el slider que aparece debajo, que hace que las imágenes se peguen*/
@@ -613,7 +615,9 @@ footer a {
 }
 
 
-
+.abrir{
+    display: none;
+}
 
 .cerrar{
     display: none;
@@ -624,14 +628,34 @@ footer a {
 
 
 
+.reveal {
+    position: relative;
+    opacity: 0;
+}
+.reveal.active {
+    opacity: 1;
+}
+.active.fade-bottom {
+    animation: fade-bottom 1s ease-in;
+}
+
+@keyframes fade-bottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
 /* Respponsive para tablet*/
 @media screen and (min-width: 600px) and (max-width: 966px){
-
     .title_navigation_section{
         display: inline;
     }
-
-
     .title_navigation_title_article{
         width: 100%;
         background-image: url("../images/cafe_f.png");
@@ -648,37 +672,101 @@ footer a {
         min-height: 150px;
         max-width: 150px;
         font-size: 1em;
-
         padding: 5%;
         margin: 5%;
     }
-
     .page2{
         display: inline;
-        background-color: black;
-        color: white;
     }
-
-
     .page{
         display: inline;
     }
     .gallery_title_right{
         width: 100%;
-        height: 95vh;
+        height: 100vh;
     }
     .gallery_title_left{
         width: 100%;
-        height: 95vh;
+        height: 100vh;
+        background-color: black;
+        color: white;
     }
     .gallery_text_right{
-        width: 99%;
+        width: 100%;
         height: auto;
-
+        background-color: black;
+        color: white;
     }
     .gallery_text_left{
         width: 99%;
         height: auto;
+    }
+    .conocenos a{
+        font-size: 1em;
+    }
+    .ola{
+        display: none;
+    }
+    .botones{
+        display: inline;
+
+    }
+    .botones button{
+        width: 50%;
+        height: 10%;
+        margin: 1%;
+        margin-left: 25%;
+        border: 1px solid black;
+    }
+    .conocer{
+        display: inline;
+
+    }
+    .conocenos{
+        width: 40vh;
+        height: auto;
+        margin-bottom: 5%;
+    }
+    .mensaje{
+        width: 40vh;
+        height: auto;
+
+    }
+    .mensaje label{
+        margin-top: 2%;
+    }
+    .mensaje input{
+        width: 40vw;
+    }
+    .mensaje textarea{
+        width: 40vw;
+    }
+    .mensaje button{
+        width: 40%;
+        margin-bottom: 5%;
+        border: 1px solid black;
+    }
+    .titulo_seccion2{
+
+        color: white;
+    }
+    .titulo_seccion{
+        margin-top: 10%;
+        color: black;
+    }
+
+    .registrar{
+        display: grid;
+        width: 75%;
+        height: auto;
+        border: 5px double black;
+
+
+    }
+
+    .registrar form{
+        font-size: 1.25em;
+        width: 100%;
 
     }
     footer{
@@ -721,8 +809,6 @@ footer a {
         color: white;
         text-decoration: none;
     }
-
-
     .cerrar{
         top:5%;
         right: 5%;
@@ -736,6 +822,11 @@ footer a {
         display: block;
         width: 50px;
         height: 50px;
+        filter: brightness(0.9) invert(1    ) sepia(.5) hue-rotate(100deg) saturate(100%);
+
+    }
+    .center{
+        margin-bottom: 20%;
     }
 }
 
@@ -743,7 +834,6 @@ footer a {
 @media screen and (max-width: 600px) {
     p {
         font-size: 1.5em;
-
     }
     li{
         font-size: 1.5em;
@@ -770,11 +860,8 @@ footer a {
 
     .page2{
         display: inline;
-        background-color: black;
-        color: white;
 
     }
-
 
     .gallery_title_right{
         width: 100%;
@@ -783,15 +870,85 @@ footer a {
     .gallery_title_left{
         width: 100%;
         height: auto;
+        background-color: black;
+        color: white;
     }
     .gallery_text_right{
-        width: 99%;
+        width: 100%;
         height: auto;
+        background-color: black;
+        color: white;
     }
     .gallery_text_left{
         width: 99%;
         height: auto;
 
+    }
+    .registrar{
+        display: grid;
+        width: 75%;
+        height: auto;
+        border: 5px double black;
+    }
+    .registrar form{
+        font-size: 1.25em;
+        width: 100%;
+    }
+    .conocenos a{
+        font-size: 1em;
+    }
+    .ola{
+        display: none;
+    }
+    .botones{
+        display: inline;
+    }
+    .botones button{
+        width: 50%;
+        height: auto;
+        margin: 2%;
+        margin-left: 25%;
+        border: 1px solid black;
+
+    }
+    .conocer{
+        display: inline;
+
+    }
+    .conocenos{
+        width: 40vh;
+        height: auto;
+        margin-bottom: 5%;
+    }
+    .conocenos h1{
+        font-size: 0.75em;
+    }
+    .mensaje{
+        width: 40vh;
+        height: auto;
+
+    }
+
+    .mensaje label{
+        margin-top: 2%;
+    }
+    .mensaje input{
+        width: 50vw;
+    }
+    .mensaje textarea{
+        width: 50vw;
+    }
+    .mensaje button{
+        width: 40%;
+        margin-bottom: 5%;
+        border: 1px solid black;
+    }
+    .titulo_seccion2{
+        color: white;
+    }
+    .titulo_seccion{
+        margin-top: 10%;
+        color: black;
     }
 
     footer{
@@ -822,7 +979,7 @@ footer a {
     }
     .hamburger{
         list-style-type: none;
-        margin-top: 40%;
+        margin-top: 50%;
     }
 
     .hamburger li{
@@ -832,8 +989,9 @@ footer a {
     .hamburger a{
         color: white;
         text-decoration: none;
-    }
+        font-size: 1.25em;
 
+    }
 
     .cerrar{
         top:5%;
@@ -848,6 +1006,9 @@ footer a {
         display: block;
         width: 50px;
         height: 50px;
-        filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(100deg) saturate(200%);
+        filter: brightness(0.9) invert(1    ) sepia(.5) hue-rotate(100deg) saturate(100%);
+    }
+    .center{
+        margin-bottom: 20%;
     }
 }

@@ -15,6 +15,7 @@ window.addEventListener('load', () => {
     cerrar.style.display = 'none';
     abrir.style.display = 'block';
     nav.style.display = 'none';
+    reveal();
 })
 
 abrir.addEventListener('click', () => {
@@ -132,3 +133,20 @@ setIntervalBebida(function () {
     }
 }, 4000);
 
+
+
+function reveal() {
+    let reveals = document.querySelectorAll(".reveal");
+    for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+        let elementVisible = 50;
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        } else {
+            reveals[i].classList.remove("active");
+        }
+    }
+}
+
+window.addEventListener("scroll", reveal);
