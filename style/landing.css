@@ -1,5 +1,5 @@
 /* Formato de toda la paguina */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,33 +7,40 @@
     text-align: justify;
     background-color: transparent;
 }
+
 /*Dimensiones del cuerpo de la página*/
-body{
+body {
     width: 100%;
     height: 100%;
 }
+
 /*Tamaño y formato de los títulos*/
 h2 {
     font-size: 4em;
     text-align: center;
 }
+
 h3 {
     font-size: 2.75em;
     text-align: center;
 }
-a{
+
+a {
     font-size: 1.3em;
     text-align: center;
 
 }
+
 /*Este titulo se usa para quitar los warning de recomendación.
    En realidad estos titulos no aparecen visibles la página web */
-h6{
+h6 {
     display: none;
 }
+
 p {
     font-size: 1.5em;
 }
+
 li {
     font-size: 1.5em;
     margin-left: 2%;
@@ -41,7 +48,7 @@ li {
 
 /*Contenedor de la página 1, la que tiene la navegación, que va ser de tipo flex*/
 
-.title_navigation_section{
+.title_navigation_section {
     align-items: center;
     height: 100vh;
     background-image: url("../images/cafe_f.png");
@@ -52,18 +59,21 @@ li {
     width: 100%;
     max-height: 100%;
 }
-.page{
+
+.page {
     width: 100%;
     height: 100vh;
     /*border-bottom: black 4px solid;*/
 }
-.page2{
+
+.page2 {
     width: 100%;
     height: 100vh;
     /*border-bottom: black 4px solid;*/
     background-color: black;
     color: white;
 }
+
 /*Formato de la parte del titulo y el video de la primera página. Es un display de tipo flex que
 contiene un grid */
 .title_navigation_title_article {
@@ -79,10 +89,12 @@ contiene un grid */
     grid-template-rows: 1fr auto;
 
 }
+
 .title_navigation_title_article h2 {
     color: white;
     text-align: left;
 }
+
 /*Formato de los botones de navegacion. Este articulo es un flex a la derecha.
 Contiene una malla para mostrar los ditintos botones  */
 .title_navigation_nav {
@@ -100,8 +112,9 @@ Contiene una malla para mostrar los ditintos botones  */
     grid-template-rows: 1fr 1fr 1fr 1fr;
 
 }
+
 /*Formato de los botones*/
-.button_box{
+.button_box {
     width: 100px;
     height: 100px;
     margin: 5%;
@@ -128,11 +141,13 @@ Contiene una malla para mostrar los ditintos botones  */
 
     /*box-shadow: 0 15px 20px rgba(0,0,0,0.4);  */
 }
+
 /*Animación que ocurre cuando el ratón esta encima de los botones*/
-.button_box:hover{
+.button_box:hover {
     background-color: rgb(255, 255, 255);
     color: black;
 }
+
 /*Formato del video embedido como iframe*/
 .video-class {
     width: 100%;
@@ -141,7 +156,6 @@ Contiene una malla para mostrar los ditintos botones  */
     border: none;
     min-width: 100%;
 }
-
 
 
 /*Contenedor de las paginas donde el texto esta a la izquierda y la galeria a la derecha.
@@ -161,16 +175,17 @@ Serán iguales las páginas pares*/
  */
 
 /*Formato del contenedor del titulo y la galeria de imagenes que se encuantra a la derecha.*/
-.gallery_title_right{
+.gallery_title_right {
     float: right;
-    width: 40%;
+    width: 100%;
     height: 100%;
     padding: 2%;
+    max-width: 40rem;
     /*background-color: black;*/
 }
 
 /*Formato del contenedor del titulo y la galeria de imagenes que se encuantra a la  izquierda.*/
-.gallery_title_left{
+.gallery_title_left {
     float: left;
     width: 40%;
     height: 90%;
@@ -180,20 +195,20 @@ Serán iguales las páginas pares*/
 
 /*Contenedor del texto que esta la derecha.
 El texto que se encuentra en el interior es un grid, para poder centrarlo*/
-.gallery_text_right{
+.gallery_text_right {
     float: right;
     width: 60%;
     padding: 2%;
     height: 100%;
     display: grid;
     place-content: center;
-    color: white ;
+    color: white;
 
 }
 
 /*Contenedor del texto que esta la izquierda.
 El texto que se encuentra en el interior es un grid, para poder centrarlo*/
-.gallery_text_left{
+.gallery_text_left {
     float: left;
     width: 60%;
     padding: 2%;
@@ -203,16 +218,18 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 
 }
 
-.gallery_text_right div{
+.gallery_text_right div {
     padding: 2%;
     border: 5px double white;
-    color: white ;
+    color: white;
 
 }
-.gallery_title_right div p{
-    color: white ;
+
+.gallery_title_right div p {
+    color: white;
 }
-.gallery_text_left div{
+
+.gallery_text_left div {
     padding: 2%;
     border: 5px double black;
 }
@@ -224,8 +241,8 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     place-content: center;
 }
 
-.registrar{
-    margin:auto;
+.registrar {
+    margin: auto;
     display: grid;
     width: 30%;
     height: auto;
@@ -233,25 +250,27 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 
 }
 
-.registrar form{
+.registrar form {
     font-size: 1.25em;
     padding: 5%;
     width: 100%;
 
 }
-.cajas{
-    border-bottom:2px solid black;
+
+.cajas {
+    border-bottom: 2px solid black;
     margin-bottom: 2%;
 }
-.registrar label{
+
+.registrar label {
     width: auto;
     color: black;
     margin-top: 5%;
 }
 
-.registrar button{
+.registrar button {
     font-size: 0.75em;
-    border: black  solid 2px;
+    border: black solid 2px;
     border-radius: 20px;
     background-color: white;
     color: black;
@@ -260,14 +279,16 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     text-align: center;
 
 }
-.registrar input{
+
+.registrar input {
     border: none;
     background-color: transparent;
     color: black;
     width: auto;
     margin-bottom: 5%;
 }
-.botones{
+
+.botones {
     display: grid;
     place-content: center;
     grid-template-columns: 1fr 1fr 1fr;
@@ -280,31 +301,35 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     text-align: center;
 
 }
-.botones button{
+
+.botones button {
     width: 90%;
     border: 1px solid black;
 }
 
 
-.center{
+.center {
     display: grid;
     place-content: center;
 
 }
-.center h4{
+
+.center h4 {
     text-align: center;
     font-size: 2em;
 
 }
-.conocer{
+
+.conocer {
     display: grid;
     place-content: center center;
     grid-template-columns: 1fr 1fr;
-    margin-top:10% ;
+    margin-top: 10%;
     gap: 20%;
 
 }
-.conocenos{
+
+.conocenos {
     border: 5px double black;
     padding: 10%;
     /*border: 5px double black;*/
@@ -314,13 +339,13 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     height: 50vh;
 }
 
-.conocenos a{
+.conocenos a {
     text-decoration: transparent;
     font-size: 1.5em;
     color: black;
 }
 
-.mensaje{
+.mensaje {
     font-size: 1.5em;
     margin: auto;
     border: 5px double black;
@@ -331,32 +356,34 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     place-content: center;
 }
 
-.mensaje textarea{
+.mensaje textarea {
     resize: none;
-    border:2px  solid black;
+    border: 2px solid black;
     width: 25vw;
     height: 30vh;
 }
-.mensaje input{
+
+.mensaje input {
     border: 2px solid black;
     color: black;
     text-align: center;
 
 }
-.mensaje button{
+
+.mensaje button {
     font-size: 1em;
-    border: black  solid 1px;
+    border: black solid 1px;
     border-radius: 20px;
     color: black;
     margin: auto;
-    margin-top: 5% ;
+    margin-top: 5%;
     width: 25%;
     text-align: center;
 
 }
 
 /*Contenedor de la galeria de imagnes, con el slider que aparece debajo, que hace que las imágenes se peguen*/
-.slider{
+.slider {
     aspect-ratio: 3/4;
     height: 80%;
     position: relative;
@@ -369,8 +396,9 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
     min-width: auto;
     max-width: 90%;
 }
+
 /*Formato de las imagenes dentro de la galería*/
-.slider img{
+.slider img {
     flex: 1 0 auto;
     width: 100%;
     left: 0;
@@ -380,16 +408,18 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 
 /*Formato de los titulos de las páginas que tienen galeria
 Cada uno tiene un id propio, pero como los textos son iguales, podemos darles una clase*/
-.titulo_seccion{
+.titulo_seccion {
     /*background-color: black;*/
     color: black;
     padding-bottom: 5%;
 }
-.titulo_seccion2{
+
+.titulo_seccion2 {
     /*background-color: black;*/
     color: white;
     padding-bottom: 5%;
 }
+
 /*Contendor del footer. Esta fijo.*/
 footer {
     clear: both;
@@ -404,6 +434,7 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     z-index: 3;
 }
+
 /*Formato del texto y los enlaces que se encuentra en footer*/
 footer a {
 
@@ -413,64 +444,75 @@ footer a {
     text-decoration: transparent;
 
 }
+
 /*Formato del logo de la pagina y del logo de instagram*/
-.imagen{
+.imagen {
     background-color: transparent;
     width: 15px;
     height: 15px;
 }
+
 .imagen2 {
     background-color: transparent;
-    color : black;
+    color: black;
 }
-.logo{
+
+.logo {
     background-color: transparent;
 
 }
-.logo2{
+
+.logo2 {
     background-color: transparent;
     width: 15px;
     height: 15px;
 }
-.ola{
+
+.ola {
     height: 10%;
     width: 100%;
     overflow: hidden;
     position: relative;
     bottom: 10%;
 }
-.ola svg{
+
+.ola svg {
     height: 100%;
     width: 100%;
 }
-.ola_negra{
+
+.ola_negra {
     stroke: none;
     fill: #000000;
 }
-.ola_blanca{
+
+.ola_blanca {
     stroke: none;
     fill: #ffffff;
 }
-.i img{
+
+.i img {
     width: 15%;
     aspect-ratio: 4/3;
     object-fit: contain;
     mix-blend-mode: color-burn;
 }
 
-.nav_menu{
-    display: none;
-}
-.abrir{
+.nav_menu {
     display: none;
 }
 
-.nav_menu{
+.abrir {
     display: none;
 }
+
+.nav_menu {
+    display: none;
+}
+
 /* Galería con JavaScript*/
 
-.new_slider{
+.new_slider {
     width: 410px;
     aspect-ratio: 3/4;
     border-radius: 10px;
@@ -479,28 +521,28 @@ footer a {
     margin: auto;
 }
 
-.slides{
+.slides {
     width: 500%;
     height: 500px;
     display: flex;
 }
 
-.slides input{
+.slides input {
     display: none;
 }
 
-.slide{
+.slide {
     width: 20%;
     transition: 2s;
 }
 
-.slide img{
+.slide img {
     width: 410px;
     aspect-ratio: 3/4;
 }
 
-/* Navegación Manual */
-.navigation-manual{
+/* Navegación Manual primera galería*/
+.navigation-manual {
     position: absolute;
     width: 410px;
     margin-top: -40px;
@@ -508,59 +550,40 @@ footer a {
     justify-content: center;
 }
 
-.manual-btn{
+.manual-btn {
     border: 2px solid black;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
 }
-.manual-btn:not(:last-child){
+
+.manual-btn:not(:last-child) {
     margin-right: 40px;
 }
 
-.manual-btn:hover{
+.manual-btn:hover {
     background: black;
 }
 
-#radio1:checked ~ .first{
+#radio1:checked ~ .first {
     margin-left: 0;
 }
 
-#radio2:checked ~ .first{
+#radio2:checked ~ .first {
     margin-left: -20%;
 }
 
-#radio3:checked ~ .first{
+#radio3:checked ~ .first {
     margin-left: -40%;
 }
 
-#radio4:checked ~ .first{
+#radio4:checked ~ .first {
     margin-left: -60%;
 }
 
-#bebida_radio1:checked ~ .first{
-    margin-left: -20%;
-}
-#bebida_radio2:checked ~ .first{
-    margin-left: -40%;
-}
-#bebida_radio3:checked ~ .first{
-    margin-left: -60%;
-}
-#bebida_radio4:checked ~ .first{
-    margin-left: -60%;
-}
-#bebida_radio5:checked ~ .first{
-    margin-left: -80%;
-}
-#bebida_radio6:checked ~ .first{
-    margin-left: -100%;
-}
-
-
-/* Navegación automática coloreado */
-.navigation-auto{
+/* Navegación automática coloreado primera galería */
+.navigation-auto {
     position: absolute;
     display: flex;
     width: 410px;
@@ -568,73 +591,85 @@ footer a {
     margin-top: 460px;
 }
 
-.navigation-auto div{
+.navigation-auto div {
     border: 2px solid black;
     padding: 5px;
     border-radius: 10px;
     transition: 1s;
 }
 
-.navigation-auto div:not(:last-child){
+.navigation-auto div:not(:last-child) {
     margin-right: 40px;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1{
+#radio1:checked ~ .navigation-auto .auto-btn1 {
     background: black;
 }
 
-#radio2:checked ~ .navigation-auto .auto-btn2{
+#radio2:checked ~ .navigation-auto .auto-btn2 {
     background: black;
 }
 
-#radio3:checked ~ .navigation-auto .auto-btn3{
+#radio3:checked ~ .navigation-auto .auto-btn3 {
     background: black;
 }
 
-#radio4:checked ~ .navigation-auto .auto-btn4{
-    background: black;
-}
-
-#bebida_radio1:checked ~ .navigation-auto .radio_auto-btn1{
-    background: black;
-}
-#bebida_radio2:checked ~ .navigation-auto .radio_auto-btn2{
-    background: black;
-}
-#bebida_radio3:checked ~ .navigation-auto .radio_auto-btn3{
-    background: black;
-}
-#bebida_radio4:checked ~ .navigation-auto .radio_auto-btn4{
-    background: black;
-}
-#bebida_radio5:checked ~ .navigation-auto .radio_auto-btn5{
-    background: black;
-}
-#bebida_radio6:checked ~ .navigation-auto .radio_auto-btn6{
+#radio4:checked ~ .navigation-auto .auto-btn4 {
     background: black;
 }
 
 
-.abrir{
+.siema {
+    width: 70%;
+    margin: auto;
+}
+
+.siema img {
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-left: 7%;
+    padding-right: 7%;
+    opacity: 0.6;
+    border: none;
+    background-color: transparent;
+    color: #8e918f;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out
+}
+
+
+.abrir {
     display: none;
 }
 
-.cerrar{
-    display: none;
-}
-.tres_rayas{
+.cerrar {
     display: none;
 }
 
+.tres_rayas {
+    display: none;
+}
 
 
 .reveal {
     position: relative;
     opacity: 0;
 }
+
 .reveal.active {
     opacity: 1;
 }
+
 .active.fade-bottom {
     animation: fade-bottom 1s ease-in;
 }
@@ -652,21 +687,25 @@ footer a {
 
 
 /* Respponsive para tablet*/
-@media screen and (min-width: 600px) and (max-width: 966px){
-    .title_navigation_section{
+@media screen and (min-width: 600px) and (max-width: 966px) {
+    .title_navigation_section {
         display: inline;
     }
-    .title_navigation_title_article{
+
+    .title_navigation_title_article {
         width: 100%;
         background-image: url("../images/cafe_f.png");
     }
+
     .title_navigation_nav {
         display: none;
     }
-    .video-class{
+
+    .video-class {
         margin-top: 40%;
     }
-    .button_box{
+
+    .button_box {
         border: black solid 4px;
         color: black;
         min-height: 150px;
@@ -675,87 +714,106 @@ footer a {
         padding: 5%;
         margin: 5%;
     }
-    .page2{
+
+    .page2 {
         display: inline;
     }
-    .page{
+
+    .page {
         display: inline;
     }
-    .gallery_title_right{
+
+    .gallery_title_right {
         width: 100%;
         height: 100vh;
     }
-    .gallery_title_left{
+
+    .gallery_title_left {
         width: 100%;
         height: 100vh;
         background-color: black;
         color: white;
     }
-    .gallery_text_right{
+
+    .gallery_text_right {
         width: 100%;
         height: auto;
         background-color: black;
         color: white;
     }
-    .gallery_text_left{
+
+    .gallery_text_left {
         width: 99%;
         height: auto;
     }
-    .conocenos a{
+
+    .conocenos a {
         font-size: 1em;
     }
-    .ola{
+
+    .ola {
         display: none;
     }
-    .botones{
+
+    .botones {
         display: inline;
 
     }
-    .botones button{
+
+    .botones button {
         width: 50%;
         height: 10%;
         margin: 1%;
         margin-left: 25%;
         border: 1px solid black;
     }
-    .conocer{
+
+    .conocer {
         display: inline;
 
     }
-    .conocenos{
+
+    .conocenos {
         width: 40vh;
         height: auto;
         margin-bottom: 5%;
     }
-    .mensaje{
+
+    .mensaje {
         width: 40vh;
         height: auto;
 
     }
-    .mensaje label{
+
+    .mensaje label {
         margin-top: 2%;
     }
-    .mensaje input{
+
+    .mensaje input {
         width: 40vw;
     }
-    .mensaje textarea{
+
+    .mensaje textarea {
         width: 40vw;
     }
-    .mensaje button{
+
+    .mensaje button {
         width: 40%;
         margin-bottom: 5%;
         border: 1px solid black;
     }
-    .titulo_seccion2{
+
+    .titulo_seccion2 {
 
         color: white;
     }
-    .titulo_seccion{
+
+    .titulo_seccion {
         margin-top: 10%;
         color: black;
     }
 
-    .registrar{
+    .registrar {
         display: grid;
         width: 75%;
         height: auto;
@@ -764,31 +822,35 @@ footer a {
 
     }
 
-    .registrar form{
+    .registrar form {
         font-size: 1.25em;
         width: 100%;
 
     }
-    footer{
+
+    footer {
         height: 7%;
     }
-    .abrir{
-        top:5%;
-        right:5%;
-        background-color:transparent;
+
+    .abrir {
+        top: 5%;
+        right: 5%;
+        background-color: transparent;
         position: fixed;
         color: black;
         width: 5%;
         height: 3%;
         border: none;
     }
-    .abrir img{
+
+    .abrir img {
         display: block;
         width: 50px;
         height: 50px;
     }
-    .nav_menu{
-        top:0;
+
+    .nav_menu {
+        top: 0;
         right: 0;
         background-color: rgba(0, 0, 0, 0.72);
         position: fixed;
@@ -796,21 +858,24 @@ footer a {
         height: 100%;
         text-align: center;
     }
-    .hamburger{
+
+    .hamburger {
         list-style-type: none;
         margin-top: 40%;
     }
 
-    .hamburger li{
+    .hamburger li {
         text-align: center;
         margin: 15%;
     }
-    .hamburger a{
+
+    .hamburger a {
         color: white;
         text-decoration: none;
     }
-    .cerrar{
-        top:5%;
+
+    .cerrar {
+        top: 5%;
         right: 5%;
         background-color: transparent;
         position: fixed;
@@ -818,14 +883,16 @@ footer a {
         height: 3%;
         border: none;
     }
-    .cerrar img{
+
+    .cerrar img {
         display: block;
         width: 50px;
         height: 50px;
-        filter: brightness(0.9) invert(1    ) sepia(.5) hue-rotate(100deg) saturate(100%);
+        filter: brightness(0.9) invert(1) sepia(.5) hue-rotate(100deg) saturate(100%);
 
     }
-    .center{
+
+    .center {
         margin-bottom: 20%;
     }
 }
@@ -835,75 +902,87 @@ footer a {
     p {
         font-size: 1.5em;
     }
-    li{
+
+    li {
         font-size: 1.5em;
         margin-left: 5%;
     }
 
-    .title_navigation_section{
+    .title_navigation_section {
         display: inline;
     }
 
 
-    .title_navigation_title_article{
+    .title_navigation_title_article {
         width: 100%;
         background-image: url("../images/cafe_f.png");
     }
-    .title_navigation_nav{
+
+    .title_navigation_nav {
         display: none;
         width: 100%;
         border-left: none;
     }
-    .page{
+
+    .page {
         display: inline;
     }
 
-    .page2{
+    .page2 {
         display: inline;
 
     }
 
-    .gallery_title_right{
+    .gallery_title_right {
         width: 100%;
         height: auto;
     }
-    .gallery_title_left{
+
+    .gallery_title_left {
         width: 100%;
         height: auto;
         background-color: black;
         color: white;
     }
-    .gallery_text_right{
+
+    .gallery_text_right {
         width: 100%;
         height: auto;
         background-color: black;
         color: white;
     }
-    .gallery_text_left{
+
+    .gallery_text_left {
         width: 99%;
         height: auto;
 
     }
-    .registrar{
+
+    .registrar {
         display: grid;
         width: 75%;
         height: auto;
         border: 5px double black;
     }
-    .registrar form{
+
+    .registrar form {
         font-size: 1.25em;
         width: 100%;
     }
-    .conocenos a{
+
+    .conocenos a {
         font-size: 1em;
     }
-    .ola{
+
+    .ola {
         display: none;
     }
-    .botones{
+
+    .botones {
         display: inline;
     }
-    .botones button{
+
+    .botones button {
         width: 50%;
         height: auto;
         margin: 2%;
@@ -911,65 +990,77 @@ footer a {
         border: 1px solid black;
 
     }
-    .conocer{
+
+    .conocer {
         display: inline;
 
     }
-    .conocenos{
+
+    .conocenos {
         width: 40vh;
         height: auto;
         margin-bottom: 5%;
     }
-    .conocenos h1{
+
+    .conocenos h1 {
         font-size: 0.75em;
     }
-    .mensaje{
+
+    .mensaje {
         width: 40vh;
         height: auto;
 
     }
 
-    .mensaje label{
+    .mensaje label {
         margin-top: 2%;
     }
-    .mensaje input{
+
+    .mensaje input {
         width: 50vw;
     }
-    .mensaje textarea{
+
+    .mensaje textarea {
         width: 50vw;
     }
-    .mensaje button{
+
+    .mensaje button {
         width: 40%;
         margin-bottom: 5%;
         border: 1px solid black;
     }
-    .titulo_seccion2{
+
+    .titulo_seccion2 {
         color: white;
     }
-    .titulo_seccion{
+
+    .titulo_seccion {
         margin-top: 10%;
         color: black;
     }
 
-    footer{
+    footer {
         height: 7%;
     }
-    .abrir{
-        top:5%;
-        right:5%;
-        background-color:transparent;
+
+    .abrir {
+        top: 5%;
+        right: 5%;
+        background-color: transparent;
         position: fixed;
         color: black;
         width: 5%;
         height: 3%;
     }
-    .abrir img{
+
+    .abrir img {
         display: block;
         width: 50px;
         height: 50px;
     }
-    .nav_menu{
-        top:0;
+
+    .nav_menu {
+        top: 0;
         right: 0;
         background-color: rgba(0, 0, 0, 0.72);
         position: fixed;
@@ -977,24 +1068,26 @@ footer a {
         height: 100%;
         text-align: center;
     }
-    .hamburger{
+
+    .hamburger {
         list-style-type: none;
         margin-top: 50%;
     }
 
-    .hamburger li{
+    .hamburger li {
         text-align: center;
         margin: 15%;
     }
-    .hamburger a{
+
+    .hamburger a {
         color: white;
         text-decoration: none;
         font-size: 1.25em;
 
     }
 
-    .cerrar{
-        top:5%;
+    .cerrar {
+        top: 5%;
         right: 5%;
         background-color: transparent;
         position: fixed;
@@ -1002,13 +1095,15 @@ footer a {
         height: 3%;
 
     }
-    .cerrar img{
+
+    .cerrar img {
         display: block;
         width: 50px;
         height: 50px;
-        filter: brightness(0.9) invert(1    ) sepia(.5) hue-rotate(100deg) saturate(100%);
+        filter: brightness(0.9) invert(1) sepia(.5) hue-rotate(100deg) saturate(100%);
     }
-    .center{
+
+    .center {
         margin-bottom: 20%;
     }
 }

@@ -34,15 +34,14 @@ cerrar.addEventListener('click', () => {
 function getCookie(dni) {
     let name = "dni=" + dni;
     let identificador = "dni=";
-    let clave = dni;
     let decodedCookie = decodeURIComponent(document.cookie);
     let ca = decodedCookie.split(';');
     for (let i = 0; i < ca.length; i++) {
         let c = ca[i];
-        while (c.charAt(0) == ' ') {
+        while (c.charAt(0) === ' ') {
             c = c.substring(1);
         }
-        if (c.indexOf(name) == 0) {
+        if (c.indexOf(name) === 0) {
             return c.substring(identificador.length, c.length);
         }
     }
@@ -61,7 +60,6 @@ function setCookie(dni, exdays) {
 
     const d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    let expires = "expires=" + d.toUTCString();
     document.cookie = "dni=" + dni + "; name=" + name + "; surname=" + surname + "; tfl=" + tlf + "; mail=" + mail + "; path=/";
 }
 
@@ -86,7 +84,7 @@ function createAccount() {
 
 function comp_dni(dni_) {
     let pattern = /^[0-9]{8}[A-Z]$/;
-    if (false == pattern.test(dni_)) {
+    if (false === pattern.test(dni_)) {
         alert("DNI no valido")
     }
 
@@ -94,21 +92,21 @@ function comp_dni(dni_) {
 
 function comp_tlf(tlf) {
     let pattern = /^[0-9]{9}$/;
-    if (false == pattern.test(tlf)) {
+    if (false === pattern.test(tlf)) {
         alert("Telefono no valido");
     }
 }
 
 function comp_correo(correo) {
     let pattern = /^[a-z0-9]+@[a-z]+\.[a-z]{3}$/;
-    if (false == pattern.test(correo)) {
+    if (false === pattern.test(correo)) {
         alert("Correo no valido")
     }
 }
 
 function comp_nombre_ape(nom) {
     let pattern = /^[A-Z,a-z]$/;
-    if (false == pattern.test(corre)) {
+    if (false === pattern.test(nom)) {
         alert("Nombre u Apellido no valido")
     }
 }
@@ -123,15 +121,6 @@ setInterval(function () {
         slideIndex = 1;
     }
 }, 5000);
-
-slideIndex_bebida = 1;
-setIntervalBebida(function () {
-    document.getElementById("bebida_radio" + slideIndex_bebida).checked = true;
-    slideIndex_bebida++;
-    if (slideIndex_bebida > 5) {
-        slideIndex_bebida = 1;
-    }
-}, 4000);
 
 
 

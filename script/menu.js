@@ -35,7 +35,7 @@ cerrarCompra.addEventListener('click', () => {
 })
 
 logo.addEventListener('click', () => {
-    window.location.href='landing.html';
+    window.location.href = 'landing.html';
 })
 
 window.addEventListener('load', () => {
@@ -43,77 +43,77 @@ window.addEventListener('load', () => {
     eleme.style.display = 'block';
     contador.style.display = 'none';
     comp.style.display = 'none';
-    paso1.style.background='black';
+    paso1.style.background = 'black';
     pos = 0;
     initApp(0);
-    cafe.style.background='black';
+    cafe.style.background = 'black';
     cafe.style.color = 'white';
 
 })
 cafe.addEventListener('click', () => {
     initApp(0);
-    cafe.style.background='black';
+    cafe.style.background = 'black';
     cafe.style.color = 'white';
-    bebidas_dulces.style.background='white';
+    bebidas_dulces.style.background = 'white';
     bebidas_dulces.style.color = 'black';
-    delicateen.style.background='white';
+    delicateen.style.background = 'white';
     delicateen.style.color = 'black';
-    tartas.style.background='white';
+    tartas.style.background = 'white';
     tartas.style.color = 'black';
-    reposteria.style.background='white';
+    reposteria.style.background = 'white';
     reposteria.style.color = 'black';
 })
 bebidas_dulces.addEventListener('click', () => {
     initApp(6);
-    bebidas_dulces.style.background='black';
+    bebidas_dulces.style.background = 'black';
     bebidas_dulces.style.color = 'white';
-    cafe.style.background='white';
+    cafe.style.background = 'white';
     cafe.style.color = 'black';
-    delicateen.style.background='white';
+    delicateen.style.background = 'white';
     delicateen.style.color = 'black';
-    tartas.style.background='white';
+    tartas.style.background = 'white';
     tartas.style.color = 'black';
-    reposteria.style.background='white';
+    reposteria.style.background = 'white';
     reposteria.style.color = 'black';
 })
 delicateen.addEventListener('click', () => {
     initApp(12);
-    delicateen.style.background='black';
+    delicateen.style.background = 'black';
     delicateen.style.color = 'white';
-    bebidas_dulces.style.background='white';
+    bebidas_dulces.style.background = 'white';
     bebidas_dulces.style.color = 'black';
-    tartas.style.background='white';
+    tartas.style.background = 'white';
     tartas.style.color = 'black';
-    reposteria.style.background='white';
+    reposteria.style.background = 'white';
     reposteria.style.color = 'black';
-    cafe.style.background='white';
+    cafe.style.background = 'white';
     cafe.style.color = 'black';
 })
 tartas.addEventListener('click', () => {
     initApp(18);
-    tartas.style.background='black';
+    tartas.style.background = 'black';
     tartas.style.color = 'white';
-    bebidas_dulces.style.background='white';
+    bebidas_dulces.style.background = 'white';
     bebidas_dulces.style.color = 'black';
-    delicateen.style.background='white';
+    delicateen.style.background = 'white';
     delicateen.style.color = 'black';
-    reposteria.style.background='white';
+    reposteria.style.background = 'white';
     reposteria.style.color = 'black';
-    cafe.style.background='white';
+    cafe.style.background = 'white';
     cafe.style.color = 'black';
 })
 reposteria.addEventListener('click', () => {
     initApp(24);
-    reposteria.style.background='black';
+    reposteria.style.background = 'black';
     reposteria.style.color = 'white';
-    bebidas_dulces.style.background='white';
+    bebidas_dulces.style.background = 'white';
     bebidas_dulces.style.color = 'black';
-    delicateen.style.background='white';
+    delicateen.style.background = 'white';
     delicateen.style.color = 'black';
-    tartas.style.background='white';
+    tartas.style.background = 'white';
     tartas.style.color = 'black';
 
-    cafe.style.background='white';
+    cafe.style.background = 'white';
     cafe.style.color = 'black';
 })
 
@@ -127,8 +127,7 @@ paso1.addEventListener('click', () => {
         paso1.style.background = 'black';
         paso2.style.background = '#4d5a72';
         pos = 0;
-    }
-    else if( pos ===2){
+    } else if (pos === 2) {
         alert("No puedes ir para atras tu pedido esta en camino")
     }
 })
@@ -146,7 +145,7 @@ cambiar_pedido.addEventListener('click', () => {
 })
 paso2.addEventListener('click', () => {
     if (pos === 0) {
-        if (precio_compra != 0) {
+        if (precio_compra !== 0) {
             contenedor.style.display = 'none';
             eleme.style.display = 'none';
             contador.style.display = 'none';
@@ -155,18 +154,17 @@ paso2.addEventListener('click', () => {
             pos = 1;
             mostrarElemento();
 
-        }else {
+        } else {
             alert("No has selecionado ningún elemento")
         }
 
-    }
-    else if( pos ===2) {
+    } else if (pos === 2) {
         alert("No puedes ir para atras tu pedido esta en camino")
     }
 })
 totalCarrito.addEventListener('click', () => {
     if (pos === 0) {
-        if (precio_compra != 0) {
+        if (precio_compra !== 0) {
             contenedor.style.display = 'none';
             eleme.style.display = 'none';
             contador.style.display = 'none';
@@ -182,27 +180,26 @@ totalCarrito.addEventListener('click', () => {
 
 paso3.addEventListener('click', () => {
 
-    if(pos === 1) {
+    if (pos === 1) {
         contenedor.style.display = 'none';
         eleme.style.display = 'none';
         comp.style.display = 'none';
         contador.style.display = 'block';
-        paso3.style.background='black';
+        paso3.style.background = 'black';
         pos = 2;
 
         let timerInterval = setInterval(startTimer, 1000);
-    }
-    else if(pos === 0){
+    } else if (pos === 0) {
         alert("Solo se puede acceder despues de pagar ")
     }
 })
 pagar.addEventListener('click', () => {
-    if(pos === 1) {
+    if (pos === 1) {
         contenedor.style.display = 'none';
         eleme.style.display = 'none';
         comp.style.display = 'none';
         contador.style.display = 'block';
-        paso3.style.background='black';
+        paso3.style.background = 'black';
         pos = 2;
 
         let timerInterval = setInterval(startTimer, 1000);
@@ -401,7 +398,7 @@ function initApp(st_elem) {
     while (lista.hasChildNodes()) {
         lista.removeChild(lista.firstChild);
     }
-    let prods = Array.from(cosas).slice(st_elem, (st_elem+6))
+    let prods = Array.from(cosas).slice(st_elem, (st_elem + 6))
     prods.forEach((value, key) => {
         //
         let newDiv = document.createElement('div');
@@ -410,23 +407,22 @@ function initApp(st_elem) {
             <img src="images/${value.imagen}/" alt="imagen_del_producto">
             <div class="titulo">${value.nombre}</div>
             <div class="precio">${value.precio.toLocaleString()} €</div> <!--Mirar que hace el toLocaleString() */-->
-            <button onclick="aniadirAlCarrito(${value.id-1})"> Añadir </button>`;
+            <button onclick="aniadirAlCarrito(${value.id - 1})"> Añadir </button>`;
         lista.appendChild(newDiv);
     })
 }
 
 function aniadirAlCarrito(key) {
 
-  if (lista_comidas[key] == null) {
-      lista_comidas[key] = JSON.parse(JSON.stringify(cosas[key]));
-      lista_comidas[key].cantidad = 1;
-  }
-  else{
-      lista_comidas[key].cantidad = lista_comidas[key].cantidad + 1;
-      lista_comidas[key].precio = lista_comidas[key].cantidad  * cosas[key].precio;
+    if (lista_comidas[key] == null) {
+        lista_comidas[key] = JSON.parse(JSON.stringify(cosas[key]));
+        lista_comidas[key].cantidad = 1;
+    } else {
+        lista_comidas[key].cantidad = lista_comidas[key].cantidad + 1;
+        lista_comidas[key].precio = lista_comidas[key].cantidad * cosas[key].precio;
 
-  }
-  recargaElemento();
+    }
+    recargaElemento();
 }
 
 function recargaElemento() {
@@ -461,11 +457,11 @@ function mostrarElemento() {
     lista_comidas.forEach((value, key) => {
         if (value != null) {
             let newDiv = document.createElement('li');
-            newDiv.innerHTML= `
+            newDiv.innerHTML = `
             <div><img src="images/${value.imagen}/" alt="imagen_del_producto3"></div>
             <div>${value.nombre}</div>
             <div>${cosas[key].precio} €</div>
-            <div>${value.precio.toLocaleString() } €</div>
+            <div>${value.precio.toLocaleString()} €</div>
             <div class="contador">${value.cantidad} u</div>`;
             reserva.appendChild(newDiv);
         }
@@ -476,7 +472,7 @@ function mostrarElemento() {
 }
 
 function cambiaCantidad(key, cantidad) {
-    if (cantidad == 0) {
+    if (cantidad === 0) {
         delete lista_comidas[key];
     } else {
         lista_comidas[key].cantidad = cantidad;
@@ -484,8 +480,6 @@ function cambiaCantidad(key, cantidad) {
     }
     recargaElemento();
 }
-
-
 
 
 let cantidad_minutos = 10;
@@ -501,7 +495,7 @@ function startTimer() {
         timerElement.textContent = '00:00';
         cargando.style.display = 'None';
         let newDiv = document.createElement('p');
-        newDiv.innerHTML= ` Pedido entregado`;
+        newDiv.innerHTML = ` Pedido entregado`;
 
         clearInterval(timerInterval);
         return;
@@ -516,4 +510,3 @@ function startTimer() {
 
     timerElement.textContent = minutos + ':' + segundos;
 }
-

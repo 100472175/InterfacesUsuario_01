@@ -1,425 +1,413 @@
 <!DOCTYPE html>
 <html lang="es" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-    <head>
-        <title>Cafe Florencia</title>
-        <link rel="icon" href="images/icono_b.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <meta name="author" content="Grupo 11: Marina Pérez Barbero & Eduardo Alarcón Navarro">
-        <link rel="stylesheet" href="style/landing.css">
-    </head>
-    <body>
-        <!-- Primera pagina -->
-        <section class="title_navigation_section">
-            <!-- Todos los h6 se usan para poner titulos que no aparecen en la paguina web
-             sirve para quitar los warning -->
-            <h6>Titulo</h6>
-            <article class="title_navigation_title_article">
-                <!-- Parte izquierda - Titulo, icono y video -->
-                <h2><img class="logo" src="images/icono_w.png" alt="Logo">  Cafe Florencia</h2>
-                <iframe class="video-class" src="https://www.youtube.com/embed/hN9mgsNWZrU?si=d289ofJCVc6E69pb&amp;controls=0&amp;autoplay=1&amp;mute=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </article>
-            <nav class="title_navigation_nav">
-                <!-- Boton que redirecciona a otras paginas -->
-                <a class ="button_box" href="#title_first">Café</a>
-                <a class ="button_box" href="#title_second">Bebidas Dulces</a>
-                <a class ="button_box" href="#title_third">Tartas</a>
-                <a class ="button_box" href="#title_fourth">Delicatessen</a>
-                <a class ="button_box" href="#title_fifth">Repostería</a>
-                <a class ="button_box" href="./Menu.html">Menu</a>
-                <a class ="button_box" href="#reg">Registro</a>
-                <a class ="button_box" href="#contacto">Contacto</a>
-            </nav>
+<head>
+    <title>Cafe Florencia</title>
+    <link rel="icon" href="images/icono_b.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="author" content="Grupo 11: Marina Pérez Barbero & Eduardo Alarcón Navarro">
+    <link rel="stylesheet" href="style/landing.css">
+</head>
+<body>
+<!-- Primera pagina -->
+<section class="title_navigation_section">
+    <!-- Todos los h6 se usan para poner titulos que no aparecen en la paguina web
+     sirve para quitar los warning -->
+    <h6>Titulo</h6>
+    <article class="title_navigation_title_article">
+        <!-- Parte izquierda - Titulo, icono y video -->
+        <h2><img class="logo" src="images/icono_w.png" alt="Logo"> Cafe Florencia</h2>
+        <iframe class="video-class"
+                src="https://www.youtube.com/embed/hN9mgsNWZrU?si=d289ofJCVc6E69pb&amp;controls=0&amp;autoplay=1&amp;mute=1"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+    </article>
+    <nav class="title_navigation_nav">
+        <!-- Boton que redirecciona a otras paginas -->
+        <a class="button_box" href="#title_first">Café</a>
+        <a class="button_box" href="#title_second">Bebidas Dulces</a>
+        <a class="button_box" href="#title_third">Tartas</a>
+        <a class="button_box" href="#title_fourth">Delicatessen</a>
+        <a class="button_box" href="#title_fifth">Repostería</a>
+        <a class="button_box" href="./Menu.html">Menu</a>
+        <a class="button_box" href="#reg">Registro</a>
+        <a class="button_box" href="#contacto">Contacto</a>
+    </nav>
 
-            <div class="ola">
-                <svg viewBox="0 0 500 150" preserveAspectRatio="none">
-                    <path class="ola_blanca" d="M-0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z">
-                    </path>
-                </svg>
-            </div>
+    <div class="ola">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+            <path class="ola_blanca"
+                  d="M-0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z">
+            </path>
+        </svg>
+    </div>
 
-        </section>
+</section>
 
-        <!-- Segunda pagina -->
-        <section class="page">
-            <h6>Titulo</h6>
-            <article class ="gallery_title_right">
-                <!-- Titulo y galeria de la pagina 2 a la derecha -->
-                <h3 id="title_first" class="titulo_seccion">Café</h3>
-                <!--<figure class="slider">
+<!-- Segunda pagina -->
+<section class="page">
+    <h6>Titulo</h6>
+    <article class="gallery_title_right">
+        <!-- Titulo y galeria de la pagina 2 a la derecha -->
+        <h3 id="title_first" class="titulo_seccion">Café</h3>
+        <!--<figure class="slider">
+            <img alt="image1" src="images/cafe1.jpg">
+            <img alt="image2" src="images/cafe2.jpg">
+            <img alt="image4" src="images/cafe3.jpg">
+            <img alt="image4" src="images/cafe4.jpg">
+        </figure>-->
+
+        <div class="new_slider">
+            <div class="slides">
+                <!--Botonera de navegación-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <!--Imágenes-->
+                <div class="slide first">
                     <img alt="image1" src="images/cafe1.jpg">
+                </div>
+                <div class="slide">
                     <img alt="image2" src="images/cafe2.jpg">
-                    <img alt="image4" src="images/cafe3.jpg">
+                </div>
+                <div class="slide">
+                    <img alt="image3" src="images/cafe3.jpg">
+                </div>
+                <div class="slide">
                     <img alt="image4" src="images/cafe4.jpg">
-                </figure>-->
-
-                <div class="new_slider">
-                    <div class="slides">
-                        <!--Botonera de navegación-->
-                        <input type="radio" name="radio-btn" id="radio1">
-                        <input type="radio" name="radio-btn" id="radio2">
-                        <input type="radio" name="radio-btn" id="radio3">
-                        <input type="radio" name="radio-btn" id="radio4">
-                        <!--Imágenes-->
-                        <div class="slide first">
-                            <img alt="image1" src="images/cafe1.jpg">
-                        </div>
-                        <div class="slide">
-                            <img alt="image2" src="images/cafe2.jpg">
-                        </div>
-                        <div class="slide">
-                            <img alt="image3" src="images/cafe3.jpg">
-                        </div>
-                        <div class="slide">
-                            <img alt="image4" src="images/cafe4.jpg">
-                        </div>
-                        <!--navegación automática-->
-                        <div class="navigation-auto">
-                            <div class="auto-btn1"></div>
-                            <div class="auto-btn2"></div>
-                            <div class="auto-btn3"></div>
-                            <div class="auto-btn4"></div>
-                        </div>
-                    </div>
-                    <!--navegación manual-->
-                    <div class="navigation-manual">
-                        <label for="radio1" class="manual-btn"></label>
-                        <label for="radio2" class="manual-btn"></label>
-                        <label for="radio3" class="manual-btn"></label>
-                        <label for="radio4" class="manual-btn"></label>
-                    </div>
                 </div>
-
-            </article>
-
-            <article class ="gallery_text_left reveal fade-bottom">
-                <!-- Texto de la pagina 2 a la izuierda-->
-                <h6>Titulo </h6>
-                <div>
-                    <p> En nuestro café, podras disfrutas de las bebidas calientes más amadas por todo el mundo.
-                        Utilizamos cafés importados de Etiopía, Kenya e Indonesia. Molemos el café tostado en el
-                        momento, para una textura, un sabor y un aroma inigualables por cafes instantaneos o
-                        torrefactados. Para la degustación de dicha bebida, utilizamos una taza adecuada al
-                        tamaño y nos ajustamos a los gustos de nuestra clientela, porque cada cliente es único.
-                    </p>
-                    <p> Muchos de nuestros clientes preieren disfrutar de un café solo, sin azucar ni leche ni
-                        chocolate, pero también hay clientes que disfrutan del aroma del chocolate, aprecian el
-                        toque dulce que le da el azucar o la nata montada. Con respecto a las leches, no seríamos
-                        una boutique de café si no tuvieramos una amplia selección. Entre ellas, se encuentra leche
-                        sin lactosa, leche de almenda, leche de vaca y en algunas de estas opciones también hacemos
-                        la distincción de leche entera, y semidesnatada.
-                    </p>
+                <!--navegación automática-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
                 </div>
-            </article>
-
-            <div class="ola">
-                <svg viewBox="0 0 500 150" preserveAspectRatio="none">
-                    <path d="M-0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z" class="ola_negra">
-                    </path>
-                </svg>
             </div>
-        </section>
-
-        <!-- Tercera pagina -->
-        <section class="page2">
-            <h6>Titulo</h6>
-            <article class="gallery_title_left">
-                <!-- Titulo y galeria de la pagina 3 a la izquierda -->
-                <h3 id="title_second" class="titulo_seccion2">Bebidas Dulces</h3>
-                <!--<figure class="slider">
-                    <img alt="image1" src="images/bebida1.jpg">
-                    <img alt="image2" src="images/bebida2.jpg">
-                    <img alt="image3" src="images/bebida3.jpg">
-                    <img alt="image4" src="images/bebida4.jpg">
-                    <img alt="image4" src="images/bebida5.jpg">
-                    <img alt="image4" src="images/bebida6.jpg">
-                </figure>-->
-                <div class="new_slider">
-                    <div class="slides">
-                        <!-- Botonera de navegación -->
-                        <input type="radio" name="radio-btn" id="bebida_radio1">
-                        <input type="radio" name="radio-btn" id="bebida_radio2">
-                        <input type="radio" name="radio-btn" id="bebida_radio3">
-                        <input type="radio" name="radio-btn" id="bebida_radio4">
-                        <input type="radio" name="radio-btn" id="bebida_radio5">
-                        <input type="radio" name="radio-btn" id="bebida_radio6">
-
-                        <!-- Imágenes -->
-                        <div class="slide first">
-                            <img alt="image1" src="images/bebida1.jpg">
-                        </div>
-                        <div class="slide">
-                            <img alt="image2" src="images/bebida2.jpg">
-                        </div>
-                        <div class="slide">
-                            <img alt="image3" src="images/bebida3.jpg">
-                        </div>
-                        <div class="slide">
-                            <img alt="image4" src="images/bebida4.jpg">
-                        </div>
-                        <div class="slide">
-                            <img alt="image5" src="images/bebida5.jpg">
-                        </div>
-                        <div class="slide">
-                            <img alt="image6" src="images/bebida6.jpg">
-                        </div>
-
-                        <!-- Navegación automática -->
-                        <div class="navigation-auto">
-                            <div class="radio_auto-btn1"></div>
-                            <div class="radio_auto-btn2"></div>
-                            <div class="radio_auto-btn3"></div>
-                            <div class="radio_auto-btn4"></div>
-                            <div class="radio_auto-btn5"></div>
-                            <div class="radio_auto-btn6"></div>
-                        </div>
-                    </div>
-
-                    <!-- Navegación manual -->
-                    <div class="navigation-manual">
-                        <label for="bebida_radio1" class="manual-btn"></label>
-                        <label for="bebida_radio2" class="manual-btn"></label>
-                        <label for="bebida_radio3" class="manual-btn"></label>
-                        <label for="bebida_radio4" class="manual-btn"></label>
-                        <label for="bebida_radio5" class="manual-btn"></label>
-                        <label for="bebida_radio6" class="manual-btn"></label>
-                    </div>
-                </div>
-
-            </article>
-
-            <article class="gallery_text_right  reveal fade-bottom">
-                <!-- Texto de la pagina 3 a la derecha-->
-                <h6>Titulo</h6>
-                <div>
-                    <p> La bebida es una parte fundamental de la alimentación. Por eso, nosotros desde Café Florencia tenemos
-                        un gran abanico de bebidas dulces que alegran la tarde a cualquiera.
-                        Tenemos batidos, smoothies de frutas elaborados al momento con base de zumo o leche, chocolates
-                        calientes y mucho más.
-                    </p>
-                    <p> Volviendo a nuestra bebida estrella, los batidos, tenemos una selección de batidos que dejará
-                        incredulo al comensal más exquisito. Tenemos batidos tradicionales como: batidos de chocolate,
-                        batidos de fresa, batidos de vainilla, batidos de platano, batidos de cookies y batidos de oreo.
-                    </p>
-                </div>
-            </article>
-
-            <div class="ola" >
-                <svg viewBox="0 0 500 150" preserveAspectRatio="none">
-                    <path class="ola_blanca" d="M-0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z">
-                    </path>
-                </svg>
+            <!--navegación manual-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
             </div>
-        </section>
+        </div>
 
-        <!-- Cuarta paguina -->
-        <section class="page">
-            <h6>Titulo</h6>
-            <article class = "gallery_title_right">
-                <!-- Titulo y galeria de la pagina 4 a la derecha -->
-                <h3 id="title_third" class="titulo_seccion">Tartas</h3>
-                <figure class="slider">
-                    <img alt="image1" src="images/tartas1.jpg">
-                    <img alt="image2" src="images/tartas2.jpg">
-                    <img alt="image2" src="images/tartas3.jpg">
-                </figure>
-            </article>
+    </article>
 
-            <article class = "gallery_text_left  reveal fade-bottom" >
-                <!-- Texto de la pagina 4 a la izquierda-->
-                <h6>Titulo</h6>
-                <div>
-                    <p> No todas las tartas se crean igualmente ni sabes de la misma manera. Hay que darles mimo, cariño
-                        y tiempo para que estas salgan esponjosas, sabrosas y con el punto de textura correcto.
-                        El sabor de nuestras tartas viene de productos 100% naturales, no utilizamos ningun colorante,
-                        ni potenciador del sabor artificial.
-                    </p>
-                    <p> Podemos decir orgullosamente que todos nuestros ingredientes
-                        para la elaboración de nuestras tartas provienen de España si no se especifica, por lo que
-                        promovemos el comercio local y ayudamos al sector a crecer.
-                        Entre las tartas que más rápido se acaban están la:</p>
-                        <ul>
-                            <li>Sacher</li>
-                            <li>Zanahoria</li>
-                            <li>Chocolate</li>
-                            <li>Queso</li>
-                            <li>Arándanos</li>
-                        </ul>
-                </div>
-            </article>
+    <article class="gallery_text_left reveal fade-bottom">
+        <!-- Texto de la pagina 2 a la izuierda-->
+        <h6>Titulo </h6>
+        <div>
+            <p> En nuestro café, podras disfrutas de las bebidas calientes más amadas por todo el mundo.
+                Utilizamos cafés importados de Etiopía, Kenya e Indonesia. Molemos el café tostado en el
+                momento, para una textura, un sabor y un aroma inigualables por cafes instantaneos o
+                torrefactados. Para la degustación de dicha bebida, utilizamos una taza adecuada al
+                tamaño y nos ajustamos a los gustos de nuestra clientela, porque cada cliente es único.
+            </p>
+            <p> Muchos de nuestros clientes preieren disfrutar de un café solo, sin azucar ni leche ni
+                chocolate, pero también hay clientes que disfrutan del aroma del chocolate, aprecian el
+                toque dulce que le da el azucar o la nata montada. Con respecto a las leches, no seríamos
+                una boutique de café si no tuvieramos una amplia selección. Entre ellas, se encuentra leche
+                sin lactosa, leche de almenda, leche de vaca y en algunas de estas opciones también hacemos
+                la distincción de leche entera, y semidesnatada.
+            </p>
+        </div>
+    </article>
 
-            <div class="ola">
-                <svg viewBox="0 0 500 150" preserveAspectRatio="none">
-                    <path d="M-0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z" class="ola_negra">
-                    </path>
-                </svg>
-            </div>
-        </section>
+    <div class="ola">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+            <path d="M-0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z"
+                  class="ola_negra">
+            </path>
+        </svg>
+    </div>
+</section>
 
-        <!-- Quinta paguina -->
-        <section class="page2">
-            <h6>Titulo</h6>
-            <article class="gallery_title_left">
-                <!-- Titulo y galeria de la pagina 5 a la izquierda -->
-                <h3 id="title_fourth" class="titulo_seccion2">Delicatessen</h3>
-                <figure class="slider">
-                    <img alt="image1" src="images/delicatessen1.jpg">
-                    <img alt="image2" src="images/delicatessen2.jpg">
-                    <img alt="image3" src="images/delicatessen3.jpg">
-                    <img alt="image4" src="images/delicatessen4.jpg">
-                    <img alt="image4" src="images/delicatessen5.jpg">
-                    <img alt="image4" src="images/delicatessen6.jpg">
-                    <img alt="image4" src="images/delicatessen7.jpg">
-                 </figure>
-             </article>
+<!-- Tercera pagina -->
+<section class="page2">
+    <h6>Titulo</h6>
+    <article class="gallery_title_left">
+        <!-- Titulo y galeria de la pagina 3 a la izquierda -->
+        <h3 id="title_second" class="titulo_seccion2">Bebidas Dulces</h3>
+        <div class="siema">
+            <div><img alt="image1" src="images/bebida1.jpg"></div>
+            <div><img alt="image2" src="images/bebida2.jpg"></div>
+            <div><img alt="image3" src="images/bebida3.jpg"></div>
+            <div><img alt="image4" src="images/bebida4.jpg"></div>
+            <div><img alt="image4" src="images/bebida5.jpg"></div>
+            <div><img alt="image4" src="images/bebida6.jpg"></div>
+        </div>
+    </article>
 
-             <article class="gallery_text_right reveal fade-bottom">
-                 <!-- Texto  de la pagina 5 a la derecha-->
-                <h6>Titulo</h6>
-                <div>
-                    <p> Con nuestro chef Parisino, hemos querido reinventar la repostería, acercando esos postres
-                        tradicionales, entre otros franceses, a la gastronomía española.
-                        Entre los productos que más destacan se encuentran los macarons, los croissants, los profiteroles y
-                        los eclairs. Todos ellos elaborados con ingredientes de primera calidad y con un proceso de
-                        elaboración meticuloso y artesanal.
-                    </p>
-                    <p>
-                        En cuanto a los macarons, tenemos una gran variedad de sabores, entre los que se encuentran los
-                        sabores más clásicos como el de chocolate, vainilla, fresa, platano, limón, naranja, pistacho,
-                        frambuesa, arándanos, café, dulce de leche, coco, avellana, caramelo, menta, oreo, nubes, galleta,
-                        tiramisú, mango, mantequilla de cacahuete, lichi, maracuyá, té verde, ron, piña colada,
-                        tarta de queso, nubes, tarta de galleta, tarta de tiramisú, tarta de mango, tarta de lichi y maracuyá.
-                    </p>
-                </div>
-            </article>
-            <div class="ola" >
-                <svg viewBox="0 0 500 150" preserveAspectRatio="none">
-                    <path class="ola_blanca" d="M-0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z">
-                    </path>
-                </svg>
-            </div>
-        </section>
+    <article class="gallery_text_right  reveal fade-bottom">
+        <!-- Texto de la pagina 3 a la derecha-->
+        <h6>Titulo</h6>
+        <div>
+            <p> La bebida es una parte fundamental de la alimentación. Por eso, nosotros desde Café Florencia tenemos
+                un gran abanico de bebidas dulces que alegran la tarde a cualquiera.
+                Tenemos batidos, smoothies de frutas elaborados al momento con base de zumo o leche, chocolates
+                calientes y mucho más.
+            </p>
+            <p> Volviendo a nuestra bebida estrella, los batidos, tenemos una selección de batidos que dejará
+                incredulo al comensal más exquisito. Tenemos batidos tradicionales como: batidos de chocolate,
+                batidos de fresa, batidos de vainilla, batidos de platano, batidos de cookies y batidos de oreo.
+            </p>
+        </div>
+    </article>
 
-        <!-- Sexta paguina -->
-        <section class="page">
-            <h6>Titulo</h6>
-            <article class = "gallery_title_right">
-                <!-- Titulo y galeria de la pagina 6 a la derecha -->
-                <h3 id="title_fifth" class="titulo_seccion">Repostería</h3>
-                <figure class="slider">
-                    <img alt="image1" src="images/Reposteria1.jpg" >
-                    <img alt="image2" src="images/Reposteria2.jpg">
-                    <img alt="image3" src="images/Reposteria3.jpg">
-                    <img alt="image4" src="images/Reposteria4.jpg">
-                    <img alt="image4" src="images/Reposteria5.jpg">
-                </figure>
-            </article>
+    <div class="ola">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+            <path class="ola_blanca"
+                  d="M-0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z">
+            </path>
+        </svg>
+    </div>
+</section>
 
-            <article class = "gallery_text_left  reveal fade-bottom">
-                <!-- Texto  de la pagina 6 a la izquierda-->
-                <h6>Título</h6>
-                <div>
-                    <p>La repostería es la infancia de todos. Ese bollo al salir del colegio cuando eramos pequeños.
-                        Esta tartaleta de fresa que nos pusieron en nuestro cumpleaños. Todos son momentos felicecs que
-                        queremos que recuerdes cuando estés probando nuestros productos de repostería
-                    </p>
-                    <p>
-                        Para ello, hemos recuperado las recetas tradicionales de la abuela, pero reduciendo la cantidad
-                        de materia grasa y azúcares, garantizando el mantenimiento de ese sabor característico.
-                        Los productos más destacados que tenemos son los donuts, las tartas, las tortitas y los gofres.
-                    </p>
-                </div>
+<!-- Cuarta paguina -->
+<section class="page">
+    <h6>Titulo</h6>
+    <article class="gallery_title_right">
+        <!-- Titulo y galeria de la pagina 4 a la derecha -->
+        <h3 id="title_third" class="titulo_seccion">Tartas</h3>
 
-            </article>
+        <div class="siema">
+            <div><img alt="Imagen de tarta 1" src="images/tartas1.jpg"/></div>
+            <div><img alt="Imagen de tarta 2" src="images/tartas2.jpg"/></div>
+            <div><img alt="Imagen de tarta 3" src="images/tartas3.jpg"/></div>
+        </div>
 
-        </section>
+    </article>
 
-        <section class="page">
-            <h2 id="reg" class="titulo_seccion"> Registro </h2>
-                <div class="registrar">
-                    <form>
-                        <div class="cajas">
-                            <label for="name">Nombre:</label><br>
-                            <input type="text" id="name" name="name" value="" >
-                        </div>
-
-                        <div class="cajas">
-                            <label for="surname">Apellido:</label><br>
-                            <input type="text" id="surname" name="surname" value="" >
-                        </div>
-
-                        <div class="cajas">
-                            <label for="dni">DNI:</label><br>
-                            <input type="text" id="dni" name="dni" value="" >
-                        </div>
-
-                        <div class="cajas">
-                            <label for="tlf">Teléfono móvil:</label><br>
-                            <input type="text" id="tlf" name="tlf" value="" >
-                        </div>
-
-                        <div class="cajas">
-                            <label for="mail">Email:</label><br>
-                            <input type="text" id="mail" name="mail" value="">
-                        </div>
-                        <div class="botones">
-                            <button type="reset" value="Reset" > Reset </button>
-                            <button  class="registrarse" > Registrarse </button>
-                            <button class="cancel"> Cancel </button>
-                        </div>
-                    </form>
-            </div>
-
-
-        </section>
-
-        <section class="page">
-            <article class="center" >
-                <h2 id = "contacto" class="titulo_seccion"> Conocenos: </h2>
-                <div class ="conocer">
-                    <div class="conocenos">
-                        <h4>Nuestros contactos:</h4>
-                        <a href="https://mail.google.com/">cafeflorenciauc3m@gmail.com</a>
-                        <a href="https://www.instagram.com/cafe__florencia_/">   Instagram</a>
-                    </div>
-                    <form class="mensaje">
-                        <label for="mail">Email:</label>
-                        <input type="text" id="mail_c" name="mail_c" value="" >
-                        <label for="men">Mensaje:</label>
-                        <textarea id="men" name="men" ></textarea>
-                        <button type="reset" value="Reset" > Enviar </button>
-                    </form>
-                </div>
-            </article>
-        </section>
-        <article class="margen_d">
-        <button class="abrir"> <img class="tres_rayas" src="images/btn-3lineas-horiz.png" alt="icono"> </button>
-
-        <nav class="nav_menu">
-            <!-- Boton que redirecciona a otras paginas -->
-            <button class="cerrar" > <img class="tres_rayas" src="images/btn-3lineas-horiz.png" alt="icono"> </button>
-            <ul class="hamburger">
-                <li><a href="#title_first">Café</a></li>
-                <li><a href="#title_second">Bebidas Dulces</a></li>
-                <li><a href="#title_third">Tartas</a></li>
-                <li><a href="#title_fourth">Delicatessen</a></li>
-                <li><a href="#title_fifth">Repostería</a></li>
-                <li><a href="./Menu.html">Menu</a></li>
-                <li><a href="#reg">Registro</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+    <article class="gallery_text_left  reveal fade-bottom">
+        <!-- Texto de la pagina 4 a la izquierda-->
+        <h6>Titulo</h6>
+        <div>
+            <p> No todas las tartas se crean igualmente ni sabes de la misma manera. Hay que darles mimo, cariño
+                y tiempo para que estas salgan esponjosas, sabrosas y con el punto de textura correcto.
+                El sabor de nuestras tartas viene de productos 100% naturales, no utilizamos ningun colorante,
+                ni potenciador del sabor artificial.
+            </p>
+            <p> Podemos decir orgullosamente que todos nuestros ingredientes
+                para la elaboración de nuestras tartas provienen de España si no se especifica, por lo que
+                promovemos el comercio local y ayudamos al sector a crecer.
+                Entre las tartas que más rápido se acaban están la:</p>
+            <ul>
+                <li>Sacher</li>
+                <li>Zanahoria</li>
+                <li>Chocolate</li>
+                <li>Queso</li>
+                <li>Arándanos</li>
             </ul>
-        </nav>
-        </article>
+        </div>
+    </article>
+
+    <div class="ola">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+            <path d="M-0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z"
+                  class="ola_negra">
+            </path>
+        </svg>
+    </div>
+</section>
+
+<!-- Quinta paguina -->
+<section class="page2">
+    <h6>Titulo</h6>
+    <article class="gallery_title_left">
+        <!-- Titulo y galeria de la pagina 5 a la izquierda -->
+        <h3 id="title_fourth" class="titulo_seccion2">Delicatessen</h3>
+        <div class="siema">
+            <div><img alt="image1" src="images/delicatessen1.jpg"></div>
+            <div><img alt="image2" src="images/delicatessen2.jpg"></div>
+            <div><img alt="image3" src="images/delicatessen3.jpg"></div>
+            <div><img alt="image4" src="images/delicatessen4.jpg"></div>
+            <div><img alt="image4" src="images/delicatessen5.jpg"></div>
+            <div><img alt="image4" src="images/delicatessen6.jpg"></div>
+            <div><img alt="image4" src="images/delicatessen7.jpg"></div>
+        </div>
+
+    </article>
+
+    <article class="gallery_text_right reveal fade-bottom">
+        <!-- Texto  de la pagina 5 a la derecha-->
+        <h6>Titulo</h6>
+        <div>
+            <p> Con nuestro chef Parisino, hemos querido reinventar la repostería, acercando esos postres
+                tradicionales, entre otros franceses, a la gastronomía española.
+                Entre los productos que más destacan se encuentran los macarons, los croissants, los profiteroles y
+                los eclairs. Todos ellos elaborados con ingredientes de primera calidad y con un proceso de
+                elaboración meticuloso y artesanal.
+            </p>
+            <p>
+                En cuanto a los macarons, tenemos una gran variedad de sabores, entre los que se encuentran los
+                sabores más clásicos como el de chocolate, vainilla, fresa, platano, limón, naranja, pistacho,
+                frambuesa, arándanos, café, dulce de leche, coco, avellana, caramelo, menta, oreo, nubes, galleta,
+                tiramisú, mango, mantequilla de cacahuete, lichi, maracuyá, té verde, ron, piña colada,
+                tarta de queso, nubes, tarta de galleta, tarta de tiramisú, tarta de mango, tarta de lichi y maracuyá.
+            </p>
+        </div>
+    </article>
+    <div class="ola">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+            <path class="ola_blanca"
+                  d="M-0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z">
+            </path>
+        </svg>
+    </div>
+</section>
+
+<!-- Sexta paguina -->
+<section class="page">
+    <h6>Titulo</h6>
+    <article class="gallery_title_right">
+        <!-- Titulo y galeria de la pagina 6 a la derecha -->
+        <h3 id="title_fifth" class="titulo_seccion">Repostería</h3>
+        <div class="siema">
+            <div><img alt="image1" src="images/Reposteria1.jpg"></div>
+            <div><img alt="image2" src="images/Reposteria2.jpg"></div>
+            <div><img alt="image3" src="images/Reposteria3.jpg"></div>
+            <div><img alt="image4" src="images/Reposteria4.jpg"></div>
+            <div><img alt="image4" src="images/Reposteria5.jpg"></div>
+        </div>
+    </article>
+
+    <article class="gallery_text_left  reveal fade-bottom">
+        <!-- Texto  de la pagina 6 a la izquierda-->
+        <h6>Título</h6>
+        <div>
+            <p>La repostería es la infancia de todos. Ese bollo al salir del colegio cuando eramos pequeños.
+                Esta tartaleta de fresa que nos pusieron en nuestro cumpleaños. Todos son momentos felicecs que
+                queremos que recuerdes cuando estés probando nuestros productos de repostería
+            </p>
+            <p>
+                Para ello, hemos recuperado las recetas tradicionales de la abuela, pero reduciendo la cantidad
+                de materia grasa y azúcares, garantizando el mantenimiento de ese sabor característico.
+                Los productos más destacados que tenemos son los donuts, las tartas, las tortitas y los gofres.
+            </p>
+        </div>
+
+    </article>
+
+</section>
+
+<section class="page">
+    <h2 id="reg" class="titulo_seccion"> Registro </h2>
+    <div class="registrar">
+        <form>
+            <div class="cajas">
+                <label for="name">Nombre:</label><br>
+                <input type="text" id="name" name="name" value="">
+            </div>
+
+            <div class="cajas">
+                <label for="surname">Apellido:</label><br>
+                <input type="text" id="surname" name="surname" value="">
+            </div>
+
+            <div class="cajas">
+                <label for="dni">DNI:</label><br>
+                <input type="text" id="dni" name="dni" value="">
+            </div>
+
+            <div class="cajas">
+                <label for="tlf">Teléfono móvil:</label><br>
+                <input type="text" id="tlf" name="tlf" value="">
+            </div>
+
+            <div class="cajas">
+                <label for="mail">Email:</label><br>
+                <input type="text" id="mail" name="mail" value="">
+            </div>
+            <div class="botones">
+                <button type="reset" value="Reset"> Reset</button>
+                <button class="registrarse"> Registrarse</button>
+                <button class="cancel"> Cancel</button>
+            </div>
+        </form>
+    </div>
 
 
-        <footer>
-            <!-- Footer con enlaces funcionales -->
-            <a href="#">Inicio</a>
-            <a><img class="logo2" src="images/icono_w.png" alt="Logo"> Cafe Florencia</a>
-            <a href="#contacto">Contacta con nosotros</a>
-        </footer>
+</section>
+
+<section class="page">
+    <article class="center">
+        <h2 id="contacto" class="titulo_seccion"> Conocenos: </h2>
+        <div class="conocer">
+            <div class="conocenos">
+                <h4>Nuestros contactos:</h4>
+                <a href="https://mail.google.com/">cafeflorenciauc3m@gmail.com</a>
+                <a href="https://www.instagram.com/cafe__florencia_/"> Instagram</a>
+            </div>
+            <form class="mensaje">
+                <label for="mail_c">Email:</label>
+                <input type="text" id="mail_c" name="mail_c" value="">
+                <label for="men">Mensaje:</label>
+                <textarea id="men" name="men"></textarea>
+                <button type="reset" value="Reset"> Enviar</button>
+            </form>
+        </div>
+    </article>
+</section>
+<article class="margen_d">
+    <button class="abrir"><img class="tres_rayas" src="images/btn-3lineas-horiz.png" alt="icono"></button>
+
+    <nav class="nav_menu">
+        <!-- Boton que redirecciona a otras paginas -->
+        <button class="cerrar"><img class="tres_rayas" src="images/btn-3lineas-horiz.png" alt="icono"></button>
+        <ul class="hamburger">
+            <li><a href="#title_first">Café</a></li>
+            <li><a href="#title_second">Bebidas Dulces</a></li>
+            <li><a href="#title_third">Tartas</a></li>
+            <li><a href="#title_fourth">Delicatessen</a></li>
+            <li><a href="#title_fifth">Repostería</a></li>
+            <li><a href="./Menu.html">Menu</a></li>
+            <li><a href="#reg">Registro</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</article>
 
 
-   </body>
-   <script src="script/landing.js"></script>
+<footer>
+    <!-- Footer con enlaces funcionales -->
+    <a href="#">Inicio</a>
+    <a><img class="logo2" src="images/icono_w.png" alt="Logo"> Cafe Florencia</a>
+    <a href="#contacto">Contacta con nosotros</a>
+</footer>
+
+</body>
+<script src="script/siema.min.js"></script>
+<script src="script/landing.js"></script>
+<script>
+    const siemas = document.querySelectorAll('.siema');
+
+    Siema.prototype.addArrows = function () {
+        // make buttons & append them inside Siema's container
+        this.prevArrow = document.createElement('button');
+        this.nextArrow = document.createElement('button');
+        this.prevArrow.textContent = '<';
+        this.nextArrow.textContent = '>';
+        this.selector.appendChild(this.prevArrow)
+        this.selector.appendChild(this.nextArrow)
+
+        // event handlers on buttons
+        this.prevArrow.addEventListener('click', () => this.prev());
+        this.nextArrow.addEventListener('click', () => this.next());
+    }
+
+    for (const siema of siemas) {
+        const instance = new Siema({
+            selector: siema,
+            loop: true,
+            duration: 400,
+        });
+        instance.addArrows();
+    }
+</script>
+
+
 </html>
