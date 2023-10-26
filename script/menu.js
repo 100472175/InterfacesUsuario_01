@@ -245,7 +245,7 @@ let cosas = [
     },
     {
         id: 7,
-        nombre: 'A',
+        nombre: 'Batido de chocolate negro',
         imagen: 'bebida1.jpg',
         precio: 4.50
     },
@@ -275,9 +275,9 @@ let cosas = [
     },
     {
         id: 12,
-        nombre: 'Tarta sorpresa',
+        nombre: 'Batido de nubes',
         imagen: 'bebida6.jpg',
-        precio: 40
+        precio: 3
     },
     {
         id: 13,
@@ -317,39 +317,39 @@ let cosas = [
     },
     {
         id: 19,
-        nombre: 'Macarons',
+        nombre: 'Tarta mixta',
         imagen: 'tartas1.jpg',
-        precio: 12
+        precio: 10
     },
     {
         id: 20,
-        nombre: 'Croissants',
+        nombre: 'Tarta de nata',
         imagen: 'tartas2.jpg',
-        precio: 50
+        precio: 10
     },
     {
         id: 21,
-        nombre: 'Profiteroles',
+        nombre: 'Tarta de fresa',
         imagen: 'tartas3.jpg',
-        precio: 40
+        precio: 10
     },
     {
         id: 22,
-        nombre: 'Eclairs',
+        nombre: 'Tarta de oreo',
         imagen: 'tartas4.jpg',
-        precio: 50
+        precio: 10
     },
     {
         id: 23,
-        nombre: 'Surtido de macarrons',
+        nombre: 'Tarta de vainilla',
         imagen: 'tartas5.jpg',
-        precio: 50
+        precio: 10
     },
     {
         id: 24,
-        nombre: 'Tarta sorpresa',
+        nombre: 'Tarta de chocolate',
         imagen: 'tartas6.jpg',
-        precio: 40
+        precio: 10
     },
     {
         id: 25,
@@ -383,9 +383,9 @@ let cosas = [
     },
     {
         id: 30,
-        nombre: 'Tarta sorpresa',
+        nombre: 'Crepes',
         imagen: 'Reposteria6.jpg',
-        precio: 40
+        precio: 4.5
     },
 ];
 
