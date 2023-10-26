@@ -187,8 +187,8 @@ paso3.addEventListener('click', () => {
         contador.style.display = 'block';
         paso3.style.background = 'black';
         pos = 2;
-
         let timerInterval = setInterval(startTimer, 1000);
+        store_pedido(lista_comidas, precio_compra);
     } else if (pos === 0) {
         alert("Solo se puede acceder despues de pagar ")
     }
@@ -201,11 +201,9 @@ pagar.addEventListener('click', () => {
         contador.style.display = 'block';
         paso3.style.background = 'black';
         pos = 2;
-
+        store_pedido(lista_comidas, precio_compra);
         let timerInterval = setInterval(startTimer, 1000);
     }
-
-
 })
 
 let cosas = [
@@ -509,4 +507,14 @@ function startTimer() {
     }
 
     timerElement.textContent = minutos + ':' + segundos;
+}
+
+function store_pedido(lista_comidas, precio_compra) {
+    let pedido = {
+        lista_comidas: lista_comidas,
+        precio_compra: precio_compra
+    }
+    //Get the time
+    let today = new Date();
+    localStorage.setItem('pedido'+today, JSON.stringify(pedido));
 }

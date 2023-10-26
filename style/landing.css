@@ -177,7 +177,7 @@ Serán iguales las páginas pares*/
 /*Formato del contenedor del titulo y la galeria de imagenes que se encuantra a la derecha.*/
 .gallery_title_right {
     float: right;
-    width: 100%;
+    width: 40%;
     height: 100%;
     padding: 2%;
     max-width: 40rem;
@@ -190,6 +190,7 @@ Serán iguales las páginas pares*/
     width: 40%;
     height: 90%;
     padding: 2%;
+
     /*background-color: black;*/
 }
 
@@ -258,9 +259,11 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 }
 
 .cajas {
+    position: relative;
     border-bottom: 2px solid black;
     margin-bottom: 2%;
 }
+
 
 .registrar label {
     width: auto;
@@ -281,10 +284,10 @@ El texto que se encuentra en el interior es un grid, para poder centrarlo*/
 }
 
 .registrar input {
-    border: none;
+    border: dashed 2px black;
     background-color: transparent;
     color: black;
-    width: auto;
+    width: 100%;
     margin-bottom: 5%;
 }
 
@@ -684,6 +687,7 @@ button:hover {
         opacity: 1;
     }
 }
+
 
 
 /* Respponsive para tablet*/
