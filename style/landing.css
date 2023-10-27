@@ -538,14 +538,11 @@ footer a {
 }
 .button_mov {
     cursor: pointer;
-    margin-left: 15%;
-    margin-right: 15%;
-    padding-left: 7%;
-    padding-right: 7%;
+    margin: auto;
     opacity: 0.6;
     border: none;
     background-color: transparent;
-    color: #8e918f;
+    color: #858585;
     font-size: 1.5em;
     font-weight: bold;
 }
