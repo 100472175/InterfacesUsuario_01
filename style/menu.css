@@ -6,40 +6,41 @@
     text-align: justify;
     background-color: transparent;
 }
-
 h1{
     font-weight: bolder;
 }
-
 body{
     background-color: white;
     width: 100%;
     height: 100%;
 }
 .contenedor{
-    width: 55%; /*Esto hay que cambiarlo a porcentaje*/
+    width: 55%;
     margin: auto;
     transition: 0.75s;
 }
 
+/*Formato del heder paso 1*/
 header{
     display: grid;
-    grid-template-columns: 1fr 14% ; /*Cmabiar los pixeles*/
+    grid-template-columns: 1fr 14% ;
     margin-top: 5%;
 }
 header h1{
     font-size: 3em;
 }
-
+.logo{
+    height: 40px;
+    width: 40px;
+}
+/*Formato de la bolsa de compra paso 1*/
 header .bolsa{
     position: relative;
     text-align: right;
 }
-
 header .bolsa img{
     width: 40px;
 }
-
 header .bolsa span{
     background: red;
     border-radius: 50%;
@@ -52,6 +53,7 @@ header .bolsa span{
     left: 83%;
     padding: 3px 10px;
 }
+/*Formato de paltos disponibles para comprar*/
 .lista_comida_disp{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -59,6 +61,7 @@ header .bolsa span{
     row-gap: 5%; /*cambiar*/
     margin-top: 5%; /*cambiar*/
 }
+/*Formato de cada plato*/
 .elemento{
     text-align: center;
     background-color: #e9eeef;
@@ -101,6 +104,7 @@ header .bolsa span{
     border: black solid 1px;
     background-color: white;
 }
+/*Formato de la cesta -> donde se muestarn los platos seleccionados*/
 .carrito{
     position: fixed;
     top: 0;
@@ -116,7 +120,6 @@ header .bolsa span{
 .active .contenedor{
     transform: translateX(-25%);
 }
-
 .carrito h1{
     color: #4d5a72;
     margin: 0;
@@ -129,6 +132,7 @@ header .bolsa span{
     margin-top: 5%;
     text-align: left;
 }
+/*Formato de los botones que te permiten ver el total del pedido y de cerrar la cesta*/
 .info_pedido{
     position: absolute;
     bottom: 0;
@@ -150,7 +154,6 @@ header .bolsa span{
     color: white;
 
 }
-
 .info_pedido div{
     display: flex;
     justify-content: center;
@@ -158,11 +161,11 @@ header .bolsa span{
     font-weight: bold;
     cursor: pointer;
 }
-
 .info_pedido div:nth-child(2) { /*Esto elige el segundo hijo div, es como el enésimo hijo, el 2*/
     background-color: #2b3036;
     color: #fff;
 }
+/*Formato de los platos selecionados*/
 .lista_comida_selec{
     margin: 5%;
 }
@@ -191,14 +194,6 @@ header .bolsa span{
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
 }
-/*
-.lista_comida li div img{
-    margin-left: 15%;
-    left: 0;
-    width: 20%;
-}
-*/
-
 .lista_comida_selec li button{
     font-size: x-large;
     width: auto;
@@ -210,7 +205,7 @@ header .bolsa span{
 .lista_comida_selec .contador{
     margin: 0 10px;
 }
-
+/*Formato para poner diferentes menus*/
 .diferentes_menus{display: grid;
     place-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -220,6 +215,7 @@ header .bolsa span{
     font-size: 1.5em;
     border: 1px solid black;
 }
+/*Formato migas de pan*/
 .migas_pan{
     display: flex;
 
@@ -242,6 +238,7 @@ header .bolsa span{
     color: black;
 }
 
+/*Formato de la lista de platos del paso dos -> revison*/
 .reserva{
     width: 65%;
     display: grid;
@@ -272,8 +269,6 @@ header .bolsa span{
     border-radius: 10px;
 
 }
-
-
 .reserva li div{
     display: grid;
     padding: 5%;
@@ -291,31 +286,6 @@ header .bolsa span{
     text-align: center;
 
 }
-
-
-.espera_pedido{
-    display: grid;
-    place-content: center;
-    margin: auto;
-
-}
-.contador_t{
-    margin: auto;
-    margin-top: 10%
-
-}
-
-.contador_t nav{
-    display: grid;
-    place-content: center;
-    margin: 40% auto;
-
-}
-#timer {
-    margin: auto;
-    font-size: 5em;
-}
-
 .precio_total{
     display: grid;
     place-content: center;
@@ -342,22 +312,32 @@ header .bolsa span{
     background-color: #2b3036;
     color: #fff;
 }
-
 .botones_revison button:nth-child(1){
     background-color: #4d5a72;
     color: #fff;
 }
 
-.logo{
-    height: 40px;
-    width: 40px;
-}
 
-.container{
-
+/*Formato del paso 3 de */
+.espera_pedido{
     display: grid;
     place-content: center;
-    height: 100vh;
+    margin: auto;
+}
+.contador_t{
+    margin: auto;
+    margin-top: 10%
+
+}
+.contador_t nav{
+    display: grid;
+    place-content: center;
+    margin: 40% auto;
+
+}
+#timer {
+    margin: auto;
+    font-size: 5em;
 }
 .cargando{
     width: 50%;
@@ -369,6 +349,7 @@ header .bolsa span{
     margin: 50% auto;
 }
 
+/*Animación de granos de cafe*/
 .granos_cafe{
     width: 5px;
     height: 5px;
@@ -401,9 +382,6 @@ header .bolsa span{
     color: white;
     font-size: 1.5em;
 }
-
-
-
 @keyframes salto {
     from {
         transform: scaleX(1.25);
@@ -413,7 +391,6 @@ header .bolsa span{
                 translateY(-50px) scaleX(1);
     }
 }
-
 
 
 @media screen and (min-width: 600px) and (max-width: 966px) {
@@ -442,7 +419,6 @@ header .bolsa span{
     }
 
 }
-
 
 
 @media screen and (max-width: 600px){

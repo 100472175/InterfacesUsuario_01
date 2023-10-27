@@ -141,6 +141,7 @@ function animar() {
             animacion[i].classList.remove("active");
         }
     }
+
 }
 
 window.addEventListener("scroll", animar);
