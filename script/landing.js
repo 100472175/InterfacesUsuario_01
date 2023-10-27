@@ -146,8 +146,8 @@ const siemas = document.querySelectorAll('.siema');
 
 Siema.prototype.addArrows = function () {
     // make buttons & append them inside Siema's container
-    this.prevArrow = document.createElement('button_prev');
-    this.nextArrow = document.createElement('button_next');
+    this.prevArrow = document.createElement('button_mov');
+    this.nextArrow = document.createElement('button_mov');
     this.prevArrow.textContent = '<';
     this.nextArrow.textContent = '>';
     this.selector.appendChild(this.prevArrow)

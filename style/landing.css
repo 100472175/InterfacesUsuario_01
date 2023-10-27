@@ -631,8 +631,8 @@ footer a {
     width: 100%;
 }
 
-/*
-button {
+
+.button_mov {
     cursor: pointer;
     margin-left: 15%;
     margin-right: 15%;
@@ -646,13 +646,10 @@ button {
     font-weight: bold;
 }
 
-button:hover {
+.button_mov:hover {
     opacity: 1;
     transition: opacity 0.2s ease-in-out
 }
-
- */
-
 
 .abrir {
     display: none;
