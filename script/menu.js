@@ -1,3 +1,4 @@
+// Obtener los elementos del documento para poder manipularlos
 let abrirCompra = document.querySelector(".bolsa");
 let cerrarCompra = document.querySelector(".finalizaCompra");
 let lista = document.querySelector(".lista_comida_disp");
@@ -27,7 +28,7 @@ let precio_compra = 0;
 let pos = 0;
 
 
-
+// Abrir y cerrar el carrito
 abrirCompra.addEventListener('click', () => {
     body.classList.add('active');
 })
@@ -35,10 +36,12 @@ cerrarCompra.addEventListener('click', () => {
     body.classList.remove('active');
 })
 
+// Volver al landing
 logo.addEventListener('click', () => {
     window.location.href = 'landing.html';
 })
 
+// Cargar el carrito
 window.addEventListener('load', () => {
     contenedor.style.display = 'block';
     eleme.style.display = 'block';
@@ -51,6 +54,8 @@ window.addEventListener('load', () => {
     cafe.style.color = 'white';
 
 })
+
+// Cambiar de categoria a
 cafe.addEventListener('click', () => {
     initApp(0);
     cafe.style.background = 'black';
@@ -64,6 +69,8 @@ cafe.addEventListener('click', () => {
     reposteria.style.background = 'white';
     reposteria.style.color = 'black';
 })
+
+// Cambiar de categoria a bebidas dulces
 bebidas_dulces.addEventListener('click', () => {
     initApp(6);
     bebidas_dulces.style.background = 'black';
@@ -77,6 +84,8 @@ bebidas_dulces.addEventListener('click', () => {
     reposteria.style.background = 'white';
     reposteria.style.color = 'black';
 })
+
+// Cambiar el menu a delicatessen
 delicateen.addEventListener('click', () => {
     initApp(12);
     delicateen.style.background = 'black';
@@ -90,6 +99,8 @@ delicateen.addEventListener('click', () => {
     cafe.style.background = 'white';
     cafe.style.color = 'black';
 })
+
+// Cambiar el menu a tartas
 tartas.addEventListener('click', () => {
     initApp(18);
     tartas.style.background = 'black';
@@ -103,6 +114,8 @@ tartas.addEventListener('click', () => {
     cafe.style.background = 'white';
     cafe.style.color = 'black';
 })
+
+// Cambiar el menu a reposteria
 reposteria.addEventListener('click', () => {
     initApp(24);
     reposteria.style.background = 'black';
@@ -118,7 +131,7 @@ reposteria.addEventListener('click', () => {
     cafe.style.color = 'black';
 })
 
-
+// Intentar cambiar de paso, al pulsar el boton de otro paso
 paso1.addEventListener('click', () => {
     if (pos === 1) {
         contenedor.style.display = 'block';
@@ -133,6 +146,7 @@ paso1.addEventListener('click', () => {
     }
 })
 
+// Intentar cambiar de paso, al pulsar el boton de otro paso, succesfull
 cambiar_pedido.addEventListener('click', () => {
     if (pos === 1) {
         contenedor.style.display = 'block';
@@ -144,6 +158,8 @@ cambiar_pedido.addEventListener('click', () => {
         pos = 0;
     }
 })
+
+// Intentar cambiar de paso, al pulsar el boton de otro paso
 paso2.addEventListener('click', () => {
     if (pos === 0) {
         if (precio_compra !== 0) {
@@ -154,15 +170,15 @@ paso2.addEventListener('click', () => {
             paso2.style.background = 'black';
             pos = 1;
             mostrarElemento();
-
         } else {
             alert("No has selecionado ningún elemento")
         }
-
     } else if (pos === 2) {
         alert("No puedes ir para atras tu pedido esta en camino")
     }
 })
+
+// Intentar cambiar de paso, al pulsar el boton de otro paso, unsuccesfull porque no hay elemtnos para comprar
 totalCarrito.addEventListener('click', () => {
     if (pos === 0) {
         if (precio_compra !== 0) {
@@ -179,6 +195,7 @@ totalCarrito.addEventListener('click', () => {
     }
 })
 
+// Intentar cambiar de paso para mostrar el contador, como se se hubiera enviado
 paso3.addEventListener('click', () => {
 
     if (pos === 1) {
@@ -194,6 +211,7 @@ paso3.addEventListener('click', () => {
         alert("Solo se puede acceder despues de pagar ")
     }
 })
+// Cambio  de paso para mostrar el contador, como se se hubiera enviado
 pagar.addEventListener('click', () => {
     if (pos === 1) {
         contenedor.style.display = 'none';
@@ -207,6 +225,7 @@ pagar.addEventListener('click', () => {
     }
 })
 
+// Lista de los productos disponibles
 let cosas = [
     {
         id: 1,
@@ -390,9 +409,10 @@ let cosas = [
     },
 ];
 
-
+// lista auxiliar para guardar los elementos que se han añadido al carrito
 let lista_comidas = [];
 
+// Inicio de la aplicación, que se ejecuta nada más cargar la página.
 function initApp(st_elem) {
     while (lista.hasChildNodes()) {
         lista.removeChild(lista.firstChild);
@@ -411,6 +431,7 @@ function initApp(st_elem) {
     })
 }
 
+// Función para añadir un elemento al carrito
 function aniadirAlCarrito(key) {
 
     if (lista_comidas[key] == null) {
@@ -424,6 +445,7 @@ function aniadirAlCarrito(key) {
     recargaElemento();
 }
 
+// Función para recargar el carrito
 function recargaElemento() {
     lista_comida.innerHTML = '';
     let cuenta = 0;
@@ -451,6 +473,7 @@ function recargaElemento() {
     cantidad.innerText = cuenta;
 }
 
+// Función para mostrar los elementos del carrito en el "paso 2"
 function mostrarElemento() {
     reserva.innerHTML = '';
     lista_comidas.forEach((value, key) => {
@@ -466,10 +489,9 @@ function mostrarElemento() {
         }
     })
     precio_total.innerText = "Total: ".concat(precio_compra.toLocaleString()).concat(' €');
-
-
 }
 
+// Cambiar la cantidad de un elemento del carrito
 function cambiaCantidad(key, cantidad) {
     if (cantidad === 0) {
         delete lista_comidas[key];
@@ -480,11 +502,12 @@ function cambiaCantidad(key, cantidad) {
     recargaElemento();
 }
 
-
+// Datos para el contador de tiempo
 let cantidad_minutos = 10;
 let cantidad_segundos = cantidad_minutos * 60;
 let timerElement = document.getElementById('timer');
 
+// Función para comenzar el contador de tiempo
 function startTimer() {
     cantidad_segundos--;
     let minutos = Math.floor(cantidad_segundos / 60);
@@ -495,11 +518,9 @@ function startTimer() {
         cargando.style.display = 'None';
         let newDiv = document.createElement('p');
         newDiv.innerHTML = ` Pedido entregado`;
-
         clearInterval(timerInterval);
         return;
     }
-
     if (minutos < 10) {
         minutos = '0' + minutos;
     }

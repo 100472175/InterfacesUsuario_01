@@ -171,6 +171,7 @@ Siema.prototype.addArrows = function () {
 
     // automatic movement
 
+
 }
 
 for (const siema of siemas) {

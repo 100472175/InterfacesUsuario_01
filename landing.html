@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Cafe Florencia</title>
     <link rel="icon" href="images/icono_b.png">
@@ -11,7 +11,7 @@
 <body>
 <!-- Primera pagina -->
 <section class="title_navigation_section">
-    <!-- Todos los h6 se usan para poner titulos que no aparecen en la paguina web
+    <!-- Todos los h6 se usan para poner titulos que no aparecen en la página web
      sirve para quitar los warning -->
     <h6>Titulo</h6>
     <article class="title_navigation_title_article">
@@ -51,14 +51,7 @@
     <article class="gallery_title_right">
         <!-- Titulo y galeria de la pagina 2 a la derecha -->
         <h3 id="title_first" class="titulo_seccion">Café</h3>
-        <!--<figure class="slider">
-            <img alt="image1" src="images/cafe1.jpg">
-            <img alt="image2" src="images/cafe2.jpg">
-            <img alt="image4" src="images/cafe3.jpg">
-            <img alt="image4" src="images/cafe4.jpg">
-        </figure>-->
-
-
+        <!--Slider manual, con botones, CSS y JS -->
         <div class="new_slider">
             <div class="slides">
                 <!--Botonera de navegación-->
@@ -117,7 +110,7 @@
             </p>
         </div>
     </article>
-
+    <!-- Esta es la ola que hace de separación entre hojas, que tiene uana figura como una ola -->
     <div class="ola">
         <svg viewBox="0 0 500 150" preserveAspectRatio="none">
             <path d="M-0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z"
@@ -167,25 +160,23 @@
     </div>
 </section>
 
-<!-- Cuarta paguina -->
+<!-- Cuarta pagína -->
 <section class="page">
     <h6>Titulo</h6>
     <article class="gallery_title_right">
         <!-- Titulo y galeria de la pagina 4 a la derecha -->
         <h3 id="title_third" class="titulo_seccion">Tartas</h3>
         <div class="siema chiquito">
-            <div><img alt="Imagen de tarta 1" src="images/tartas1.jpg"/></div>
-            <div><img alt="Imagen de tarta 2" src="images/tartas2.jpg"/></div>
-            <div><img alt="Imagen de tarta 3" src="images/tartas3.jpg"/></div>
-            <div><img alt="Imagen de tarta 4" src="images/tartas4.jpg"/></div>
-            <div><img alt="Imagen de tarta 5" src="images/tartas5.jpg"/></div>
-            <div><img alt="Imagen de tarta 6" src="images/tartas6.jpg"/></div>
+            <div><img alt="Imagen de tarta 1" src="images/tartas1.jpg"></div>
+            <div><img alt="Imagen de tarta 2" src="images/tartas2.jpg"></div>
+            <div><img alt="Imagen de tarta 3" src="images/tartas3.jpg"></div>
+            <div><img alt="Imagen de tarta 4" src="images/tartas4.jpg"></div>
+            <div><img alt="Imagen de tarta 5" src="images/tartas5.jpg"></div>
+            <div><img alt="Imagen de tarta 6" src="images/tartas6.jpg"></div>
         </div>
-
     </article>
-
     <article class="gallery_text_left  reveal fade-bottom">
-        <!-- Texto de la pagina 4 a la izquierda-->
+        <!-- Texto de la pagina 4 a la de Tartas-->
         <h6>Titulo</h6>
         <div>
             <p> No todas las tartas se crean igualmente ni sabes de la misma manera. Hay que darles mimo, cariño
@@ -216,11 +207,11 @@
     </div>
 </section>
 
-<!-- Quinta paguina -->
+<!-- Quinta pagína -->
 <section class="page2">
     <h6>Titulo</h6>
     <article class="gallery_title_left">
-        <!-- Titulo y galeria de la pagina 5 a la izquierda -->
+        <!-- Titulo y galeria de la página de las Delicatessens -->
         <h3 id="title_fourth" class="titulo_seccion2">Delicatessen</h3>
         <div class="siema chiquito">
             <div><img alt="image1" src="images/delicatessen1.jpg"></div>
@@ -262,7 +253,7 @@
     </div>
 </section>
 
-<!-- Sexta paguina -->
+<!-- Sexta página -->
 <section class="page">
     <h6>Titulo</h6>
     <article class="gallery_title_right">
@@ -296,13 +287,14 @@
     </article>
 
 </section>
-
+<!-- Sección de registro de los usuarios. -->
 <section class="page">
     <h2 id="reg" class="titulo_seccion"> Registro </h2>
     <div class="registrar">
+        <!-- Formulario -->
         <form>
             <label for="name">Nombre:</label><br>
-            <input type="textarea" id="name" name="name" value="">
+            <input type="text" id="name" name="name" value="">
 
             <label for="surname">Apellido:</label><br>
             <input type="text" id="surname" name="surname" value="">
@@ -322,19 +314,20 @@
             </div>
         </form>
     </div>
-
-
 </section>
 
+<!--Sección de contacto y envio de información-->
 <section class="page">
     <article class="center">
         <h2 id="contacto" class="titulo_seccion"> Conocenos: </h2>
         <div class="conocer">
             <div class="conocenos">
+                <!-- Sección de contacto por otras redes sociales-->
                 <h4>Nuestros contactos:</h4>
                 <a href="https://mail.google.com/">cafeflorenciauc3m@gmail.com</a>
                 <a href="https://www.instagram.com/cafe__florencia_/"> <img class="logo2" src="images/instagram.png" alt="insta"> cafe__florencia_</a>
             </div>
+            <!-- Contacto por mensaje interno de la página web -->
             <form class="mensaje">
                 <label for="mail_c">Email:</label>
                 <input type="text" id="mail_c" name="mail_c" value="">
@@ -345,9 +338,9 @@
         </div>
     </article>
 </section>
+<!-- Menu hamburguesa -->
 <article class="margen_d">
     <button class="abrir"><img class="tres_rayas" src="images/btn-3lineas-horiz.png" alt="icono"></button>
-
     <nav class="nav_menu">
         <!-- Boton que redirecciona a otras paginas -->
         <button class="cerrar"><img class="tres_rayas" src="images/btn-3lineas-horiz.png" alt="icono"></button>
@@ -372,12 +365,8 @@
     <a href="#contacto">Contacta con nosotros</a>
 </footer>
 
-</body>
+<!-- Scripts de Javacsript-->
 <script src="script/siema.min.js"></script>
 <script src="script/landing.js"></script>
-<script>
-
-</script>
-
-
+</body>
 </html>
