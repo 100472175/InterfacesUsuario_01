@@ -1,4 +1,3 @@
-// Obtener los elementos del documento para poder manipularlos
 let abrirCompra = document.querySelector(".bolsa");
 let cerrarCompra = document.querySelector(".finalizaCompra");
 let lista = document.querySelector(".lista_comida_disp");
@@ -52,10 +51,9 @@ window.addEventListener('load', () => {
     initApp(0);
     cafe.style.background = 'black';
     cafe.style.color = 'white';
-
 })
 
-// Cambiar de categoria a
+// Cambiar de categoria a cafe
 cafe.addEventListener('click', () => {
     initApp(0);
     cafe.style.background = 'black';

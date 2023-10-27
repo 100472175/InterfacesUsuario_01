@@ -218,6 +218,7 @@ header .bolsa span{
 .diferentes_menus button{
     text-align: center;
     font-size: 1.5em;
+    border: 1px solid black;
 }
 .migas_pan{
     display: flex;
@@ -299,7 +300,9 @@ header .bolsa span{
 
 }
 .contador_t{
+    margin: auto;
     margin-top: 10%
+
 }
 
 .contador_t nav{

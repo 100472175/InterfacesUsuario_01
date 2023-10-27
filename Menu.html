@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="style/menu.css">
 </head>
 <body>
+
+    <!--Migas de pan que se encargan de pasar de paginas dentro de menu -->
     <nav class="posicion">
         <button class="uno"> Menu</button>
         <button class="dos"> Pagar</button>
         <button class="tres"> Espera pedido</button>
     </nav>
 
-    <div class="contenedor">
+    <!--1º paso -> Menu -->
+    <section class="contenedor">
         <header>
             <h1> <img class="logo" src="images/icono_b.png" alt="Logo"> Menu</h1>
             <div class="bolsa">
@@ -24,32 +27,35 @@
             </div>
 
         </header>
-
+        <!--Migas de pan como enlace a paguina principal-->
         <nav class="migas_pan">
             <a href="./landing.html"> Inicio  </a>
             <a>/ Menu  </a>
         </nav>
-
-        <div class="diferentes_menus">
+        <!-- Nav para cambiar de menu-->
+        <nav class="diferentes_menus">
             <button class="cafe" >Cafe</button>
             <button class="bebidas_dulces" > Bebidas dulces</button>
             <button class="delicatessen"> Delicatessen</button>
             <button class="tartas" > Tartas</button>
             <button class="reposteria" > Reposteria</button>
-        </div>
-        <div class="lista_comida_disp"></div>
-    </div>
-    <div class="carrito">
+        </nav>
+        <!--Paltos a eleguir-->
+        <ul class="lista_comida_disp"></ul>
+    </section>
+
+    <!--Seccion dentro del 1º paso que da un resumen de los platos selecionados, se ve pulsando la bolsa -->
+    <section class="carrito">
         <h1>Resumen del pedido</h1>
-        <ul class="lista_comida_selec">
-        </ul>
+        <ul class="lista_comida_selec"></ul>
         <div class="info_pedido">
             <button class="total">Total → 0</button>
             <div class="finalizaCompra">Cerrar</div>
         </div>
-    </div>
+    </section>
 
-    <div class="compr">
+    <!--2º paso revisón del pedido-->
+    <section class="compr">
         <header>
             <h2> Revisar Pedido</h2>
         </header>
@@ -60,7 +66,7 @@
             <a>Revisión</a>
         </nav>
 
-        <section>
+        <article>
             <ul class="reserva"> </ul>
             <p class="precio_total"> Total: 0 €</p>
             <div class="botones_revison">
@@ -68,23 +74,23 @@
                 <button class="cambiar_pedido"> Cambiar pedido </button>
                 <button class="pagar"> Pagar </button>
             </div>
-        </section>
-    </div>
+        </article>
+    </section>
 
-    <div class="contador_t" >
-
-        <section class="espera_pedido">
+    <!--Paso 3 espera pedido -->
+    <section class="contador_t" >
+        <article class="espera_pedido">
             <h2>Tu pedido esta hecho</h2>
             <h2>Tiempo hasta la entrega:</h2>
             <p id="timer"></p>
 
-            <div class="cargando">
+            <article class="cargando">
                 <div class="granos_cafe"> <img src="images/menu/granos-de-cafe.png" alt="granos_cafe"></div>
                 <div class="granos_cafe"> <img src="images/menu/granos-de-cafe.png" alt="granos_cafe"></div>
                 <div class="granos_cafe"> <img src="images/menu/granos-de-cafe.png" alt="granos_cafe"></div>
-            </div>
-        </section>
-    </div>
+            </article>
+        </article>
+    </section>
 
 
 
