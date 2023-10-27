@@ -146,8 +146,8 @@ const siemas = document.querySelectorAll('.siema');
 
 Siema.prototype.addArrows = function () {
     // make buttons & append them inside Siema's container
-    this.prevArrow = document.createElement('button');
-    this.nextArrow = document.createElement('button');
+    this.prevArrow = document.createElement('button_prev');
+    this.nextArrow = document.createElement('button_next');
     this.prevArrow.textContent = '<';
     this.nextArrow.textContent = '>';
     this.selector.appendChild(this.prevArrow)
@@ -166,6 +166,11 @@ for (const siema of siemas) {
         selector: siema,
         loop: true,
         duration: 400,
+        perPage:{
+            0: 1,
+            600: 2,
+            966: 1
+        }
     });
     instance.addArrows();
 }

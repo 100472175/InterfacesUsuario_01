@@ -180,7 +180,6 @@ Serán iguales las páginas pares*/
     width: 40%;
     height: 100%;
     padding: 2%;
-    max-width: 40rem;
     /*background-color: black;*/
 }
 
@@ -190,7 +189,6 @@ Serán iguales las páginas pares*/
     width: 40%;
     height: 90%;
     padding: 2%;
-
     /*background-color: black;*/
 }
 
@@ -880,7 +878,8 @@ button:hover {
         color: white;
         text-decoration: none;
     }
-    .hamburger a:hover{
+
+    .hamburger a:hover {
         cursor: pointer;
         text-decoration: underline solid white;
     }
@@ -906,7 +905,16 @@ button:hover {
     .center {
         margin-bottom: 20%;
     }
+
+    .chiquito {
+        aspect-ratio: 3/4;
+        height: 80%;
+        display: grid;
+        align-content: center;
+        margin: auto;
+    }
 }
+
 
 /* Responsive para telefonos móviles*/
 @media screen and (max-width: 600px) {
