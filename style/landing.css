@@ -633,6 +633,7 @@ footer a {
     width: 100%;
 }
 
+/*
 button {
     cursor: pointer;
     margin-left: 15%;
@@ -651,6 +652,8 @@ button:hover {
     opacity: 1;
     transition: opacity 0.2s ease-in-out
 }
+
+ */
 
 
 .abrir {
@@ -810,14 +813,9 @@ button:hover {
         border: 1px solid black;
     }
 
-    .titulo_seccion2 {
-
-        color: white;
-    }
 
     .titulo_seccion {
         margin-top: 10%;
-        color: black;
     }
 
     .registrar {
@@ -850,7 +848,7 @@ button:hover {
         border: none;
     }
 
-    .abrir img {
+    .abrir img{
         display: block;
         width: 50px;
         height: 50px;
@@ -861,7 +859,7 @@ button:hover {
         right: 0;
         background-color: rgba(0, 0, 0, 0.72);
         position: fixed;
-        width: 30%;
+        width: 50%;
         height: 100%;
         text-align: center;
     }
@@ -1041,13 +1039,10 @@ button:hover {
         border: 1px solid black;
     }
 
-    .titulo_seccion2 {
-        color: white;
-    }
+
 
     .titulo_seccion {
         margin-top: 10%;
-        color: black;
     }
 
     footer {
@@ -1056,18 +1051,20 @@ button:hover {
 
     .abrir {
         top: 5%;
-        right: 5%;
+        right: 15%;
         background-color: transparent;
         position: fixed;
         color: black;
         width: 5%;
         height: 3%;
+        border: none;
     }
 
-    .abrir img {
+    .abrir img{
         display: block;
         width: 50px;
         height: 50px;
+
     }
 
     .nav_menu {
@@ -1075,7 +1072,7 @@ button:hover {
         right: 0;
         background-color: rgba(0, 0, 0, 0.72);
         position: fixed;
-        width: 30%;
+        width: 70%;
         height: 100%;
         text-align: center;
     }
@@ -1097,13 +1094,14 @@ button:hover {
 
     }
 
-    .cerrar {
+    .cerrar{
         top: 5%;
-        right: 5%;
+        right: 15%;
         background-color: transparent;
         position: fixed;
         width: 5%;
         height: 3%;
+        border: none;
 
     }
 
