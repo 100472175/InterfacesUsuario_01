@@ -139,3 +139,33 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
+
+
+
+const siemas = document.querySelectorAll('.siema');
+
+Siema.prototype.addArrows = function () {
+    // make buttons & append them inside Siema's container
+    this.prevArrow = document.createElement('button');
+    this.nextArrow = document.createElement('button');
+    this.prevArrow.textContent = '<';
+    this.nextArrow.textContent = '>';
+    this.selector.appendChild(this.prevArrow)
+    this.selector.appendChild(this.nextArrow)
+
+    // event handlers on buttons
+    this.prevArrow.addEventListener('click', () => this.prev());
+    this.nextArrow.addEventListener('click', () => this.next());
+
+    // automatic movement
+
+}
+
+for (const siema of siemas) {
+    const instance = new Siema({
+        selector: siema,
+        loop: true,
+        duration: 400,
+    });
+    instance.addArrows();
+}
