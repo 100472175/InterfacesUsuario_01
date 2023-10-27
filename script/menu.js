@@ -228,37 +228,37 @@ let cosas = [
     {
         id: 1,
         nombre: 'Cafe con leche',
-        imagen: '/menu/cafe1.jpg',
+        imagen: 'menu/cafe1.jpg',
         precio: 2.00
     },
     {
         id: 2,
         nombre: 'Latte machiato',
-        imagen: '/menu/cafe2.jpg',
+        imagen: 'menu/cafe2.jpg',
         precio: 2.00
     },
     {
         id: 3,
         nombre: 'Capuchino',
-        imagen: '/menu/cafe3.jpg',
+        imagen: 'menu/cafe3.jpg',
         precio: 2.30
     },
     {
         id: 4,
         nombre: 'Cafe con hielo',
-        imagen: '/menu/cafe4.jpg',
+        imagen: 'menu/cafe4.jpg',
         precio: 1.80
     },
     {
         id: 5,
         nombre: 'Cafe solo',
-        imagen: '/menu/cafe5.jpg',
+        imagen: 'menu/cafe5.jpg',
         precio: 1.80
     },
     {
         id: 6,
         nombre: 'Chocolate',
-        imagen: '/menu/cafe6.jpg',
+        imagen: 'menu/cafe6.jpg',
         precio: 2.3
     },
     {
@@ -421,9 +421,9 @@ function initApp(st_elem) {
         let newDiv = document.createElement('div');
         newDiv.classList.add('elemento');
         newDiv.innerHTML = `
-            <img src="images/${value.imagen}/" alt="imagen_del_producto">
+            <img src="./images/${value.imagen}" alt="imagen_del_producto">
             <div class="titulo">${value.nombre}</div>
-            <div class="precio">${value.precio.toLocaleString()} €</div> <!--Mirar que hace el toLocaleString() */-->
+            <div class="precio">${value.precio.toLocaleString()} €</div>
             <button onclick="aniadirAlCarrito(${value.id - 1})"> Añadir </button>`;
         lista.appendChild(newDiv);
     })
@@ -454,7 +454,6 @@ function recargaElemento() {
         if (value != null) {
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
-            <!--<div><img src="images/menu/${value.imagen}/" alt="imagen_del_producto"></div> -->
             <div>${value.nombre}</div>
             <div>${cosas[key].precio} €</div>
             <div>${value.precio.toLocaleString()} €</div>
@@ -478,7 +477,7 @@ function mostrarElemento() {
         if (value != null) {
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
-            <div><img src="images/${value.imagen}/" alt="imagen_del_producto3"></div>
+            <div><img src="images/${value.imagen}" alt="imagen_del_producto3"></div>
             <div>${value.nombre}</div>
             <div>${cosas[key].precio} €</div>
             <div>${value.precio.toLocaleString()} €</div>
