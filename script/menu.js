@@ -27,6 +27,7 @@ let precio_compra = 0;
 let pos = 0;
 
 
+
 abrirCompra.addEventListener('click', () => {
     body.classList.add('active');
 })
