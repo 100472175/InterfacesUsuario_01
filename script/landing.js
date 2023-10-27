@@ -4,7 +4,7 @@ let cerrar = document.querySelector(".cerrar");
 let registrarse = document.querySelector(".registrarse");
 let cancel = document.querySelector(".cancel");
 registrarse.addEventListener('click', () => {
-    createAccount();
+    setCookie();
 
 })
 cancel.addEventListener('click', () => {
@@ -48,67 +48,79 @@ function getCookie(dni) {
     return "";
 }
 
-function setCookie(dni, exdays) {
-    let name = document.getElementById("name").value;
-    comp_nombre_ape(name);
-    let surname = document.getElementById("surname").value;
-    comp_nombre_ape(surname);
-    let tlf = document.getElementById("tlf").value;
-    comp_tlf(tlf);
-    let mail = document.getElementById("mail").value;
-    comp_correo(mail);
+function setCookie() {
+    localStorage.tiempo1 = new Date().getTime();
+    if (typeof (Storage) !== "undefined") {
+        let dni = document.getElementById("dni").value;
+        let dni_check = comp_dni(dni);
 
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    document.cookie = "dni=" + dni + "; name=" + name + "; surname=" + surname + "; tfl=" + tlf + "; mail=" + mail + "; path=/";
+        localStorage.tiempo2 = new Date().getTime();
+        let name = document.getElementById("name").value;
+        let name_check = comp_nombre_ape(name);
+
+        let surname = document.getElementById("surname").value;
+        let surname_check = comp_nombre_ape(surname);
+
+        let tlf = document.getElementById("tlf").value;
+        let telf_check = comp_tlf(tlf);
+
+        let mail = document.getElementById("mail").value;
+        let mail_check = comp_correo(mail);
+
+        if ((dni_check && name_check && surname_check && telf_check && mail_check) === false) {
+            var guardado = localStorage.getItem('dni'+dni);
+            console.log(JSON.parse(guardado));
+            let datos = {dni: dni, name: name, surname: surname, tlf: tlf, mail: mail};
+            localStorage.setItem('dni'+dni, JSON.stringify(datos));
+        } else {
+            alert("No se puede crear la cuenta");
+        }
+    } else {
+        alert("No se puede crear la cuenta");
+    }
 }
 
 
 function createAccount() {
     // Ger the information from the precious form from inputs:
-    let dni_ = document.getElementById("dni").value;
-    comp_dni(dni_);
-
-
-    // Check if the cookie exists:
-    if (getCookie(dni_) !== "") {
-        alert("Ya existe una cuenta con este DNI");
-
-    } else {
-        // Create a cookie with the information:
-        setCookie(dni_, 30);
-        alert("Cuenta Creada");
-    }
-
+    setCookie(dni_);
+    alert("Cuenta Creada");
 }
 
 function comp_dni(dni_) {
     let pattern = /^[0-9]{8}[A-Z]$/;
     if (false === pattern.test(dni_)) {
-        alert("DNI no valido")
+        alert("DNI no valido");
+        return true;
     }
-
+    return false;
 }
 
 function comp_tlf(tlf) {
     let pattern = /^[0-9]{9}$/;
     if (false === pattern.test(tlf)) {
         alert("Telefono no valido");
+        return true;
     }
+    return false;
 }
 
 function comp_correo(correo) {
-    let pattern = /^[a-z0-9]+@[a-z]+\.[a-z]{3}$/;
+    let pattern = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
     if (false === pattern.test(correo)) {
-        alert("Correo no valido")
+        alert("Correo no valido");
+        return true;
     }
+    return false;
 }
 
 function comp_nombre_ape(nom) {
-    let pattern = /^[A-Z,a-z]$/;
+    let pattern = /^[a-zA-Zá-ú]+$/;
     if (false === pattern.test(nom)) {
-        alert("Nombre u Apellido no valido")
+        alert("Nombre o Apellido no valido");
+        return true;
     }
+    return false;
 }
 
 
