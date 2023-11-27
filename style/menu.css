@@ -206,7 +206,8 @@ header .bolsa span{
     margin: 0 10px;
 }
 /*Formato para poner diferentes menus*/
-.diferentes_menus{display: grid;
+.diferentes_menus{
+    display: grid;
     place-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
